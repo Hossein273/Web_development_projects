@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Torque Auto Co. — Trusted Mechanic in Brisbane | Servicing, Brakes, Tyres &amp; Diagnostics</title>
+<meta name="description" content="Torque Auto Co. is a Brisbane mechanic offering honest car servicing, brakes, tyres, engine diagnostics, air-con and roadworthy inspections. Fixed-price quotes, nationwide warranty, all makes and models. Book online today.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FFFFFF; --bg-2:#F4F6F8; --bg-3:#E8EBF0; --surface:#FFFFFF;
+  --ink:#15171C; --ink-2:#454B57; --muted:#6E7480; --faint:#A6ACB6;
+  --line:rgba(21,23,28,.10); --line-2:rgba(21,23,28,.18);
+  --amber:#F5B21A; --amber-2:#FFC53D; --amber-deep:#B97D08; --amber-soft:rgba(245,178,26,.15);
+  --red:#E5402E; --green:#34C759;
+  --fd:'Archivo',sans-serif; --fb:'Inter',sans-serif; --fm:'JetBrains Mono',monospace;
+  --nav-h:74px; --eo:cubic-bezier(.25,.46,.45,.94); --es:cubic-bezier(.34,1.56,.64,1);
+  --sh:0 24px 60px rgba(21,23,28,.14); --sh-m:0 16px 36px rgba(21,23,28,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink-2);font-family:var(--fb);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none;transition:color .2s}a:hover{color:var(--amber-2)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1220px;margin:0 auto;padding:0 30px}
+.section{padding:116px 0}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#EEF0F4,#E2E5EB)}
+.ph::after{content:"\002699";position:absolute;inset:0;display:grid;place-items:center;font-size:3rem;color:rgba(245,178,26,.18)}
+.ph img{position:relative;z-index:1;transition:opacity .6s,transform .8s var(--eo)}
+.ph img.imgfail{opacity:0}
+.eyebrow{font-family:var(--fm);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-deep);display:inline-flex;align-items:center;gap:9px}
+.eyebrow::before{content:"//";color:var(--amber-deep);font-weight:700}
+.center .eyebrow{justify-content:center}
+.s-title{font-family:var(--fd);font-weight:800;font-size:clamp(2.1rem,4.8vw,3.5rem);line-height:1.02;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink);margin:16px 0 0}
+.s-title .a{color:var(--amber)}
+.s-lead{color:var(--muted);font-size:1.06rem;max-width:560px;margin-top:18px}
+.center{text-align:center}.center .s-lead{margin-left:auto;margin-right:auto}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--fd);font-weight:700;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 26px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s,border-color .2s,color .2s}
+.btn svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.4;fill:none}
+.btn-amber{background:var(--amber);color:#14161A;border-color:var(--amber)}
+.btn-amber:hover{background:var(--amber-2);border-color:var(--amber-2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,178,26,.3)}
+.btn-out{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-out:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+.btn-lg{padding:16px 32px;font-size:.94rem}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(255,255,255,.8);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.3s}
+.nav.scrolled{background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);box-shadow:0 6px 30px rgba(21,23,28,.07)}
+.nav-in{max-width:1220px;margin:0 auto;padding:0 30px;height:100%;display:flex;align-items:center;gap:2rem}
+.brand{display:flex;align-items:center;gap:11px;color:var(--ink)}
+.brand svg{width:36px;height:36px;flex-shrink:0}
+.brand .bn{font-family:var(--fd);font-weight:800;font-size:1.3rem;letter-spacing:-.01em;text-transform:uppercase;line-height:1}
+.brand .bn em{font-style:normal;color:var(--amber)}
+.nav-links{display:flex;gap:1.7rem;list-style:none;margin-left:auto}
+.nav-links a{font-family:var(--fm);font-size:.74rem;font-weight:500;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;position:relative;padding-bottom:4px}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--eo)}
+.nav-links a:hover{color:var(--ink)}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.nav-phone{display:inline-flex;align-items:center;gap:8px;font-family:var(--fd);font-weight:700;font-size:.92rem;color:var(--ink)}
+.nav-phone svg{width:16px;height:16px;stroke:var(--amber);stroke-width:2;fill:none}
+.burger{display:none;flex-direction:column;justify-content:space-between;width:26px;height:16px;background:none;border:none;cursor:pointer}
+.burger span{height:2px;border-radius:2px;background:var(--ink);transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding-top:var(--nav-h);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{transform:scale(1.06);transition:transform 9s ease}
+.hero:hover .hero-bg img{transform:scale(1.12)}
+.hero-bg::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(100deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 42%,rgba(255,255,255,.62) 70%,rgba(255,255,255,.38) 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 15% 60%,rgba(245,178,26,.12),transparent 55%)}
+.hero-in{position:relative;z-index:3;max-width:1220px;margin:0 auto;padding:90px 30px;width:100%}
+.hero-in>*{max-width:640px}
+.hero-tag{font-family:var(--fm);font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:20px;display:inline-flex;align-items:center;gap:10px}
+.hero-tag::before{content:"";width:30px;height:2px;background:var(--amber)}
+.hero h1{font-family:var(--fd);font-weight:800;font-size:clamp(2.7rem,6.6vw,5.2rem);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;color:var(--ink)}
+.hero h1 .a{color:var(--amber)}
+.hero .lead{font-size:1.16rem;color:var(--ink-2);margin:22px 0 32px;max-width:500px;line-height:1.6}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;margin-top:40px}
+.htr{display:flex;align-items:center;gap:8px;font-family:var(--fm);font-size:.74rem;letter-spacing:.04em;color:var(--ink-2)}
+.htr svg{width:16px;height:16px;stroke:var(--amber);stroke-width:2;fill:none;flex-shrink:0}
+/* strip */
+.strip{background:var(--amber);overflow:hidden;padding:14px 0;position:relative;z-index:5}
+.strip-track{display:flex;white-space:nowrap;animation:marq 28s linear infinite}
+.strip-track span{font-family:var(--fd);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:#14161A;padding:0 1.4rem;display:inline-flex;align-items:center;gap:1.4rem}
+.strip-track span::after{content:"\002022";opacity:.5}
+/* services */
+.services{background:var(--bg-2)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.4rem}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:2.1rem 1.9rem;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--eo)}
+.svc:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:var(--sh-m)}
+.svc:hover::before{transform:scaleX(1)}
+.svc-num{font-family:var(--fm);font-size:.68rem;color:var(--amber-deep);letter-spacing:.1em;position:absolute;top:1.6rem;right:1.7rem}
+.svc-ic{width:54px;height:54px;border-radius:12px;background:var(--amber-soft);color:var(--amber);display:grid;place-items:center;margin-bottom:18px}
+.svc-ic svg{width:27px;height:27px;stroke:currentColor;stroke-width:1.7;fill:none}
+.svc h3{font-family:var(--fd);font-weight:700;font-size:1.2rem;text-transform:uppercase;letter-spacing:-.01em;color:var(--ink);margin-bottom:8px}
+.svc p{font-size:.9rem;color:var(--muted);line-height:1.6}
+/* feature band */
+.feature{background:var(--bg);position:relative;overflow:hidden}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.feat-img{aspect-ratio:4/3;border-radius:14px;box-shadow:var(--sh);position:relative}
+.feat-img .tagchip{position:absolute;bottom:16px;left:16px;z-index:2;font-family:var(--fm);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.92);color:var(--amber-deep);border:1px solid var(--line);padding:7px 12px;border-radius:8px}
+.feat-list{list-style:none;margin-top:1.8rem;display:flex;flex-direction:column;gap:14px}
+.feat-list li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2)}
+.feat-list .ck{width:24px;height:24px;border-radius:6px;background:var(--amber-soft);color:var(--amber);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+.feat-list .ck svg{width:14px;height:14px;stroke:currentColor;stroke-width:3;fill:none}
+.feat-list b{color:var(--ink);font-weight:600;display:block;font-size:.98rem}
+.feat-list span{font-size:.86rem;color:var(--muted)}
+/* process */
+.process{background:var(--bg-2)}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;margin-top:3.4rem}
+.step{position:relative}
+.step .n{font-family:var(--fd);font-weight:800;font-size:2.4rem;color:var(--amber);line-height:1;opacity:.9}
+.step .bar{height:2px;background:var(--line);margin:14px 0 16px;position:relative;overflow:hidden}
+.step .bar::after{content:"";position:absolute;left:0;top:0;height:100%;width:44%;background:var(--amber)}
+.step h4{font-family:var(--fd);font-weight:700;font-size:1.05rem;text-transform:uppercase;color:var(--ink);margin-bottom:7px}
+.step p{font-size:.85rem;color:var(--muted);line-height:1.55}
+/* about */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center}
+.about-img{aspect-ratio:1/1;border-radius:14px;box-shadow:var(--sh)}
+.about-text p{color:var(--ink-2);margin-bottom:1.1rem}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;margin-top:2rem}
+.ast{border-left:2px solid var(--amber);padding-left:14px}
+.ast .n{font-family:var(--fd);font-weight:800;font-size:1.9rem;color:var(--ink);line-height:1}
+.ast .l{font-family:var(--fm);font-size:.7rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:5px}
+/* brands */
+.brands{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.brands-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 2.6rem;padding:8px 0}
+.brands .bl{font-family:var(--fd);font-weight:700;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase;color:var(--faint);transition:color .2s}
+.brands .bl:hover{color:var(--ink)}
+.brands-label{text-align:center;font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:2rem}
+/* reviews */
+.reviews{background:var(--bg)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.4rem}
+.rev{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:2rem}
+.rev .stars{color:var(--amber);letter-spacing:2px;margin-bottom:14px}
+.rev p{color:var(--ink-2);line-height:1.65;margin-bottom:1.6rem}
+.rev .who{display:flex;align-items:center;gap:12px}
+.rev .av{width:42px;height:42px;border-radius:50%;background:var(--amber-soft);color:var(--amber);display:grid;place-items:center;font-family:var(--fd);font-weight:800;flex-shrink:0}
+.rev .who b{display:block;color:var(--ink);font-size:.92rem}
+.rev .who span{font-family:var(--fm);font-size:.66rem;color:var(--muted);letter-spacing:.03em}
+/* booking */
+.book{background:var(--bg-2);position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;top:-20%;left:-10%;width:50%;height:140%;background:radial-gradient(circle,rgba(245,178,26,.1),transparent 60%);pointer-events:none}
+.book-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:start;position:relative}
+.book-info .vrow{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.book-info .vrow:last-child{border-bottom:none}
+.book-info .vi{width:42px;height:42px;border-radius:10px;background:var(--amber-soft);display:grid;place-items:center;flex-shrink:0;color:var(--amber)}
+.book-info .vi svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.9;fill:none}
+.book-info .vrow b{font-family:var(--fd);font-weight:700;color:var(--ink);font-size:1rem;text-transform:uppercase;display:block;margin-bottom:2px;letter-spacing:.01em}
+.book-info .vrow span{font-size:.9rem;color:var(--ink-2);display:block}
+.breakdown{margin-top:1.6rem;background:rgba(229,64,46,.1);border:1px solid rgba(229,64,46,.3);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.breakdown .bd-ic{color:var(--red);flex-shrink:0}.breakdown .bd-ic svg{width:22px;height:22px;stroke:currentColor;stroke-width:2;fill:none}
+.breakdown b{color:var(--ink);font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:.9rem}
+.breakdown span{font-size:.82rem;color:var(--ink-2)}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:2.3rem;position:relative;overflow:hidden;box-shadow:var(--sh-m)}
+.form::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:repeating-linear-gradient(45deg,var(--amber) 0 14px,#14161A 14px 28px)}
+.form h3{font-family:var(--fd);font-weight:800;text-transform:uppercase;color:var(--ink);font-size:1.4rem;margin-bottom:.3rem}
+.form .fh{font-family:var(--fm);font-size:.68rem;color:var(--muted);letter-spacing:.04em;margin-bottom:1.4rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:1rem}
+.fg label{font-family:var(--fm);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select,.fg textarea{background:var(--bg);border:1px solid var(--line-2);border-radius:9px;color:var(--ink);font-family:var(--fb);font-size:.94rem;padding:12px 13px;outline:none;transition:.2s;width:100%;appearance:none}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--faint)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-soft)}
+.fg select option{background:#FFFFFF}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23F5B21A' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.fg textarea{resize:vertical;min-height:88px}
+.form .btn{width:100%;justify-content:center}
+.form-ok{display:none;position:absolute;inset:0;background:rgba(255,255,255,.98);border-radius:16px;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:2rem}
+.form-ok.on{display:flex;animation:fade .5s var(--eo)}
+.form-ok .ic{width:72px;height:72px;border-radius:50%;background:var(--amber);color:#14161A;display:grid;place-items:center;font-size:2rem;box-shadow:0 0 0 8px var(--amber-soft)}
+.form-ok h3{color:var(--ink)}.form-ok p{color:var(--muted)}
+/* footer */
+.footer{background:var(--bg-2);border-top:1px solid var(--line);color:var(--muted);padding:70px 0 0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--line)}
+.footer .brand{margin-bottom:14px}
+.foot-brand p{font-size:.9rem;color:var(--muted);max-width:280px;line-height:1.6}
+.foot-soc{display:flex;gap:9px;margin-top:16px}
+.foot-soc a{width:38px;height:38px;border:1px solid var(--line-2);border-radius:8px;display:grid;place-items:center;font-family:var(--fm);font-size:.7rem;color:var(--ink-2);transition:.2s}
+.foot-soc a:hover{border-color:var(--amber);color:var(--amber)}
+.foot-col h5{font-family:var(--fd);font-weight:700;text-transform:uppercase;font-size:.95rem;color:var(--ink);margin-bottom:14px;letter-spacing:.02em}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col a,.foot-col li{font-size:.87rem;color:var(--muted)}
+.foot-col a:hover{color:var(--amber)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.4rem 0;font-family:var(--fm);font-size:.7rem;color:var(--faint)}
+/* anim */
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s var(--eo),transform .7s var(--eo)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:5px}
+/* responsive */
+@media(max-width:1000px){
+  .feat-grid,.about-grid,.book-grid{grid-template-columns:1fr;gap:3rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .proc-grid{grid-template-columns:repeat(2,1fr);gap:2rem}
+  .rev-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2.4rem}
+}
+@media(max-width:680px){
+  .section{padding:80px 0}
+  .nav-links,.nav-phone{display:none}
+  .burger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(20,22,26,.99);border-top:1px solid var(--line);padding:1.8rem 30px;gap:1.5rem;box-shadow:var(--sh-m)}
+  .hero{min-height:auto;padding-bottom:60px}
+  .hero-bg::before{background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,255,255,.96))}
+  .svc-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr}
+  .about-stats{grid-template-columns:1fr 1fr}
+  .form-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-bot{flex-direction:column;text-align:center}
+}
+@media(max-width:430px){.wrap,.nav-in{padding:0 20px}.foot-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+</style></head><body><nav class="nav" id="nav"><div class="nav-in"><a href="#home" class="brand"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3l13 7.5v15L20 33 7 25.5v-15z" stroke="#F5B21A" stroke-width="2"/><path d="M16.5 16.5a4 4 0 105.5 5.3l4.2 4.2 1.8-1.8-4.2-4.2a4 4 0 00-5.3-5.5l2.2 2.2-.7 2.4-2.4.7z" fill="#F5B21A"/></svg><span class="bn">Torque<em>Auto</em></span></a>
+<ul class="nav-links" id="navlinks">
+<li><a href="#services">Services</a></li><li><a href="#why">Why Us</a></li>
+<li><a href="#process">How It Works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#book">Book</a></li></ul>
+<div class="nav-actions">
+<a href="tel:+61730000000" class="nav-phone"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z"/></svg>(07) 3000 0000</a>
+<a href="#book" class="btn btn-amber" style="padding:11px 20px">Book a service</a>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div></nav><header class="hero" id="home">
+<div class="hero-bg"><div class="ph "><img src="https://images.pexels.com/photos/8985455/pexels-photo-8985455.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1100&fit=crop&dpr=1" alt="Mechanic working on a car engine" loading="lazy"></div></div>
+<div class="hero-in">
+<span class="hero-tag">Brisbane mechanic · est. 1998</span>
+<h1>Honest repairs.<br><span class="a">Done right,</span> first time.</h1>
+<p class="lead">From logbook servicing to major repairs — fixed-price quotes, quality parts, and a nationwide warranty on every job. All makes and models.</p>
+<div class="hero-cta"><a href="#book" class="btn btn-amber btn-lg">Book a service <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a href="tel:+61730000000" class="btn btn-out btn-lg"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z"/></svg>(07) 3000 0000</a></div>
+<div class="hero-trust">
+<span class="htr"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Licensed &amp; insured</span>
+<span class="htr"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Nationwide warranty</span>
+<span class="htr"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.8 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>4.9★ from 600+ reviews</span>
+</div></div></header><div class="strip"><div class="strip-track"><span>Logbook servicing</span><span>Brakes &amp; tyres</span><span>Engine diagnostics</span><span>Air-con re-gas</span><span>Roadworthy certificates</span><span>All makes &amp; models</span><span>Fixed-price quotes</span><span>Logbook servicing</span><span>Brakes &amp; tyres</span><span>Engine diagnostics</span><span>Air-con re-gas</span><span>Roadworthy certificates</span><span>All makes &amp; models</span><span>Fixed-price quotes</span></div></div><section class="section services" id="services"><div class="wrap">
+<div class="center"><span class="eyebrow">What we do</span><h2 class="s-title">Full-service <span class="a">auto care</span></h2>
+<p class="s-lead">One workshop for everything your car needs — from a quick service to the jobs other shops send away.</p></div>
+<div class="svc-grid"><div class="svc rv"><span class="svc-num">01</span><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4l-6 6 1.9 1.9 6-6a4 4 0 005.4-5.4l-2.4 2.4-1.9-.5-.5-1.9z"/></svg></div><h3>Logbook & Servicing</h3><p>Manufacturer-scheduled servicing that keeps your new-car warranty intact.</p></div><div class="svc rv d1"><span class="svc-num">02</span><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div><h3>Brakes & Suspension</h3><p>Pads, rotors, shocks and struts — so you stop short and ride smooth.</p></div><div class="svc rv d2"><span class="svc-num">03</span><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg></div><h3>Tyres & Alignment</h3><p>Fitting, balancing and wheel alignment for even wear and a true steer.</p></div><div class="svc rv"><span class="svc-num">04</span><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="11" rx="2"/><path d="M7 8V5h6l2 3M8 13h2M14 13h2"/></svg></div><h3>Engine Diagnostics</h3><p>Check-engine light on? We plug in, read the codes and tell you straight.</p></div><div class="svc rv d1"><span class="svc-num">05</span><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M4 6l16 12M20 6L4 18M2 12h20"/></svg></div><h3>Air-Conditioning</h3><p>Re-gas, leak checks and repairs to get the cold air blowing again.</p></div><div class="svc rv d2"><span class="svc-num">06</span><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><h3>Roadworthy & Inspections</h3><p>Safety certificates and thorough pre-purchase inspections you can trust.</p></div></div></div></section><section class="section feature" id="why"><div class="wrap"><div class="feat-grid">
+<div class="rv"><div class="ph feat-img"><img src="https://images.pexels.com/photos/20872015/pexels-photo-20872015.jpeg?auto=compress&cs=tinysrgb&w=900&h=680&fit=crop&dpr=1" alt="Inside the Torque Auto workshop" loading="lazy"></div><div style="position:relative"></div></div>
+<div class="rv d1"><span class="eyebrow">Why Torque</span>
+<h2 class="s-title">No guesswork.<br>No <span class="a">surprises.</span></h2>
+<p class="s-lead" style="max-width:none">We earn trust the old-fashioned way — by telling you the truth, quoting up front, and fixing it properly the first time.</p>
+<ul class="feat-list"><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span><div><b>Master technicians</b><span>Qualified, licensed and always up to date with the latest makes.</span></div></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span><div><b>Genuine & quality parts</b><span>We fit parts that last — and stand behind every one of them.</span></div></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span><div><b>Latest diagnostic gear</b><span>Dealer-level scan tools to find the real problem, fast.</span></div></li><li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span><div><b>Nationwide warranty</b><span>Every job is covered, wherever the road takes you.</span></div></li></ul></div>
+</div></div></section><section class="section process" id="process"><div class="wrap">
+<div class="center"><span class="eyebrow">How it works</span><h2 class="s-title">From booking to <span class="a">back on the road</span></h2>
+<p class="s-lead">A clear, no-surprises process — you approve the price before we lift a spanner.</p></div>
+<div class="proc-grid"><div class="step rv d0"><div class="n">01</div><div class="bar"></div><h4>Book it in</h4><p>Online in 60 seconds, or just give us a call.</p></div><div class="step rv d1"><div class="n">02</div><div class="bar"></div><h4>Drop it off</h4><p>Leave it with us — or we'll pick it up locally.</p></div><div class="step rv d2"><div class="n">03</div><div class="bar"></div><h4>Inspect & quote</h4><p>We diagnose and send a fixed price. Nothing starts without your OK.</p></div><div class="step rv d3"><div class="n">04</div><div class="bar"></div><h4>We fix it right</h4><p>Quality parts, done properly, by qualified hands.</p></div><div class="step rv d3"><div class="n">05</div><div class="bar"></div><h4>Drive away</h4><p>Back on the road — warranty in hand, job done.</p></div></div></div></section><section class="section about" id="about"><div class="wrap"><div class="about-grid">
+<div class="rv"><span class="eyebrow">Our shop</span>
+<h2 class="s-title">Family-run,<br>since <span class="a">1998.</span></h2>
+<p>Torque Auto Co. started as a one-bay garage with a simple promise: treat every car like our own, and every customer like a neighbour. Two decades on, that hasn't changed.</p>
+<p>Our team of qualified technicians services everything from family hatchbacks to 4WDs and fleets — with the same honesty and care we built our name on.</p>
+<div class="about-stats">
+<div class="ast"><span class="n" data-to="25" data-suf="+">0</span><span class="l">Years in business</span></div>
+<div class="ast"><span class="n" data-to="40" data-suf="k+">0</span><span class="l">Cars serviced</span></div>
+<div class="ast"><span class="n" data-to="4.9">0</span><span class="l">Google rating</span></div>
+<div class="ast"><span class="n" data-to="6">0</span><span class="l">Master techs</span></div>
+</div></div>
+<div class="rv d1"><div class="ph about-img"><img src="https://images.pexels.com/photos/4439585/pexels-photo-4439585.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop&dpr=1" alt="Our mechanic at work" loading="lazy"></div></div>
+</div></div></section><section class="section brands" style="padding:54px 0"><div class="wrap">
+<p class="brands-label">We service all makes &amp; models</p><div class="brands-in"><span class="bl">Toyota</span><span class="bl">Mazda</span><span class="bl">Ford</span><span class="bl">Hyundai</span><span class="bl">Holden</span><span class="bl">Kia</span><span class="bl">Subaru</span><span class="bl">Volkswagen</span><span class="bl">Nissan</span><span class="bl">Mitsubishi</span><span class="bl">BMW</span><span class="bl">Mercedes</span></div></div></section><section class="section reviews" id="reviews"><div class="wrap">
+<div class="center"><span class="eyebrow">Reviews</span><h2 class="s-title">Trusted by <span class="a">Brisbane drivers</span></h2></div>
+<div class="rev-grid"><div class="rev rv"><div class="stars">★★★★★</div><p>“Honest, fast and fairly priced. They quoted me, stuck to it, and explained everything without the usual runaround. Found my new mechanic.”</p><div class="who"><div class="av">MD</div><div><b>Mark D.</b><span>Toyota HiLux</span></div></div></div><div class="rev rv"><div class="stars">★★★★★</div><p>“My check-engine light had three other shops stumped. Torque diagnosed it in an hour and fixed it properly. Genuinely impressed.”</p><div class="who"><div class="av">AR</div><div><b>Aisha R.</b><span>Mazda CX-5</span></div></div></div><div class="rev rv"><div class="stars">★★★★★</div><p>“Booked online, dropped it off before work, picked it up that afternoon serviced and washed. Couldn't be easier.”</p><div class="who"><div class="av">LC</div><div><b>Liam C.</b><span>VW Golf</span></div></div></div></div></div></section><section class="section book" id="book"><div class="wrap"><div class="book-grid">
+<div class="book-info rv"><span class="eyebrow">Book a service</span>
+<h2 class="s-title" style="margin-bottom:1.6rem">Get a <span class="a">fixed-price</span> quote</h2>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>The Workshop</b><span>22 Kingsford Smith Drive, Hamilton QLD 4007</span></div></div>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z"/></svg></span><div><b>Call us</b><span>(07) 3000 0000</span></div></div>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b>Email</b><span>service@torqueauto.com.au</span></div></div>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Open</b><span>Mon–Fri 7:30–5:30 · Sat 8–12 · Sun closed</span></div></div>
+<div class="breakdown"><span class="bd-ic"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg></span><div><b>Broken down?</b> <span>After-hours breakdown line: 0400 000 000</span></div></div>
+</div>
+<div class="rv d1"><form class="form" id="bookform" novalidate>
+<h3>Book your car in</h3><p class="fh">// We'll confirm your booking within the hour</p>
+<div class="form-row"><div class="fg"><label>Your name</label><input type="text" placeholder="Jane Smith" required></div>
+<div class="fg"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX" required></div></div>
+<div class="form-row"><div class="fg"><label>Car make &amp; model</label><input type="text" placeholder="Toyota Corolla"></div>
+<div class="fg"><label>Year</label><input type="text" placeholder="2018"></div></div>
+<div class="form-row"><div class="fg"><label>Service needed</label><select><option value="">Select…</option><option>Logbook / general service</option><option>Brakes &amp; suspension</option><option>Tyres &amp; alignment</option><option>Engine diagnostics</option><option>Air-conditioning</option><option>Roadworthy / inspection</option><option>Not sure — please advise</option></select></div>
+<div class="fg"><label>Preferred date</label><input type="text" placeholder="e.g. next Tuesday"></div></div>
+<div class="fg"><label>Anything else?</label><textarea placeholder="Noises, warning lights, what you've noticed…"></textarea></div>
+<button type="submit" class="btn btn-amber" id="sendbtn">Request my booking <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<div class="form-ok" id="formok"><div class="ic">✓</div><h3 class="s-title" style="font-size:1.5rem">Booking requested!</h3><p>Thanks — we'll call to confirm your time shortly.</p></div>
+</form></div>
+</div></div></section><footer class="footer"><div class="wrap"><div class="foot-grid">
+<div class="foot-brand"><a href="#home" class="brand"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3l13 7.5v15L20 33 7 25.5v-15z" stroke="#F5B21A" stroke-width="2"/><path d="M16.5 16.5a4 4 0 105.5 5.3l4.2 4.2 1.8-1.8-4.2-4.2a4 4 0 00-5.3-5.5l2.2 2.2-.7 2.4-2.4.7z" fill="#F5B21A"/></svg><span class="bn">Torque<em>Auto</em></span></a><p style="margin-top:14px">Honest, family-run auto care in Brisbane since 1998. Servicing, repairs and inspections for all makes and models.</p>
+<div class="foot-soc"><a href="#" aria-label="Facebook">fb</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Google">G</a></div></div>
+<div class="foot-col"><h5>Services</h5><ul><li><a href="#services">Logbook servicing</a></li><li><a href="#services">Brakes &amp; tyres</a></li><li><a href="#services">Diagnostics</a></li><li><a href="#services">Air-conditioning</a></li><li><a href="#services">Roadworthy</a></li></ul></div>
+<div class="foot-col"><h5>Workshop</h5><ul><li>22 Kingsford Smith Dr</li><li>Hamilton QLD 4007</li><li>Mon–Sat</li><li><a href="#book">Get directions</a></li></ul></div>
+<div class="foot-col"><h5>Book in</h5><ul><li><a href="#book">Book a service</a></li><li><a href="tel:+61730000000">(07) 3000 0000</a></li><li><a href="mailto:service@torqueauto.com.au">service@torqueauto.com.au</a></li><li>Breakdown: 0400 000 000</li></ul></div>
+</div><div class="foot-bot"><span>© 2026 Torque Auto Co. · Lic. No. 0000000</span><span>Fixed-price quotes · Nationwide warranty · All makes &amp; models</span></div>
+</div></footer><script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));var navas=[].slice.call(document.querySelectorAll('.nav-links a'));
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>40);var cur='';secs.forEach(function(s){if(scrollY>=s.offsetTop-130)cur=s.id;});navas.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});},{passive:true});
+  burger.addEventListener('click',function(){var o=burger.classList.toggle('open');links.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');document.body.style.overflow='';});});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+})();
+[].slice.call(document.querySelectorAll('.ph img')).forEach(function(img){img.addEventListener('error',function(){img.classList.add('imgfail');});});
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});[].slice.call(document.querySelectorAll('.rv')).forEach(function(e){io.observe(e);});})();
+(function(){var nums=[].slice.call(document.querySelectorAll('.n[data-to]'));if(!nums.length)return;var done=false;var io=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!done){done=true;nums.forEach(function(el){var to=parseFloat(el.dataset.to),suf=el.dataset.suf||'',dec=to%1!==0,st=performance.now(),dur=1400;function tk(now){var p=Math.min((now-st)/dur,1),e=1-Math.pow(1-p,3),v=e*to;el.textContent=(dec?v.toFixed(1):Math.round(v))+suf;if(p<1)requestAnimationFrame(tk);}requestAnimationFrame(tk);});}},{threshold:.4});io.observe(nums[0]);})();
+(function(){var f=document.getElementById('bookform'),ok=document.getElementById('formok'),b=document.getElementById('sendbtn');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var t=b.innerHTML;b.innerHTML='Sending…';b.disabled=true;setTimeout(function(){ok.classList.add('on');b.innerHTML=t;b.disabled=false;},1200);});})();
+console.log('%cTORQUE AUTO CO.','font:800 20px Archivo,sans-serif;color:#F5B21A');
+</script></body></html>

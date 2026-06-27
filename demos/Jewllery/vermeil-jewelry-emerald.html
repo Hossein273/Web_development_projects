@@ -1,0 +1,667 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vermeil — Fine Jewellery | 360° Viewer, Ring Builder, GIA Certified</title>
+<meta name="description" content="Vermeil is a fine jewellery house: explore pieces in 360° with macro zoom, build your own ring, preview engraving, view GIA certificates, and book a private gemologist consultation. Ethically sourced, insured, pay in 4.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#F8F5EE; --ivory-2:#EFEADF; --surface:#FFFFFF; --paper:#F8F5EE;
+  --emerald:#0E5E45; --emerald-2:#0A4A37; --emerald-3:#073528; --emerald-soft:#E2EFE9; --emerald-bright:#18876A;
+  --gold:#B88A3A; --gold-deep:#9A7430; --gold-soft:#F1E7CD; --gold-bright:#D2AF5C;
+  --ink:#16221C; --ink-2:#3E4A43; --muted:#7C867E; --faint:#B2BAB2;
+  --line:#E6E0D2; --line-2:#DAD2C1;
+  --fd:'Marcellus',serif; --fb:'Jost',sans-serif;
+  --nav-h:72px; --eo:cubic-bezier(.25,.46,.45,.94); --es:cubic-bezier(.34,1.56,.64,1);
+  --r:14px; --r-lg:22px;
+  --sh-s:0 4px 18px rgba(14,40,30,.07); --sh-m:0 18px 46px rgba(14,40,30,.13); --sh-l:0 34px 74px rgba(14,40,30,.2);
+}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink-2);font-family:var(--fb);font-weight:300;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--emerald);text-decoration:none;transition:color .2s}a:hover{color:var(--emerald-bright)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1220px;margin:0 auto;padding:0 32px}
+.section{padding:104px 0}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--emerald-soft),var(--gold-soft) 90%)}
+.ph::after{content:"\2726";position:absolute;inset:0;display:grid;place-items:center;font-size:2rem;color:rgba(184,138,58,.34)}
+.ph img{position:relative;z-index:1;transition:opacity .5s,transform .9s var(--eo)}
+.ph img.imgfail{opacity:0}
+.eyebrow{font-family:var(--fb);font-weight:500;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:11px}
+.eyebrow::before,.eyebrow.two::after{content:"";width:26px;height:1px;background:var(--gold)}
+.center .eyebrow{justify-content:center}
+.s-title{font-family:var(--fd);font-weight:400;font-size:clamp(2.3rem,4.8vw,3.5rem);line-height:1.14;color:var(--ink);margin:16px 0 0;letter-spacing:.01em}
+.s-title em{font-style:italic;color:var(--emerald);font-family:var(--fd)}
+.s-lead{color:var(--muted);font-size:1.04rem;max-width:560px;margin-top:16px;line-height:1.7}
+.center{text-align:center}.center .s-lead{margin-left:auto;margin-right:auto}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--fb);font-weight:500;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:16px 32px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s,border-color .2s,color .2s}
+.btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.8;fill:none}
+.btn-em{background:var(--emerald);color:#fff;border-color:var(--emerald)}
+.btn-em:hover{background:var(--emerald-2);border-color:var(--emerald-2);transform:translateY(-2px);box-shadow:var(--sh-m)}
+.btn-gold{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-deep);border-color:var(--gold-deep);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-line:hover{border-color:var(--emerald);color:var(--emerald);transform:translateY(-2px)}
+.btn-ghost-light{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(4px)}
+.btn-ghost-light:hover{background:#fff;color:var(--emerald);border-color:#fff;transform:translateY(-2px)}
+.btn-lg{padding:18px 38px;font-size:.78rem}
+.btn-sm{padding:11px 20px;font-size:.68rem}
+/* announce */
+.announce{background:var(--emerald);color:#fff;text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;padding:9px 16px}
+.announce b{color:var(--gold-bright);font-weight:500}
+.announce span{margin:0 14px;opacity:.85}
+/* nav */
+.nav{position:sticky;top:0;z-index:900;background:rgba(248,245,238,.88);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid transparent;transition:.3s}
+.nav.scrolled{border-bottom:1px solid var(--line);box-shadow:0 4px 22px rgba(14,40,30,.05)}
+.nav-in{max-width:1220px;margin:0 auto;padding:0 32px;height:var(--nav-h);display:flex;align-items:center;gap:2rem}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.brand svg{width:24px;height:24px;flex-shrink:0}
+.brand .bn{font-family:var(--fd);font-weight:400;font-size:1.7rem;letter-spacing:.2em;text-transform:uppercase;padding-left:.2em;line-height:1}
+.nav-links{display:flex;gap:1.9rem;list-style:none;margin:0 auto}
+.nav-links a{font-family:var(--fb);font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);position:relative;padding-bottom:4px}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--eo)}
+.nav-links a:hover{color:var(--emerald)}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:16px}
+.icon-btn{position:relative;background:none;border:none;cursor:pointer;color:var(--ink);display:grid;place-items:center;transition:color .2s}
+.icon-btn:hover{color:var(--emerald)}
+.icon-btn svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.5;fill:none}
+.cart-count{position:absolute;top:-7px;right:-9px;min-width:17px;height:17px;border-radius:9px;background:var(--gold);color:#fff;font-size:.6rem;font-weight:600;display:grid;place-items:center;padding:0 4px;transform:scale(0);transition:transform .25s var(--es)}
+.cart-count.show{transform:scale(1)}
+.burger{display:none;flex-direction:column;justify-content:space-between;width:25px;height:14px;background:none;border:none;cursor:pointer}
+.burger span{height:1.5px;background:var(--ink);transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+/* HERO SLIDER */
+.hero{position:relative;height:90vh;min-height:600px;max-height:860px;overflow:hidden;background:var(--emerald-3)}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.1s var(--eo),visibility 1.1s}
+.slide.on{opacity:1;visibility:visible}
+.slide .ph{position:absolute;inset:0}
+.slide .ph img{transform:scale(1.05);transition:transform 7s ease}
+.slide.on .ph img{transform:scale(1.14)}
+.slide-ov{position:absolute;inset:0;z-index:2;background:linear-gradient(100deg,rgba(7,53,40,.86) 0%,rgba(7,53,40,.6) 45%,rgba(7,53,40,.2) 75%,transparent 100%)}
+.slide-in{position:absolute;inset:0;z-index:3;display:flex;align-items:center}
+.slide-in .wrap{width:100%}
+.slide-c{max-width:560px;color:#fff}
+.slide-c .eyebrow{color:var(--gold-bright)}.slide-c .eyebrow::before{background:var(--gold-bright)}
+.slide-c h1{font-family:var(--fd);font-weight:400;font-size:clamp(2.6rem,5.6vw,4.6rem);line-height:1.06;color:#fff;margin:18px 0 0;letter-spacing:.01em;opacity:0;transform:translateY(24px);transition:opacity .9s var(--eo) .25s,transform .9s var(--eo) .25s}
+.slide-c h1 em{font-style:italic;color:var(--gold-bright)}
+.slide-c p{font-size:1.16rem;color:rgba(255,255,255,.85);margin:20px 0 32px;max-width:440px;font-weight:300;opacity:0;transform:translateY(24px);transition:opacity .9s var(--eo) .4s,transform .9s var(--eo) .4s}
+.slide-c .slide-cta{display:flex;flex-wrap:wrap;gap:13px;opacity:0;transform:translateY(24px);transition:opacity .9s var(--eo) .55s,transform .9s var(--eo) .55s}
+.slide.on .slide-c h1,.slide.on .slide-c p,.slide.on .slide-c .slide-cta{opacity:1;transform:none}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);color:#fff;display:grid;place-items:center;cursor:pointer;transition:.25s}
+.slider-arrow:hover{background:var(--gold);border-color:var(--gold)}
+.slider-arrow svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8;fill:none}
+.slider-arrow.prev{left:32px}.slider-arrow.next{right:32px}
+.slider-dots{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:10px}
+.dot{width:36px;height:3px;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:.3s;padding:0}
+.dot.on{background:var(--gold-bright);width:54px}
+/* trust strip */
+.trust{background:var(--surface);border-bottom:1px solid var(--line)}
+.trust-in{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;padding:30px 0}
+.trust-it{display:flex;align-items:center;gap:11px;justify-content:center;text-align:left}
+.trust-it svg{width:26px;height:26px;stroke:var(--emerald);stroke-width:1.4;fill:none;flex-shrink:0}
+.trust-it b{font-family:var(--fb);font-weight:600;font-size:.78rem;color:var(--ink);display:block;letter-spacing:.02em}
+.trust-it span{font-size:.7rem;color:var(--muted)}
+.trust-it+.trust-it{border-left:1px solid var(--line)}
+/* categories */
+.cats{background:var(--ivory)}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:3rem}
+.cat{position:relative;overflow:hidden;aspect-ratio:4/5;display:block}
+.cat .ph{position:absolute;inset:0}
+.cat::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,transparent 42%,rgba(7,53,40,.66))}
+.cat:hover .ph img{transform:scale(1.07)}
+.cat-label{position:absolute;z-index:3;left:0;right:0;bottom:22px;text-align:center;color:#fff}
+.cat-label b{font-family:var(--fd);font-weight:400;font-size:1.5rem;display:block;letter-spacing:.04em}
+.cat-label span{font-family:var(--fb);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin-top:5px;display:inline-block}
+/* viewer (360 + zoom) */
+.viewer{background:var(--surface)}
+.viewer-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center}
+.viewer-stage{position:relative;background:radial-gradient(circle at 50% 40%,var(--emerald-soft),var(--ivory-2));border:1px solid var(--line);aspect-ratio:1/1;overflow:hidden;cursor:grab;border-radius:var(--r)}
+.viewer-stage.grabbing{cursor:grabbing}
+.viewer-spin{position:absolute;inset:14%;will-change:transform}
+.viewer-spin .ph{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle,var(--gold-soft),var(--emerald-soft))}
+.viewer-spin img{border-radius:50%}
+.viewer-zoom{position:absolute;inset:0;z-index:4;opacity:0;background-repeat:no-repeat;background-size:230%;pointer-events:none;transition:opacity .25s}
+.viewer-stage:hover .viewer-zoom{opacity:1}
+.viewer-hint{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:5;font-family:var(--fb);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald);background:rgba(255,255,255,.85);padding:7px 14px;border-radius:999px;display:flex;align-items:center;gap:7px;pointer-events:none}
+.viewer-hint svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.8;fill:none}
+.viewer-tools{display:flex;gap:10px;margin-top:1.8rem;flex-wrap:wrap}
+.vtool{display:inline-flex;align-items:center;gap:8px;font-family:var(--fb);font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--ivory);border:1px solid var(--line-2);padding:11px 16px;cursor:pointer;transition:.2s}
+.vtool:hover{border-color:var(--emerald);color:var(--emerald)}
+.vtool svg{width:16px;height:16px;stroke:currentColor;stroke-width:1.6;fill:none}
+.vfeat{list-style:none;margin-top:1.6rem;display:flex;flex-direction:column;gap:13px}
+.vfeat li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2)}
+.vfeat .vi{width:34px;height:34px;border-radius:50%;background:var(--emerald-soft);color:var(--emerald);display:grid;place-items:center;flex-shrink:0}
+.vfeat .vi svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.7;fill:none}
+.vfeat b{color:var(--ink);font-weight:500;display:block;font-size:.96rem}
+.vfeat span{font-size:.84rem;color:var(--muted)}
+/* RING BUILDER */
+.builder{background:var(--emerald-soft)}
+.build-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:3rem;align-items:start;margin-top:3rem}
+.build-preview{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:2.4rem;text-align:center;position:sticky;top:90px}
+.ring-svg{width:100%;max-width:300px;margin:0 auto;display:block}
+.build-sum{margin-top:1.6rem;text-align:left}
+.build-sum .bs-name{font-family:var(--fd);font-size:1.5rem;color:var(--ink);text-align:center;margin-bottom:1rem}
+.bs-row{display:flex;justify-content:space-between;font-size:.84rem;padding:7px 0;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.bs-row span:first-child{color:var(--muted)}
+.bs-row b{color:var(--ink);font-weight:500}
+.build-price{margin-top:1.3rem;text-align:center}
+.build-price .bp-amt{font-family:var(--fd);font-size:2.6rem;color:var(--emerald);line-height:1}
+.build-price .bp-bnpl{font-size:.8rem;color:var(--muted);margin-top:6px}
+.build-price .bp-bnpl b{color:var(--gold-deep);font-weight:600}
+.build-preview .btn{width:100%;margin-top:1.3rem}
+.build-controls{display:flex;flex-direction:column;gap:2rem}
+.bgroup .bg-label{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--fb);font-weight:600;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:1rem}
+.bg-label .step{color:var(--gold-deep)}
+.bopts{display:flex;flex-wrap:wrap;gap:10px}
+.bopt{font-family:var(--fb);font-size:.8rem;font-weight:400;color:var(--ink-2);background:var(--surface);border:1.5px solid var(--line-2);padding:12px 18px;cursor:pointer;transition:.2s;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:84px}
+.bopt:hover{border-color:var(--gold)}
+.bopt.on{border-color:var(--emerald);background:var(--emerald);color:#fff}
+.bopt .shape{width:26px;height:26px;display:grid;place-items:center}
+.bopt .shape svg{width:26px;height:26px;fill:currentColor}
+.bopt .bo-name{font-size:.76rem}
+.metal-sw{width:30px;height:30px;border-radius:50%;border:2px solid rgba(0,0,0,.08)}
+.bopt.on .metal-sw{border-color:rgba(255,255,255,.6)}
+.carat-readout{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.carat-readout b{font-family:var(--fd);font-size:1.9rem;color:var(--ink);line-height:1}
+.carat-readout span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cslider{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:var(--line-2);border-radius:4px;outline:none;cursor:pointer}
+.cslider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--emerald);border:3px solid #fff;box-shadow:var(--sh-s);cursor:pointer}
+.cslider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--emerald);border:3px solid #fff;cursor:pointer}
+/* shop */
+.shop{background:var(--ivory)}
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;margin-top:3rem}
+.card{background:var(--surface);transition:transform .35s var(--eo),box-shadow .35s;display:flex;flex-direction:column;border:1px solid var(--line)}
+.card:hover{transform:translateY(-5px);box-shadow:var(--sh-m)}
+.card-img{aspect-ratio:1/1;position:relative;overflow:hidden;background:var(--emerald-soft)}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-fav{position:absolute;z-index:3;top:13px;right:13px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);border:none;display:grid;place-items:center;cursor:pointer;transition:.2s;color:var(--ink-2)}
+.card-fav:hover{color:var(--emerald)}
+.card-fav svg{width:16px;height:16px;stroke:currentColor;stroke-width:1.6;fill:none;transition:.2s}
+.card-fav.liked svg{fill:var(--emerald);stroke:var(--emerald)}
+.card-cert{position:absolute;z-index:3;top:13px;left:13px;font-family:var(--fb);font-size:.58rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--emerald);background:rgba(255,255,255,.92);padding:5px 10px;display:flex;align-items:center;gap:5px;cursor:pointer}
+.card-cert svg{width:11px;height:11px;stroke:currentColor;stroke-width:2;fill:none}
+.card-body{padding:1.4rem;text-align:center;display:flex;flex-direction:column;align-items:center;flex:1}
+.card-cat{font-family:var(--fb);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.card-name{font-family:var(--fd);font-weight:400;font-size:1.32rem;color:var(--ink);margin:7px 0 6px}
+.price{font-family:var(--fb);font-weight:500;font-size:1.05rem;color:var(--ink)}
+.bnpl{font-size:.72rem;color:var(--muted);margin-top:4px}
+.bnpl b{color:var(--gold-deep);font-weight:600}
+.card-add{margin-top:1.1rem;width:100%;font-family:var(--fb);font-weight:500;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--emerald);border:none;padding:13px;cursor:pointer;transition:.2s}
+.card-add:hover{background:var(--emerald-2)}
+/* tools (engraving + sizer) */
+.tools{background:var(--surface)}
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.tool-card{background:var(--ivory);border:1px solid var(--line);border-radius:var(--r);padding:2.4rem}
+.tool-card h3{font-family:var(--fd);font-size:1.6rem;color:var(--ink);margin-bottom:.3rem}
+.tool-card .th{font-size:.86rem;color:var(--muted);margin-bottom:1.6rem}
+.engrave-prev{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;display:grid;place-items:center;margin-bottom:1.4rem}
+.engrave-svg{width:100%;max-width:300px}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:1rem}
+.fg label{font-family:var(--fb);font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select{background:var(--surface);border:1px solid var(--line-2);color:var(--ink);font-family:var(--fb);font-size:.94rem;padding:13px 14px;outline:none;transition:.2s;width:100%;appearance:none}
+.fg input:focus,.fg select:focus{border-color:var(--emerald);box-shadow:0 0 0 3px var(--emerald-soft)}
+.font-chips{display:flex;gap:8px;flex-wrap:wrap}
+.font-chip{font-size:.8rem;padding:8px 16px;border:1px solid var(--line-2);background:var(--surface);cursor:pointer;transition:.2s;color:var(--ink-2)}
+.font-chip.on{border-color:var(--emerald);background:var(--emerald);color:#fff}
+.sizer-ring{width:var(--d,60px);height:var(--d,60px);border-radius:50%;border:2px dashed var(--emerald);margin:1rem auto;display:grid;place-items:center;transition:width .15s,height .15s;background:var(--emerald-soft)}
+.sizer-readout{text-align:center;margin:1rem 0}
+.sizer-readout .sz{font-family:var(--fd);font-size:2.4rem;color:var(--emerald);line-height:1}
+.sizer-readout .szsub{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.sizer-note{font-size:.74rem;color:var(--muted);text-align:center;margin-top:.6rem}
+/* authenticity */
+.auth{background:var(--emerald);color:#fff;position:relative;overflow:hidden}
+.auth::before{content:"";position:absolute;top:-30%;right:-10%;width:50%;height:160%;background:radial-gradient(circle,rgba(210,175,92,.18),transparent 62%);pointer-events:none}
+.auth .eyebrow{color:var(--gold-bright)}.auth .eyebrow::before,.auth .eyebrow.two::after{background:var(--gold-bright)}
+.auth .s-title{color:#fff}.auth .s-title em{color:var(--gold-bright)}.auth .s-lead{color:rgba(255,255,255,.7)}
+.auth-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;margin-top:3rem;position:relative}
+.acard{text-align:center;padding:1.4rem}
+.acard .ai{width:62px;height:62px;border-radius:50%;border:1px solid var(--gold-bright);display:grid;place-items:center;margin:0 auto 16px;color:var(--gold-bright)}
+.acard .ai svg{width:28px;height:28px;stroke:currentColor;stroke-width:1.4;fill:none}
+.acard h4{font-family:var(--fd);font-size:1.3rem;color:#fff;margin-bottom:6px}
+.acard p{font-size:.85rem;color:rgba(255,255,255,.68);line-height:1.55}
+.acard .cert-link{margin-top:10px;font-family:var(--fb);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);background:none;border:none;cursor:pointer;border-bottom:1px solid var(--gold-bright);padding-bottom:2px}
+/* video showcase */
+.video{background:var(--ivory)}
+.video-stage{position:relative;aspect-ratio:21/9;overflow:hidden;border-radius:var(--r);box-shadow:var(--sh-m)}
+.video-stage::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,53,40,.5),rgba(7,53,40,.1));z-index:2}
+.video-play{position:absolute;inset:0;z-index:3;display:grid;place-items:center;cursor:pointer}
+.video-play .pp{width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;transition:.25s;box-shadow:var(--sh-m)}
+.video-play:hover .pp{transform:scale(1.08);background:#fff}
+.video-play .pp svg{width:28px;height:28px;fill:var(--emerald);margin-left:4px}
+.video-cap{position:absolute;bottom:24px;left:28px;z-index:3;color:#fff}
+.video-cap b{font-family:var(--fd);font-size:1.4rem;display:block}
+.video-cap span{font-size:.8rem;color:rgba(255,255,255,.8);letter-spacing:.04em}
+/* consultation */
+.consult{background:var(--ivory-2)}
+.consult-in{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:var(--sh-m)}
+.consult-img{position:relative;min-height:420px}
+.consult-text{padding:3.4rem}
+.consult-text h2{font-family:var(--fd);font-size:clamp(2rem,3.6vw,2.8rem);color:var(--ink);line-height:1.1;margin:14px 0 14px}
+.consult-text h2 em{font-style:italic;color:var(--emerald)}
+.consult-text p{color:var(--muted);margin-bottom:1.6rem;max-width:400px}
+.consult-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:1.8rem}
+.consult-list li{display:flex;align-items:center;gap:11px;font-size:.92rem;color:var(--ink-2)}
+.consult-list .ck{width:22px;height:22px;border-radius:50%;background:var(--emerald-soft);color:var(--emerald);display:grid;place-items:center;flex-shrink:0}
+.consult-list .ck svg{width:12px;height:12px;stroke:currentColor;stroke-width:3;fill:none}
+/* reviews */
+.reviews{background:var(--surface)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3rem}
+.rev{background:var(--ivory);padding:2.2rem;border:1px solid var(--line);text-align:center}
+.rev .stars{color:var(--gold);letter-spacing:3px;font-size:.82rem;margin-bottom:1rem}
+.rev p{font-family:var(--fd);font-size:1.16rem;font-style:italic;color:var(--ink);line-height:1.5;margin-bottom:1.3rem}
+.rev .who b{font-family:var(--fb);font-weight:600;color:var(--ink);font-size:.84rem;display:block}
+.rev .who span{font-size:.74rem;color:var(--muted)}
+/* footer */
+.footer{background:var(--emerald-3);color:rgba(255,255,255,.6);padding:72px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer .brand{color:#fff;margin-bottom:14px}
+.foot-brand p{font-size:.88rem;color:rgba(255,255,255,.5);max-width:280px;line-height:1.7}
+.foot-soc{display:flex;gap:9px;margin-top:18px}
+.foot-soc a{width:38px;height:38px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center;font-size:.7rem;color:rgba(255,255,255,.7);transition:.2s}
+.foot-soc a:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+.foot-col h5{font-family:var(--fb);font-weight:600;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:15px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.foot-col a,.foot-col li{font-size:.86rem;color:rgba(255,255,255,.55)}
+.foot-col a:hover{color:var(--gold-bright)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.5rem 0;font-size:.74rem;color:rgba(255,255,255,.4)}
+/* toast */
+.toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,170%);background:var(--emerald);color:#fff;padding:15px 26px;font-size:.76rem;letter-spacing:.06em;z-index:3000;box-shadow:var(--sh-l);transition:transform .4s var(--es);display:flex;align-items:center;gap:11px}
+.toast.show{transform:translate(-50%,0)}
+.toast .td{color:var(--gold-bright)}
+/* modal */
+.modal{position:fixed;inset:0;z-index:4000;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.on{display:flex}
+.modal-bg{position:absolute;inset:0;background:rgba(7,53,40,.55);backdrop-filter:blur(4px)}
+.modal-card{position:relative;background:var(--surface);border-radius:var(--r);max-width:440px;width:100%;padding:2.6rem;box-shadow:var(--sh-l);animation:pop .4s var(--es);max-height:90vh;overflow:auto}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line-2);background:none;cursor:pointer;color:var(--ink-2);display:grid;place-items:center}
+.modal-close svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
+.cert-head{text-align:center;border-bottom:2px solid var(--emerald);padding-bottom:1.2rem;margin-bottom:1.4rem}
+.cert-head .cl{font-family:var(--fb);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.cert-head h3{font-family:var(--fd);font-size:1.7rem;color:var(--ink);margin-top:4px}
+.cert-head .cn{font-size:.74rem;color:var(--muted);margin-top:4px}
+.cert-rows{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.cert-rows>div{background:var(--surface);padding:14px}
+.cert-rows .ck2{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cert-rows b{font-family:var(--fd);font-size:1.2rem;color:var(--ink);display:block;margin-top:2px}
+.cert-foot{text-align:center;font-size:.72rem;color:var(--muted);margin-top:1.4rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.cert-foot svg{width:15px;height:15px;stroke:var(--emerald);stroke-width:1.8;fill:none}
+.modal-card h3.mtitle{font-family:var(--fd);font-size:1.6rem;color:var(--ink);margin-bottom:.3rem}
+.modal-card .msub{font-size:.86rem;color:var(--muted);margin-bottom:1.4rem}
+.modal-card .btn{width:100%;margin-top:.4rem}
+.modal-ok{text-align:center;padding:1rem 0}
+.modal-ok .ic{width:64px;height:64px;border-radius:50%;background:var(--emerald-soft);color:var(--emerald);display:grid;place-items:center;font-size:1.7rem;margin:0 auto 1rem}
+/* concierge chat */
+.chat-fab{position:fixed;bottom:26px;right:26px;z-index:3500;width:60px;height:60px;border-radius:50%;background:var(--emerald);color:#fff;border:none;cursor:pointer;display:grid;place-items:center;box-shadow:var(--sh-m);transition:.25s}
+.chat-fab:hover{background:var(--emerald-2);transform:scale(1.05)}
+.chat-fab svg{width:26px;height:26px;stroke:#fff;stroke-width:1.7;fill:none}
+.chat-fab .cdot{position:absolute;top:2px;right:2px;width:13px;height:13px;border-radius:50%;background:var(--gold-bright);border:2px solid var(--emerald)}
+.chat-panel{position:fixed;bottom:98px;right:26px;z-index:3500;width:340px;max-width:calc(100vw - 40px);background:var(--surface);border-radius:var(--r);box-shadow:var(--sh-l);overflow:hidden;transform:translateY(20px) scale(.96);opacity:0;visibility:hidden;transition:.3s var(--es)}
+.chat-panel.on{transform:none;opacity:1;visibility:visible}
+.chat-head{background:var(--emerald);color:#fff;padding:18px 20px;display:flex;align-items:center;gap:11px}
+.chat-head .ch-av{width:38px;height:38px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-family:var(--fd);font-size:1rem;color:#fff}
+.chat-head b{font-family:var(--fd);font-size:1.05rem;display:block;line-height:1.2}
+.chat-head span{font-size:.7rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:5px}
+.chat-head span::before{content:"";width:7px;height:7px;border-radius:50%;background:#5BD89B}
+.chat-body{height:300px;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:11px;background:var(--ivory)}
+.msg{max-width:80%;padding:11px 14px;border-radius:14px;font-size:.86rem;line-height:1.45}
+.msg.bot{background:var(--surface);border:1px solid var(--line);color:var(--ink-2);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.user{background:var(--emerald);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 12px;background:var(--ivory)}
+.chat-quick button{font-family:var(--fb);font-size:.7rem;color:var(--emerald);background:var(--emerald-soft);border:none;padding:7px 12px;border-radius:999px;cursor:pointer;transition:.2s}
+.chat-quick button:hover{background:var(--emerald);color:#fff}
+.chat-input{display:flex;border-top:1px solid var(--line)}
+.chat-input input{flex:1;border:none;padding:14px;font-family:var(--fb);font-size:.86rem;outline:none;background:var(--surface)}
+.chat-input button{background:var(--emerald);border:none;color:#fff;padding:0 18px;cursor:pointer}
+.chat-input button svg{width:18px;height:18px;stroke:#fff;stroke-width:2;fill:none}
+/* anim */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s var(--eo),transform .8s var(--eo)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* responsive */
+@media(max-width:980px){
+  .viewer-grid,.build-grid,.consult-in{grid-template-columns:1fr;gap:2.6rem}
+  .build-preview{position:static}
+  .consult-img{min-height:280px}
+  .trust-in{grid-template-columns:repeat(2,1fr);gap:1.6rem}
+  .trust-it+.trust-it{border-left:none}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .shop-grid{grid-template-columns:repeat(2,1fr)}
+  .tools-grid{grid-template-columns:1fr}
+  .auth-grid{grid-template-columns:repeat(2,1fr);gap:2rem}
+  .rev-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2.4rem}
+}
+@media(max-width:640px){
+  .section{padding:72px 0}
+  .nav-links{display:none}.burger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:calc(var(--nav-h) + 38px);left:0;right:0;background:rgba(248,245,238,.99);border-top:1px solid var(--line);padding:1.8rem 32px;gap:1.4rem;box-shadow:var(--sh-m)}
+  .hero{height:auto;max-height:none;min-height:0}
+  .slide{position:relative;opacity:1;visibility:visible;height:78vh}
+  .slide:not(.on){display:none}
+  .slider-arrow{display:none}
+  .cat-grid,.shop-grid{grid-template-columns:1fr 1fr}
+  .build-controls .bopts{gap:8px}
+  .auth-grid{grid-template-columns:1fr;gap:1.6rem}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .video-cap b{font-size:1.1rem}.foot-bot{flex-direction:column;text-align:center}
+}
+@media(max-width:430px){.wrap,.nav-in{padding:0 20px}.cat-grid,.shop-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}.chat-panel{right:12px;left:12px;width:auto}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}.slide{transition:none}}
+</style></head><body><div class="announce">Complimentary insured shipping<span>·</span>Pay in 4 interest-free<span>·</span><b>Lifetime warranty on every piece</b></div><nav class="nav" id="nav"><div class="nav-in"><a href="#home" class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="#0E5E45" stroke-width="1.1"><path d="M5 9h14l-7 11z"/><path d="M5 9l2.5-4h9L19 9M9 5l3 4 3-4"/></svg><span class="bn">Vermeil</span></a>
+<ul class="nav-links" id="navlinks">
+<li><a href="#shop">Shop</a></li><li><a href="#builder">Ring Builder</a></li>
+<li><a href="#viewer">Collections</a></li><li><a href="#auth">About</a></li><li><a href="#consult">Contact</a></li></ul>
+<div class="nav-actions">
+<button class="icon-btn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+<button class="icon-btn" aria-label="Bag"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7zM9 8a3 3 0 016 0"/></svg><span class="cart-count" id="cartcount">0</span></button>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></div></nav><header class="hero" id="home"><div class="slide on"><div class="ph "><img src="https://images.pexels.com/photos/9509032/pexels-photo-9509032.jpeg?auto=compress&cs=tinysrgb&w=1700&h=1000&fit=crop&dpr=1" alt="Brilliance, <em>redefined.</em>" loading="lazy"></div><div class="slide-ov"></div>
+    <div class="slide-in"><div class="wrap"><div class="slide-c">
+    <span class="eyebrow">The 2026 Collection</span><h1>Brilliance, <em>redefined.</em></h1><p>Handcrafted fine jewellery in recycled gold and ethically sourced diamonds — made to be treasured for a lifetime.</p>
+    <div class="slide-cta"><a href="#shop" class="btn btn-gold btn-lg">Shop the collection</a><a href="#consult" class="btn btn-ghost-light btn-lg">Book a viewing</a></div>
+    </div></div></div></div><div class="slide"><div class="ph "><img src="https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=1700&h=1000&fit=crop&dpr=1" alt="Build your <em>forever</em> ring." loading="lazy"></div><div class="slide-ov"></div>
+    <div class="slide-in"><div class="wrap"><div class="slide-c">
+    <span class="eyebrow">Design your own</span><h1>Build your <em>forever</em> ring.</h1><p>Choose your diamond, setting and metal in our interactive ring builder — and watch it come to life.</p>
+    <div class="slide-cta"><a href="#builder" class="btn btn-gold btn-lg">Open the ring builder</a><a href="#builder" class="btn btn-ghost-light btn-lg">Explore settings</a></div>
+    </div></div></div></div><div class="slide"><div class="ph "><img src="https://images.pexels.com/photos/6262842/pexels-photo-6262842.jpeg?auto=compress&cs=tinysrgb&w=1700&h=1000&fit=crop&dpr=1" alt="Ethically sourced,<br><em>endlessly loved.</em>" loading="lazy"></div><div class="slide-ov"></div>
+    <div class="slide-in"><div class="wrap"><div class="slide-c">
+    <span class="eyebrow">Our promise</span><h1>Ethically sourced,<br><em>endlessly loved.</em></h1><p>Conflict-free diamonds, 100% recycled gold, GIA-certified and insured at every step.</p>
+    <div class="slide-cta"><a href="#auth" class="btn btn-gold btn-lg">Our promise</a><a href="#consult" class="btn btn-ghost-light btn-lg">Talk to a gemologist</a></div>
+    </div></div></div></div>
+<button class="slider-arrow prev" id="sprev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+<button class="slider-arrow next" id="snext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+<div class="slider-dots"><button class="dot on" aria-label="Slide 1"></button><button class="dot" aria-label="Slide 2"></button><button class="dot" aria-label="Slide 3"></button></div></header><section class="trust"><div class="wrap"><div class="trust-in"><div class="trust-it"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>GIA Certified</b><span>Independently graded</span></div></div><div class="trust-it"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><div><b>Conflict-Free</b><span>Ethically sourced</span></div></div><div class="trust-it"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7zM6.5 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 20a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg><div><b>Insured Shipping</b><span>Signature on delivery</span></div></div><div class="trust-it"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Lifetime Warranty</b><span>Care & resizing</span></div></div><div class="trust-it"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><div><b>Pay in 4</b><span>Interest-free</span></div></div></div></div></section><section class="section cats" id="collections"><div class="wrap">
+<div class="center"><span class="eyebrow two">Shop by category</span><h2 class="s-title">Find your <em>forever</em> piece</h2></div>
+<div class="cat-grid"><a class="cat rv d0" href="#shop"><div class="ph "><img src="https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=520&h=650&fit=crop&dpr=1" alt="Rings" loading="lazy"></div><div class="cat-label"><b>Rings</b><br><span>Shop rings</span></div></a><a class="cat rv d1" href="#shop"><div class="ph "><img src="https://images.pexels.com/photos/12026052/pexels-photo-12026052.jpeg?auto=compress&cs=tinysrgb&w=520&h=650&fit=crop&dpr=1" alt="Necklaces" loading="lazy"></div><div class="cat-label"><b>Necklaces</b><br><span>Shop necklaces</span></div></a><a class="cat rv d2" href="#shop"><div class="ph "><img src="https://images.pexels.com/photos/12144990/pexels-photo-12144990.jpeg?auto=compress&cs=tinysrgb&w=520&h=650&fit=crop&dpr=1" alt="Earrings" loading="lazy"></div><div class="cat-label"><b>Earrings</b><br><span>Shop earrings</span></div></a><a class="cat rv d3" href="#shop"><div class="ph "><img src="https://images.pexels.com/photos/3641059/pexels-photo-3641059.jpeg?auto=compress&cs=tinysrgb&w=520&h=650&fit=crop&dpr=1" alt="Bracelets" loading="lazy"></div><div class="cat-label"><b>Bracelets</b><br><span>Shop bracelets</span></div></a></div></div></section><section class="section viewer" id="viewer"><div class="wrap"><div class="viewer-grid">
+<div class="rv">
+<div class="viewer-stage" id="vstage">
+  <div class="viewer-spin" id="vspin"><div class="ph "><img src="https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=640&h=640&fit=crop&dpr=1" alt="Sapphire & diamond ring" loading="lazy"></div></div>
+  <div class="viewer-zoom" id="vzoom" data-img="https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=1400&h=1400&fit=crop&dpr=1"></div>
+  <div class="viewer-hint"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-3-6.7M21 4v4h-4"/></svg> Drag to rotate · 360°</div>
+</div>
+<div class="viewer-tools">
+  <button class="vtool" id="ar-btn" data-modal="armodal"><svg viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 012-2h3M21 8V5a2 2 0 00-2-2h-3M3 16v3a2 2 0 002 2h3M21 16v3a2 2 0 01-2 2h-3"/><circle cx="12" cy="12" r="3"/></svg> Try it on (AR)</button>
+  <button class="vtool" data-modal="vidmodal"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3z"/></svg> Watch 4K video</button>
+  <button class="vtool" data-modal="certmodal"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> GIA certificate</button>
+</div></div>
+<div class="rv d1"><span class="eyebrow two">Immersive viewing</span>
+<h2 class="s-title">Inspect every <em>facet</em></h2>
+<p class="s-lead">Can't visit in person? Explore each piece exactly as you would in our showroom — spin it a full 360°, zoom into the clarity, watch it move, or try it on with AR.</p>
+<ul class="vfeat"><li><span class="vi"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-3-6.7M21 4v4h-4"/></svg></span><div><b>360° rotation</b><span>Drag to inspect every angle &amp; facet.</span></div></li><li><span class="vi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span><div><b>Macro zoom</b><span>Hover to magnify clarity &amp; hallmarks.</span></div></li><li><span class="vi"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></span><div><b>4K video</b><span>Watch it move &amp; catch the light.</span></div></li><li><span class="vi"><svg viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 012-2h3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M8 21H5a2 2 0 01-2-2v-3"/><circle cx="12" cy="12" r="3"/></svg></span><div><b>AR try-on</b><span>See it on you with your camera.</span></div></li></ul></div>
+</div></div></section><section class="section builder" id="builder"><div class="wrap">
+<div class="center"><span class="eyebrow two">Create your own</span><h2 class="s-title">The <em>ring builder</em></h2>
+<p class="s-lead">Design a one-of-a-kind ring in four simple steps. Your price updates live — including interest-free payments.</p></div>
+<div class="build-grid">
+<div class="build-preview"><svg class="ring-svg" viewBox="0 0 200 200" aria-label="Ring preview">
+<defs><radialGradient id="gemgrad" cx="40%" cy="35%" r="75%"><stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#E8F1F7"/><stop offset="100%" stop-color="#BFD6E6"/></radialGradient></defs>
+<ellipse class="ring-band" cx="100" cy="128" rx="50" ry="56" fill="none" stroke="#D4AF37" stroke-width="11"/>
+<ellipse class="ring-band" cx="100" cy="128" rx="50" ry="56" fill="none" stroke="#000" stroke-opacity="0.06" stroke-width="13"/>
+<g id="gemLayer"></g></svg>
+<div class="build-sum"><div class="bs-name" id="bsName">Round Solitaire</div>
+<div class="bs-row"><span>Diamond shape</span><b id="bsShape">Round</b></div>
+<div class="bs-row"><span>Setting</span><b id="bsSetting">Solitaire</b></div>
+<div class="bs-row"><span>Metal</span><b id="bsMetal">18k Yellow Gold</b></div>
+<div class="bs-row"><span>Carat</span><b id="bsCarat">1.00 ct</b></div></div>
+<div class="build-price"><div class="bp-amt" id="bpAmt">$0</div><div class="bp-bnpl" id="bpBnpl"></div></div>
+<button class="btn btn-em" id="buildadd">Add to bag</button></div>
+<div class="build-controls">
+<div class="bgroup"><div class="bg-label"><span>Diamond shape</span><span class="step">Step 1</span></div><div class="bopts"><button class="bopt on" data-shape="Round"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><circle cx="13" cy="13" r="9"/></svg></span><span class="bo-name">Round</span></button><button class="bopt" data-shape="Oval"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><ellipse cx="13" cy="13" rx="7" ry="10"/></svg></span><span class="bo-name">Oval</span></button><button class="bopt" data-shape="Princess"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><rect x="5" y="5" width="16" height="16"/></svg></span><span class="bo-name">Princess</span></button><button class="bopt" data-shape="Emerald"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><rect x="6" y="4" width="14" height="18" rx="2"/></svg></span><span class="bo-name">Emerald</span></button><button class="bopt" data-shape="Pear"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><path d="M13 3c5 6 6 9 6 12a6 6 0 01-12 0c0-3 1-6 6-12z"/></svg></span><span class="bo-name">Pear</span></button><button class="bopt" data-shape="Cushion"><span class="shape"><svg viewBox="0 0 26 26" fill="currentColor"><rect x="5" y="5" width="16" height="16" rx="6"/></svg></span><span class="bo-name">Cushion</span></button></div></div>
+<div class="bgroup"><div class="bg-label"><span>Setting</span><span class="step">Step 2</span></div><div class="bopts"><button class="bopt on" data-setting="Solitaire"><span class="bo-name">Solitaire</span></button><button class="bopt" data-setting="Halo"><span class="bo-name">Halo</span></button><button class="bopt" data-setting="Pavé"><span class="bo-name">Pavé</span></button><button class="bopt" data-setting="Three-stone"><span class="bo-name">Three-stone</span></button></div></div>
+<div class="bgroup"><div class="bg-label"><span>Metal band</span><span class="step">Step 3</span></div><div class="bopts"><button class="bopt on" data-metal="Yellow Gold"><span class="metal-sw" style="background:#D4AF37"></span><span class="bo-name">Yellow Gold</span></button><button class="bopt" data-metal="White Gold"><span class="metal-sw" style="background:#DADCE0"></span><span class="bo-name">White Gold</span></button><button class="bopt" data-metal="Rose Gold"><span class="metal-sw" style="background:#E2A99A"></span><span class="bo-name">Rose Gold</span></button><button class="bopt" data-metal="Platinum"><span class="metal-sw" style="background:#CDD1D6"></span><span class="bo-name">Platinum</span></button></div></div>
+<div class="bgroup"><div class="bg-label"><span>Carat weight</span><span class="step">Step 4</span></div>
+<div class="carat-readout"><b id="caratval">1.00</b><span>carat</span></div>
+<input type="range" min="0.5" max="3" step="0.1" value="1" class="cslider" id="carat"></div>
+</div></div></div></section><section class="section shop" id="shop"><div class="wrap">
+<div class="center"><span class="eyebrow two">The collection</span><h2 class="s-title">Pieces to <em>treasure</em></h2></div>
+<div class="shop-grid"><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/2735981/pexels-photo-2735981.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Étoile Solitaire" loading="lazy"></div><button class="card-cert" data-modal="certmodal"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> GIA certified</button><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Ring</span><h3 class="card-name">Étoile Solitaire</h3><span class="price">$2,450</span><div class="bnpl">or 4× <b>$612</b> interest-free</div>
+      <button class="card-add" data-name="Étoile Solitaire">Add to bag</button></div></article><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/14058109/pexels-photo-14058109.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Bleu Halo Ring" loading="lazy"></div><button class="card-cert" data-modal="certmodal"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> GIA certified</button><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Ring</span><h3 class="card-name">Bleu Halo Ring</h3><span class="price">$3,200</span><div class="bnpl">or 4× <b>$800</b> interest-free</div>
+      <button class="card-add" data-name="Bleu Halo Ring">Add to bag</button></div></article><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/12026052/pexels-photo-12026052.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Pavé Rivière Necklace" loading="lazy"></div><button class="card-cert" data-modal="certmodal"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> IGI certified</button><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Necklace</span><h3 class="card-name">Pavé Rivière Necklace</h3><span class="price">$4,800</span><div class="bnpl">or 4× <b>$1,200</b> interest-free</div>
+      <button class="card-add" data-name="Pavé Rivière Necklace">Add to bag</button></div></article><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/12144990/pexels-photo-12144990.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Aurora Gold Hoops" loading="lazy"></div><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Earrings</span><h3 class="card-name">Aurora Gold Hoops</h3><span class="price">$690</span><div class="bnpl">or 4× <b>$172</b> interest-free</div>
+      <button class="card-add" data-name="Aurora Gold Hoops">Add to bag</button></div></article><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/3641059/pexels-photo-3641059.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Rose Gold Cuff" loading="lazy"></div><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Bracelet</span><h3 class="card-name">Rose Gold Cuff</h3><span class="price">$1,150</span><div class="bnpl">or 4× <b>$288</b> interest-free</div>
+      <button class="card-add" data-name="Rose Gold Cuff">Add to bag</button></div></article><article class="card rv">
+      <div class="card-img"><div class="ph "><img src="https://images.pexels.com/photos/7093768/pexels-photo-7093768.jpeg?auto=compress&cs=tinysrgb&w=520&h=520&fit=crop&dpr=1" alt="Solstice Pendant" loading="lazy"></div><button class="card-cert" data-modal="certmodal"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> IGI certified</button><button class="card-fav" aria-label="Save"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-8A5 5 0 0112 6a5 5 0 019.5 7c-2.5 3.5-9.5 8-9.5 8z"/></svg></button></div>
+      <div class="card-body"><span class="card-cat">Necklace</span><h3 class="card-name">Solstice Pendant</h3><span class="price">$890</span><div class="bnpl">or 4× <b>$222</b> interest-free</div>
+      <button class="card-add" data-name="Solstice Pendant">Add to bag</button></div></article></div></div></section><section class="section tools" id="tools"><div class="wrap">
+<div class="center"><span class="eyebrow two">Made for you</span><h2 class="s-title">Perfect fit, <em>personal touch</em></h2></div>
+<div class="tools-grid"><div class="tool-card rv">
+<h3>Engraving preview</h3><p class="th">See your message engraved inside the band, instantly.</p>
+<div class="engrave-prev"><svg viewBox="0 0 320 120" class="engrave-svg"><defs><linearGradient id="bandgrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#E7CF8C"/><stop offset="50%" stop-color="#C2A04C"/><stop offset="100%" stop-color="#9A7430"/></linearGradient></defs>
+<rect x="18" y="42" width="284" height="36" rx="18" fill="url(#bandgrad)" stroke="#9A7430"/>
+<rect x="18" y="42" width="284" height="36" rx="18" fill="none" stroke="#fff" stroke-opacity="0.25"/>
+<text id="engout" x="160" y="66" text-anchor="middle" font-family="'Marcellus',serif" font-style="italic" font-size="19" fill="#5C4A22">Forever</text></svg></div>
+<div class="fg"><label>Your engraving (max 22 characters)</label><input type="text" id="engtext" maxlength="22" placeholder="e.g. Forever, 14.02.26"></div>
+<div class="fg"><label>Style</label><div class="font-chips"><button class="font-chip on" data-font="Script">Script</button><button class="font-chip" data-font="Serif">Serif</button><button class="font-chip" data-font="Sans">Sans</button></div></div>
+</div><div class="tool-card rv d1">
+<h3>Ring sizer</h3><p class="th">Slide to your finger's inside diameter — or place a ring you own on the circle.</p>
+<div id="sizerring" class="sizer-ring" style="--d:60px"></div>
+<div class="sizer-readout"><div class="sz"><span id="szau">N</span> <span style="color:var(--muted);font-size:1.2rem">·</span> US <span id="szus">6.0</span></div>
+<div class="szsub"><span id="szmm">16.5 mm</span> inside diameter</div></div>
+<div class="fg"><label>Inside diameter</label><input type="range" min="14" max="22" step="0.1" value="16.5" class="cslider" id="sizer"></div>
+<p class="sizer-note">Tip: measure a ring that already fits, edge to edge. We'll post you a free sizer too — and resizing is always complimentary.</p>
+</div></div></div></section><section class="section auth" id="auth"><div class="wrap">
+<div class="center"><span class="eyebrow two">Trust &amp; authenticity</span><h2 class="s-title">Buy with <em>complete confidence</em></h2>
+<p class="s-lead">A high-ticket purchase deserves total peace of mind. Here's our promise on every piece.</p></div>
+<div class="auth-grid"><div class="acard rv"><div class="ai"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>GIA certified</h4><p>Every diamond is independently graded. View the full 4Cs report on each piece.</p><button class="cert-link" data-modal="certmodal">View a sample certificate</button></div><div class="acard rv"><div class="ai"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/></svg></div><h4>Insured shipping</h4><p>Discreet, fully insured packaging with signature-on-delivery worldwide.</p></div><div class="acard rv"><div class="ai"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div><h4>Ethically sourced</h4><p>Conflict-free diamonds and 100% recycled gold, certified at origin.</p></div><div class="acard rv"><div class="ai"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h4>Lifetime care</h4><p>Complimentary cleaning, resizing and a lifetime warranty on every creation.</p></div></div></div></section><section class="section video"><div class="wrap">
+<div class="video-stage"><div class="ph "><img src="https://images.pexels.com/photos/9509032/pexels-photo-9509032.jpeg?auto=compress&cs=tinysrgb&w=1500&h=640&fit=crop&dpr=1" alt="Model wearing Vermeil jewellery" loading="lazy"></div>
+<div class="video-play" data-modal="vidmodal"><div class="pp"><svg viewBox="0 0 24 24"><path d="M7 5v14l11-7z"/></svg></div></div>
+<div class="video-cap"><b>The Aurora film</b><span>See the collection move &amp; catch the light · 4K</span></div></div></div></section><section class="section consult" id="consult"><div class="wrap"><div class="consult-in">
+<div class="consult-img"><div class="ph "><img src="https://images.pexels.com/photos/6098251/pexels-photo-6098251.jpeg?auto=compress&cs=tinysrgb&w=760&h=760&fit=crop&dpr=1" alt="Private consultation" loading="lazy"></div></div>
+<div class="consult-text"><span class="eyebrow two">VIP service</span>
+<h2>A private <em>consultation</em></h2>
+<p>Book a one-on-one video call with a certified gemologist or personal stylist — from the comfort of home.</p>
+<ul class="consult-list">
+<li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span> One-click video booking</li>
+<li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span> Expert guidance on the 4Cs &amp; custom design</li>
+<li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg></span> Flexible luxury financing on request</li></ul>
+<form data-ok="consultok"><div class="form-fields">
+<div class="fg"><label>Name</label><input type="text" placeholder="Your name" required></div>
+<div class="fg"><label>Email</label><input type="email" placeholder="you@example.com" required></div>
+<div class="fg"><label>What are you looking for?</label><select><option>An engagement ring</option><option>A custom design</option><option>A gift</option><option>Investment pieces</option><option>Just browsing</option></select></div>
+<button type="submit" class="btn btn-em">Book my video consultation</button></div>
+<div class="modal-ok" id="consultok" style="display:none"><div class="ic">✦</div><h3 class="s-title" style="font-size:1.5rem">Thank you</h3><p style="color:var(--muted)">Your consultation request is in — a gemologist will email you to confirm a time.</p></div>
+</form></div></div></div></section><section class="section reviews"><div class="wrap">
+<div class="center"><span class="eyebrow two">Client love</span><h2 class="s-title">Cherished by <em>thousands</em></h2></div>
+<div class="rev-grid"><div class="rev rv"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>“The ring builder made designing my fiancée's ring an absolute joy — and the GIA certificate gave me total peace of mind.”</p><div class="who"><b>James P.</b><span>Custom engagement ring</span></div></div><div class="rev rv"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>“Being able to spin and zoom into every piece sealed it for me. It arrived insured, beautifully boxed. Flawless.”</p><div class="who"><b>Mei L.</b><span>Pavé necklace</span></div></div><div class="rev rv"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>“The virtual consultation was like having a personal jeweller. Knowledgeable, warm, no pressure. I'll be back.”</p><div class="who"><b>Sofia R.</b><span>VIP consultation</span></div></div></div></div></section><footer class="footer"><div class="wrap"><div class="foot-grid">
+<div class="foot-brand"><a href="#home" class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="#0E5E45" stroke-width="1.1"><path d="M5 9h14l-7 11z"/><path d="M5 9l2.5-4h9L19 9M9 5l3 4 3-4"/></svg><span class="bn">Vermeil</span></a><p style="margin-top:14px">Fine jewellery, handcrafted from ethically sourced diamonds and recycled gold — designed to be treasured for a lifetime.</p>
+<div class="foot-soc"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Pinterest">p</a><a href="#" aria-label="TikTok">tt</a></div></div>
+<div class="foot-col"><h5>Shop</h5><ul><li><a href="#shop">Rings</a></li><li><a href="#shop">Necklaces</a></li><li><a href="#shop">Earrings</a></li><li><a href="#builder">Ring builder</a></li></ul></div>
+<div class="foot-col"><h5>Service</h5><ul><li><a href="#tools">Ring sizer</a></li><li><a href="#tools">Engraving</a></li><li><a href="#consult">Consultations</a></li><li><a href="#auth">Warranty &amp; care</a></li></ul></div>
+<div class="foot-col"><h5>Trust</h5><ul><li><a href="#auth">GIA certified</a></li><li><a href="#auth">Insured shipping</a></li><li><a href="#auth">Ethical sourcing</a></li><li><a href="#consult">Pay in 4</a></li></ul></div>
+</div><div class="foot-bot"><span>© 2026 Vermeil Fine Jewellery</span><span>GIA certified · Conflict-free · Insured worldwide</span></div>
+</div></footer><div class="modal" id="certmodal"><div class="modal-bg"></div><div class="modal-card">
+<button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<div class="cert-head"><div class="cl">Gemological Institute of America</div><h3>Diamond Grading Report</h3><div class="cn">Report №&nbsp;2417-885-301 · vermeil.com/verify</div></div>
+<div class="cert-rows">
+<div><div class="ck2">Carat weight</div><b>1.20 ct</b></div>
+<div><div class="ck2">Cut grade</div><b>Excellent</b></div>
+<div><div class="ck2">Colour</div><b>F</b></div>
+<div><div class="ck2">Clarity</div><b>VS1</b></div>
+<div><div class="ck2">Polish</div><b>Excellent</b></div>
+<div><div class="ck2">Symmetry</div><b>Excellent</b></div>
+<div><div class="ck2">Fluorescence</div><b>None</b></div>
+<div><div class="ck2">Shape</div><b>Round Brilliant</b></div>
+</div>
+<div class="cert-foot"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> Independently graded &amp; laser-inscribed</div>
+</div></div><div class="modal" id="armodal"><div class="modal-bg"></div><div class="modal-card" style="text-align:center">
+<button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<div class="modal-ok"><div class="ic"><svg viewBox="0 0 24 24" style="width:30px;height:30px" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8V5a2 2 0 012-2h3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3M8 21H5a2 2 0 01-2-2v-3"/><circle cx="12" cy="12" r="3"/></svg></div></div>
+<h3 class="mtitle">Virtual try-on</h3><p class="msub">In the live store, this opens your phone camera to overlay this ring on your hand in real time — so you can see it on you before you buy.</p>
+<button class="btn btn-em" data-modal="" onclick="this.closest('.modal').classList.remove('on');document.body.style.overflow=''">Got it</button>
+</div></div><div class="modal" id="vidmodal"><div class="modal-bg"></div><div class="modal-card" style="text-align:center">
+<button class="modal-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+<div class="modal-ok"><div class="ic"><svg viewBox="0 0 24 24" style="width:30px;height:30px" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></div></div>
+<h3 class="mtitle">4K product film</h3><p class="msub">In the live store, a short 4K video plays here — a model wearing the piece, so you can see its true scale, movement and sparkle.</p>
+<button class="btn btn-em" onclick="this.closest('.modal').classList.remove('on');document.body.style.overflow=''">Close</button>
+</div></div><button class="chat-fab" id="chatfab" aria-label="Concierge chat"><span class="cdot"></span><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L3 20l1-5.5A8 8 0 1121 12z"/></svg></button>
+<div class="chat-panel" id="chatpanel">
+<div class="chat-head"><div class="ch-av">A</div><div><b>Aria · Concierge</b><span>Typically replies instantly</span></div></div>
+<div class="chat-body" id="chatbody"><div class="msg bot">Hello! I'm Aria, your Vermeil concierge. Ask me anything about our diamonds, sizing, shipping or custom design. 💎</div></div>
+<div class="chat-quick"><button>Stone clarity?</button><button>Shipping &amp; returns</button><button>Book a consultation</button><button>Pay in 4?</button></div>
+<div class="chat-input"><input type="text" id="chatinput" placeholder="Type a message…"><button id="chatsend" aria-label="Send"><svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></button></div>
+</div><div class="toast" id="toast"><span class="td">✦</span><span class="tx">Added to your bag</span></div><script>
+/* nav + reveal + fallback */
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));var navas=[].slice.call(document.querySelectorAll('.nav-links a'));
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>30);var cur='';secs.forEach(function(s){if(scrollY>=s.offsetTop-130)cur=s.id;});navas.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});},{passive:true});
+  burger.addEventListener('click',function(){var o=burger.classList.toggle('open');links.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');document.body.style.overflow='';});});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+})();
+[].slice.call(document.querySelectorAll('.ph img')).forEach(function(img){img.addEventListener('error',function(){img.classList.add('imgfail');});});
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});[].slice.call(document.querySelectorAll('.rv')).forEach(function(e){io.observe(e);});})();
+
+/* ===== HERO SLIDER ===== */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),dots=[].slice.call(document.querySelectorAll('.dot'));
+  if(!slides.length)return;var i=0,timer;
+  function go(n){i=(n+slides.length)%slides.length;slides.forEach(function(s,k){s.classList.toggle('on',k===i);});dots.forEach(function(d,k){d.classList.toggle('on',k===i);});}
+  function next(){go(i+1);}function start(){timer=setInterval(next,6000);}function stop(){clearInterval(timer);}
+  dots.forEach(function(d,k){d.addEventListener('click',function(){go(k);stop();start();});});
+  var pv=document.getElementById('sprev'),nx=document.getElementById('snext');
+  if(pv)pv.addEventListener('click',function(){go(i-1);stop();start();});
+  if(nx)nx.addEventListener('click',function(){go(i+1);stop();start();});
+  go(0);start();
+})();
+
+/* ===== 360 VIEWER + MACRO ZOOM ===== */
+(function(){
+  var stage=document.getElementById('vstage'),spin=document.getElementById('vspin'),zoom=document.getElementById('vzoom');
+  if(!stage)return;var rot=0,down=false,startX=0,startRot=0;
+  function set(r){spin.style.transform='rotate('+r+'deg)';}
+  stage.addEventListener('mousedown',function(e){down=true;startX=e.clientX;startRot=rot;stage.classList.add('grabbing');});
+  addEventListener('mouseup',function(){down=false;stage.classList.remove('grabbing');});
+  addEventListener('mousemove',function(e){if(down){rot=startRot+(e.clientX-startX)*0.8;set(rot);}});
+  stage.addEventListener('touchstart',function(e){down=true;startX=e.touches[0].clientX;startRot=rot;},{passive:true});
+  stage.addEventListener('touchmove',function(e){if(down){rot=startRot+(e.touches[0].clientX-startX)*0.8;set(rot);}},{passive:true});
+  addEventListener('touchend',function(){down=false;});
+  // macro zoom
+  if(zoom){var url=zoom.dataset.img;if(url)zoom.style.backgroundImage='url('+url+')';
+    stage.addEventListener('mousemove',function(e){var r=stage.getBoundingClientRect();var x=(e.clientX-r.left)/r.width*100,y=(e.clientY-r.top)/r.height*100;zoom.style.backgroundPosition=x+'% '+y+'%';});}
+})();
+
+/* ===== RING BUILDER ===== */
+(function(){
+  var shapeMul={Round:1.0,Oval:.9,Princess:.85,Emerald:.92,Pear:.88,Cushion:.87};
+  var setBase={Solitaire:1200,Halo:1900,'Pavé':2200,'Three-stone':2600};
+  var metal={'Yellow Gold':{add:0,band:'#D4AF37',name:'18k Yellow Gold'},'White Gold':{add:0,band:'#DADCE0',name:'18k White Gold'},'Rose Gold':{add:150,band:'#E2A99A',name:'18k Rose Gold'},'Platinum':{add:900,band:'#CDD1D6',name:'Platinum'}};
+  var st={shape:'Round',setting:'Solitaire',metal:'Yellow Gold',carat:1.0};
+  function money(n){return '$'+Math.round(n/10)*10===0?'$0':'$'+(Math.round(n/10)*10).toLocaleString('en-AU');}
+  function gemSVG(shape,size){
+    var s=size,h=s*1.18;var fill='url(#gemgrad)',stroke='#7FA8C9';
+    if(shape==='Round')return '<ellipse cx="0" cy="0" rx="'+s+'" ry="'+s+'" fill="'+fill+'" stroke="'+stroke+'"/><path d="M-'+s+' -'+(s*0.2)+'H'+s+'M0 -'+s+'V'+s+'M-'+(s*0.6)+' -'+(s*0.7)+'L'+(s*0.6)+' '+(s*0.7)+'M'+(s*0.6)+' -'+(s*0.7)+'L-'+(s*0.6)+' '+(s*0.7)+'" stroke="'+stroke+'" stroke-width="0.7" opacity=".5"/>';
+    if(shape==='Oval')return '<ellipse cx="0" cy="0" rx="'+(s*0.8)+'" ry="'+h+'" fill="'+fill+'" stroke="'+stroke+'"/><path d="M0 -'+h+'V'+h+'M-'+(s*0.8)+' 0H'+(s*0.8)+'" stroke="'+stroke+'" stroke-width="0.7" opacity=".5"/>';
+    if(shape==='Princess')return '<rect x="-'+s+'" y="-'+s+'" width="'+(s*2)+'" height="'+(s*2)+'" fill="'+fill+'" stroke="'+stroke+'"/><path d="M-'+s+' -'+s+'L'+s+' '+s+'M'+s+' -'+s+'L-'+s+' '+s+'" stroke="'+stroke+'" stroke-width="0.7" opacity=".5"/>';
+    if(shape==='Emerald')return '<rect x="-'+(s*0.8)+'" y="-'+h+'" width="'+(s*1.6)+'" height="'+(h*2)+'" rx="3" fill="'+fill+'" stroke="'+stroke+'"/><rect x="-'+(s*0.5)+'" y="-'+(h*0.7)+'" width="'+(s)+'" height="'+(h*1.4)+'" fill="none" stroke="'+stroke+'" stroke-width="0.7" opacity=".5"/>';
+    if(shape==='Pear')return '<path d="M0 -'+h+' C '+s+' -'+(h*0.4)+', '+s+' '+(s*0.9)+', 0 '+(s*1.15)+' C -'+s+' '+(s*0.9)+', -'+s+' -'+(h*0.4)+', 0 -'+h+' Z" fill="'+fill+'" stroke="'+stroke+'"/>';
+    return '<rect x="-'+s+'" y="-'+s+'" width="'+(s*2)+'" height="'+(s*2)+'" rx="'+(s*0.5)+'" fill="'+fill+'" stroke="'+stroke+'"/><path d="M0 -'+s+'V'+s+'M-'+s+' 0H'+s+'" stroke="'+stroke+'" stroke-width="0.7" opacity=".5"/>';
+  }
+  function render(){
+    var gemSize=9+st.carat*8;
+    var band=metal[st.metal].band;
+    document.querySelectorAll('.ring-band').forEach(function(e){e.setAttribute('stroke',band);});
+    var halo=(st.setting==='Halo')?'<circle cx="100" cy="58" r="'+(gemSize+6)+'" fill="none" stroke="'+band+'" stroke-width="2"/>'+haloDots(gemSize,band):'';
+    var sides=(st.setting==='Three-stone')?'<g transform="translate(100,58)"><ellipse cx="-'+(gemSize+10)+'" cy="0" rx="'+(gemSize*0.5)+'" ry="'+(gemSize*0.6)+'" fill="url(#gemgrad)" stroke="#7FA8C9"/><ellipse cx="'+(gemSize+10)+'" cy="0" rx="'+(gemSize*0.5)+'" ry="'+(gemSize*0.6)+'" fill="url(#gemgrad)" stroke="#7FA8C9"/></g>':'';
+    var pave=(st.setting==='Pavé')?paveDots(band):'';
+    document.getElementById('gemLayer').innerHTML=halo+sides+'<g transform="translate(100,58)">'+gemSVG(st.shape,gemSize)+'</g>'+pave;
+    // price
+    var diamond=9500*shapeMul[st.shape]*Math.pow(st.carat,1.5);
+    var total=setBase[st.setting]+metal[st.metal].add+diamond;
+    document.getElementById('bsShape').textContent=st.shape;
+    document.getElementById('bsSetting').textContent=st.setting;
+    document.getElementById('bsMetal').textContent=metal[st.metal].name;
+    document.getElementById('bsCarat').textContent=st.carat.toFixed(2)+' ct';
+    document.getElementById('bsName').textContent=st.shape+' '+st.setting;
+    document.getElementById('bpAmt').textContent=money(total);
+    document.getElementById('bpBnpl').innerHTML='or 4 interest-free payments of <b>'+money(total/4)+'</b>';
+  }
+  function haloDots(gs,band){var o='';for(var a=0;a<360;a+=30){var rad=(a)*Math.PI/180,r=gs+6;o+='<circle cx="'+(100+Math.cos(rad)*r)+'" cy="'+(58+Math.sin(rad)*r)+'" r="1.4" fill="'+band+'"/>';}return o;}
+  function paveDots(band){var o='';for(var x=-1;x<=1;x+=2){for(var k=0;k<5;k++){o+='<circle cx="'+(100+x*(18+k*7))+'" cy="'+(92+k*3)+'" r="1.6" fill="'+band+'"/>';}}return o;}
+  function bind(attr,val,grp){document.querySelectorAll('[data-'+grp+']').forEach(function(b){b.classList.toggle('on',b.dataset[grp]===val);});}
+  [].slice.call(document.querySelectorAll('[data-shape]')).forEach(function(b){b.addEventListener('click',function(){st.shape=b.dataset.shape;bind('shape',st.shape,'shape');render();});});
+  [].slice.call(document.querySelectorAll('[data-setting]')).forEach(function(b){b.addEventListener('click',function(){st.setting=b.dataset.setting;bind('setting',st.setting,'setting');render();});});
+  [].slice.call(document.querySelectorAll('[data-metal]')).forEach(function(b){b.addEventListener('click',function(){st.metal=b.dataset.metal;bind('metal',st.metal,'metal');render();});});
+  var cs=document.getElementById('carat'),cv=document.getElementById('caratval');
+  if(cs)cs.addEventListener('input',function(){st.carat=parseFloat(cs.value);cv.textContent=st.carat.toFixed(2);render();});
+  var bAdd=document.getElementById('buildadd');if(bAdd)bAdd.addEventListener('click',function(){window.__toast('Your custom '+st.shape.toLowerCase()+' ring has been added');window.__cart();});
+  render();
+})();
+
+/* ===== ENGRAVING PREVIEW ===== */
+(function(){
+  var inp=document.getElementById('engtext'),out=document.getElementById('engout');if(!inp)return;
+  var fonts={Script:"'Marcellus', cursive",Serif:"'Marcellus', serif",Sans:"'Jost', sans-serif"};var cur='Script';
+  function up(){var t=inp.value||'Forever';out.textContent=t;out.setAttribute('font-family',fonts[cur]);out.setAttribute('font-style',cur==='Script'?'italic':'normal');}
+  inp.addEventListener('input',up);
+  [].slice.call(document.querySelectorAll('[data-font]')).forEach(function(b){b.addEventListener('click',function(){cur=b.dataset.font;document.querySelectorAll('[data-font]').forEach(function(x){x.classList.toggle('on',x===b);});up();});});
+  up();
+})();
+
+/* ===== RING SIZER ===== */
+(function(){
+  var sl=document.getElementById('sizer'),ring=document.getElementById('sizerring'),us=document.getElementById('szus'),au=document.getElementById('szau'),mm=document.getElementById('szmm');if(!sl)return;
+  var auMap=[['G',14.1],['H',14.5],['I',14.9],['J',15.3],['K',15.7],['L',16.1],['M',16.5],['N',16.9],['O',17.3],['P',17.7],['Q',18.1],['R',18.5],['S',18.9],['T',19.4],['U',19.8],['V',20.2],['W',20.6],['X',21.0],['Y',21.4],['Z',21.8]];
+  function up(){var d=parseFloat(sl.value);var usz=((d-11.63)/0.8128);ring.style.setProperty('--d',(d*3.78)+'px');mm.textContent=d.toFixed(1)+' mm';us.textContent=usz.toFixed(1);
+    var best=auMap[0];for(var k=0;k<auMap.length;k++){if(Math.abs(auMap[k][1]-d)<Math.abs(best[1]-d))best=auMap[k];}au.textContent=best[0];}
+  sl.addEventListener('input',up);up();
+})();
+
+/* ===== CERTIFICATE + CONSULT MODALS ===== */
+(function(){
+  function open(id){var m=document.getElementById(id);if(m)m.classList.add('on');document.body.style.overflow='hidden';}
+  function close(m){m.classList.remove('on');document.body.style.overflow='';}
+  [].slice.call(document.querySelectorAll('[data-modal]')).forEach(function(b){b.addEventListener('click',function(){open(b.dataset.modal);});});
+  [].slice.call(document.querySelectorAll('.modal')).forEach(function(m){m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('modal-bg')||e.target.closest('.modal-close'))close(m);});});
+  addEventListener('keydown',function(e){if(e.key==='Escape')[].slice.call(document.querySelectorAll('.modal.on')).forEach(close);});
+})();
+
+/* ===== FORMS ===== */
+[].slice.call(document.querySelectorAll('form[data-ok]')).forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById(f.dataset.ok);var fields=f.querySelector('.form-fields');if(ok&&fields){fields.style.display='none';ok.style.display='block';}});});
+
+/* ===== CART + TOAST ===== */
+(function(){
+  var count=0,el=document.getElementById('cartcount'),toast=document.getElementById('toast'),tt;
+  window.__cart=function(){count++;el.textContent=count;el.classList.add('show');};
+  window.__toast=function(msg){toast.querySelector('.tx').textContent=msg||'Added to your bag';toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show');},2400);};
+  [].slice.call(document.querySelectorAll('.card-add')).forEach(function(b){b.addEventListener('click',function(){window.__cart();window.__toast((b.dataset.name||'Piece')+' added to your bag');});});
+  [].slice.call(document.querySelectorAll('.card-fav')).forEach(function(f){f.addEventListener('click',function(){f.classList.toggle('liked');});});
+})();
+
+/* ===== CONCIERGE CHAT ===== */
+(function(){
+  var fab=document.getElementById('chatfab'),panel=document.getElementById('chatpanel'),body=document.getElementById('chatbody'),inp=document.getElementById('chatinput'),send=document.getElementById('chatsend');if(!fab)return;
+  fab.addEventListener('click',function(){panel.classList.toggle('on');if(panel.classList.contains('on'))inp.focus();});
+  function add(text,who){var d=document.createElement('div');d.className='msg '+who;d.textContent=text;body.appendChild(d);body.scrollTop=body.scrollHeight;}
+  function reply(q){q=q.toLowerCase();var r;
+    if(/ship|deliver|insur/.test(q))r="Every order ships fully insured & signature-on-delivery, in discreet packaging — complimentary worldwide.";
+    else if(/cert|gia|grad|clarity|cut|colou?r/.test(q))r="All our diamonds come with an independent GIA certificate. You can view the full 4Cs grading on any product page.";
+    else if(/size|sizing|fit/.test(q))r="Try our on-screen ring sizer in the Tools section — or we'll post you a free sizer. Resizing is always complimentary.";
+    else if(/financ|pay|bnpl|instal/.test(q))r="Yes! You can split any purchase into 4 interest-free payments at checkout, or ask about our extended luxury financing.";
+    else if(/consult|appoint|book|gemolog|stylist/.test(q))r="I'd love to arrange that. You can book a private video consultation with a certified gemologist in the Consultation section.";
+    else if(/custom|bespoke|build|engrav/.test(q))r="Wonderful — try the Ring Builder to design your own, and add complimentary engraving. I can connect you with a designer too.";
+    else if(/hi|hello|hey/.test(q))r="Hello! I'm Aria, your Vermeil concierge. How can I help you find something beautiful today?";
+    else r="Great question — let me connect you with a gemologist who can help. In the meantime, you can build a ring, view certificates, or book a consultation.";
+    setTimeout(function(){add(r,'bot');},650);
+  }
+  function user(t){if(!t.trim())return;add(t,'user');reply(t);inp.value='';}
+  send.addEventListener('click',function(){user(inp.value);});
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')user(inp.value);});
+  [].slice.call(document.querySelectorAll('.chat-quick button')).forEach(function(b){b.addEventListener('click',function(){user(b.textContent);});});
+})();
+console.log('%cVERMEIL','font:400 22px Marcellus,serif;color:#0E5E45;letter-spacing:4px');
+</script></body></html>

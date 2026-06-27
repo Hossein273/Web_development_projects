@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiorella — Italian Kitchen &amp; Wine Bar | Brisbane Trattoria, Wood-fired Pizza &amp; Handmade Pasta</title>
+<meta name="description" content="Fiorella is a warm Italian trattoria and wine bar in Brisbane serving handmade pasta, wood-fired pizza, and a cellar of Italian wines. Book a table for lunch or dinner.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FBF5EC; --cream-2:#F4E8D6; --surface:#FFFDF9; --paper:#FBF5EC;
+  --ink:#2A201A; --ink-2:#5C4D40; --muted:#937F6B; --faint:#BCAB97;
+  --line:#EADFCD; --line-2:#E1D3BD;
+  --brick:#C0492F; --brick-deep:#A23B25; --brick-soft:#F7E4DC;
+  --gold:#BE9542; --gold-deep:#9C7A33; --gold-soft:#F2E8CF;
+  --olive:#6E7A4A;
+  --fd:'Cormorant Garamond',serif; --fb:'Jost',sans-serif;
+  --nav-h:72px; --eo:cubic-bezier(.25,.46,.45,.94); --es:cubic-bezier(.34,1.56,.64,1);
+  --r:16px; --r-lg:26px;
+  --sh-s:0 4px 16px rgba(42,32,26,.07); --sh-m:0 18px 44px rgba(42,32,26,.12); --sh-l:0 34px 70px rgba(42,32,26,.18);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink-2);font-family:var(--fb);font-weight:400;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--brick-deep);text-decoration:none;transition:color .2s}a:hover{color:var(--brick)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1200px;margin:0 auto;padding:0 30px}
+.section{padding:108px 0}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--brick-soft),var(--gold-soft) 80%)}
+.ph::after{content:"\01F374";position:absolute;inset:0;display:grid;place-items:center;font-size:2rem;opacity:.25}
+.ph img{position:relative;z-index:1;transition:opacity .5s,transform .9s var(--eo)}
+.ph img.imgfail{opacity:0}
+.eyebrow{font-family:var(--fb);font-weight:500;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brick);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before,.eyebrow.two::after{content:"";width:24px;height:1px;background:var(--gold)}
+.center .eyebrow{justify-content:center}
+.s-title{font-family:var(--fd);font-weight:600;font-size:clamp(2.6rem,5.4vw,4rem);line-height:1.04;letter-spacing:0;color:var(--ink);margin:10px 0 0}
+.s-title em{font-style:italic;color:var(--brick);font-weight:500}
+.s-lead{color:var(--muted);font-size:1.08rem;max-width:540px;margin-top:14px;line-height:1.6}
+.center{text-align:center}.center .s-lead{margin-left:auto;margin-right:auto}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--fb);font-weight:500;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:15px 30px;border-radius:2px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s,background .2s,border-color .2s,color .2s}
+.btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none}
+.btn-brick{background:var(--brick);color:#fff;border-color:var(--brick)}
+.btn-brick:hover{background:var(--brick-deep);border-color:var(--brick-deep);transform:translateY(-2px);box-shadow:0 12px 26px rgba(192,73,47,.3)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-ghost:hover{border-color:var(--brick);color:var(--brick-deep);transform:translateY(-2px)}
+.btn-gold{background:transparent;color:var(--gold-deep);border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold);color:#fff;transform:translateY(-2px)}
+.btn-lg{padding:17px 36px;font-size:.86rem}
+/* topbar */
+.topbar{background:var(--ink);color:rgba(255,255,255,.82);font-size:.76rem;letter-spacing:.04em}
+.topbar-in{max-width:1200px;margin:0 auto;padding:9px 30px;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.topbar a{color:var(--gold)}.topbar b{color:#fff;font-weight:500}
+.topbar .tb-r{display:flex;gap:1.4rem;align-items:center}
+/* nav */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(251,245,236,.86);backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid transparent;transition:.3s}
+.nav.scrolled{border-bottom:1px solid var(--line);box-shadow:0 4px 22px rgba(42,32,26,.06)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 30px;height:var(--nav-h);display:flex;align-items:center;gap:2rem}
+.brand{display:flex;flex-direction:column;line-height:.9;color:var(--ink)}
+.brand .bn{font-family:var(--fd);font-weight:600;font-size:1.85rem;letter-spacing:.01em}
+.brand .bs{font-family:var(--fb);font-weight:500;font-size:.56rem;letter-spacing:.34em;text-transform:uppercase;color:var(--brick);margin-top:1px}
+.nav-links{display:flex;gap:1.9rem;list-style:none;margin-left:auto}
+.nav-links a{font-family:var(--fb);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);position:relative;padding-bottom:4px}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--brick);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--eo)}
+.nav-links a:hover{color:var(--brick-deep)}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{margin-left:.4rem}
+.burger{display:none;flex-direction:column;justify-content:space-between;width:26px;height:15px;background:none;border:none;cursor:pointer;margin-left:auto}
+.burger span{height:2px;border-radius:2px;background:var(--ink);transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--cream),var(--cream) 60%,#fff)}
+.hero::before{content:"";position:absolute;top:-14%;right:-8%;width:44%;height:74%;background:radial-gradient(circle,var(--gold-soft),transparent 66%);z-index:0;opacity:.7}
+.hero::after{content:"";position:absolute;bottom:-16%;left:-10%;width:38%;height:62%;background:radial-gradient(circle,var(--brick-soft),transparent 64%);z-index:0;opacity:.6}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr 1fr;gap:4.5rem;align-items:center;padding:70px 0 86px}
+.hero h1{font-family:var(--fd);font-weight:600;font-size:clamp(3.2rem,6.6vw,5.6rem);line-height:1;letter-spacing:0;color:var(--ink)}
+.hero h1 em{font-style:italic;color:var(--brick);font-weight:500}
+.hero .lead{font-size:1.16rem;color:var(--ink-2);margin:22px 0 32px;max-width:460px;line-height:1.65}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:40px;align-items:center}
+.hm{display:flex;align-items:center;gap:9px;font-size:.84rem;color:var(--ink-2);letter-spacing:.02em}
+.hm .st{color:var(--gold);letter-spacing:1px}
+.hm svg{width:17px;height:17px;stroke:var(--brick);stroke-width:1.7;fill:none}
+.hm-div{width:1px;height:20px;background:var(--line-2)}
+.hero-visual{position:relative}
+.hero-img{aspect-ratio:4/5;border-radius:200px 200px 8px 8px;box-shadow:var(--sh-l)}
+.hero-badge{position:absolute;bottom:26px;left:-26px;background:var(--surface);border-radius:14px;box-shadow:var(--sh-m);padding:16px 20px;text-align:center;border:1px solid var(--line)}
+.hero-badge .stars{color:var(--gold);font-size:.9rem;letter-spacing:1px}
+.hero-badge b{font-family:var(--fd);font-weight:600;font-size:1.7rem;color:var(--ink);display:block;line-height:1.1}
+.hero-badge span{font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.hero-stamp{position:absolute;top:-14px;right:-14px;width:96px;height:96px;border-radius:50%;background:var(--brick);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--fd);font-style:italic;font-size:1.05rem;line-height:1.1;transform:rotate(8deg);box-shadow:var(--sh-m)}
+/* strip */
+.strip{background:var(--brick);color:#fff;overflow:hidden;padding:14px 0}
+.strip-track{display:flex;white-space:nowrap;animation:marq 30s linear infinite}
+.strip-track span{font-family:var(--fd);font-style:italic;font-size:1.35rem;padding:0 1.5rem;display:inline-flex;align-items:center;gap:1.5rem}
+.strip-track span::after{content:"\2766";font-style:normal;font-size:.85rem;color:var(--gold-soft)}
+/* highlights */
+.highlights{background:var(--cream)}
+.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.4rem}
+.hl{background:var(--surface);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh-s);transition:transform .35s var(--eo),box-shadow .35s}
+.hl:hover{transform:translateY(-6px);box-shadow:var(--sh-m)}
+.hl-img{aspect-ratio:5/4}
+.hl:hover .hl-img img{transform:scale(1.06)}
+.hl-body{padding:1.7rem 1.8rem 2rem;text-align:center}
+.hl-body .k{font-family:var(--fb);font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep)}
+.hl-body h3{font-family:var(--fd);font-weight:600;font-size:1.7rem;color:var(--ink);margin:6px 0 8px}
+.hl-body p{font-size:.92rem;color:var(--muted);line-height:1.55}
+/* menu */
+.menu{background:var(--surface);color:var(--ink-2);position:relative;overflow:hidden}
+.menu::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 0%,rgba(190,149,66,.10),transparent 62%);pointer-events:none}
+.menu .eyebrow{color:var(--brick)}.menu .eyebrow::before,.menu .eyebrow.two::after{background:var(--gold)}
+.menu .s-title{color:var(--ink)}.menu .s-title em{color:var(--brick)}.menu .s-lead{color:var(--muted)}
+.menu-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:2.8rem 0 0;position:relative}
+.mtab{font-family:var(--fb);font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--line-2);border-radius:2px;padding:11px 22px;cursor:pointer;transition:.2s}
+.mtab:hover{color:var(--ink);border-color:var(--brick)}
+.mtab.on{background:var(--brick);border-color:var(--brick);color:#fff}
+.menu-panel{display:none;margin-top:3rem}
+.menu-panel.on{display:block;animation:fade .5s var(--eo)}
+.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 4rem;position:relative;z-index:1}
+.mi{padding:.4rem 0}
+.mi-top{display:flex;align-items:baseline;gap:.4rem}
+.mi-name{font-family:var(--fd);font-weight:600;font-size:1.5rem;color:var(--ink);white-space:nowrap}
+.mi-veg{color:var(--olive);font-size:.7rem;margin-left:6px}
+.mi-dots{flex:1;border-bottom:1.5px dotted var(--line-2);transform:translateY(-5px)}
+.mi-price{font-family:var(--fd);font-weight:600;font-size:1.4rem;color:var(--gold-deep)}
+.mi-desc{font-size:.88rem;color:var(--muted);margin-top:2px;max-width:90%;line-height:1.5}
+.menu-cta{text-align:center;margin-top:3.4rem}
+/* story */
+.story{background:var(--cream-2)}
+.story-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:4.4rem;align-items:center}
+.story-img{aspect-ratio:4/5;border-radius:8px 8px 200px 200px;box-shadow:var(--sh-l)}
+.story-text p{color:var(--ink-2);margin-bottom:1.1rem;font-size:1.04rem}
+.story-sign{font-family:var(--fd);font-style:italic;font-size:1.9rem;color:var(--brick);margin-top:.4rem}
+.story-stats{display:flex;gap:2.6rem;margin-top:2rem}
+.sst .n{font-family:var(--fd);font-weight:600;font-size:2.4rem;color:var(--ink);line-height:1}
+.sst .l{font-size:.74rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+/* gallery */
+.gallery{background:var(--cream)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:1rem;margin-top:3rem}
+.gal{border-radius:var(--r);overflow:hidden;position:relative}
+.gal.tall{grid-row:span 2}.gal.wide{grid-column:span 2}
+.gal::after{content:"";position:absolute;inset:0;z-index:3;background:rgba(192,73,47,0);transition:.3s}
+.gal:hover::after{background:rgba(192,73,47,.16)}
+.gal:hover .ph img{transform:scale(1.1)}
+/* reviews */
+.reviews{background:var(--cream-2)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:3.2rem}
+.rev{background:var(--surface);border-radius:var(--r);padding:2.1rem;box-shadow:var(--sh-s);display:flex;flex-direction:column}
+.rev .quo{font-family:var(--fd);font-size:3rem;line-height:.5;color:var(--gold);height:1.2rem}
+.rev .stars{color:var(--gold);letter-spacing:2px;margin:.6rem 0 .8rem;font-size:.9rem}
+.rev p{font-family:var(--fd);font-size:1.32rem;color:var(--ink);line-height:1.45;flex:1}
+.rev .who{display:flex;align-items:center;gap:12px;margin-top:1.4rem}
+.rev .av{width:44px;height:44px;border-radius:50%;background:var(--brick-soft);color:var(--brick-deep);display:grid;place-items:center;font-family:var(--fd);font-weight:600;font-size:1.2rem}
+.rev .who b{display:block;color:var(--ink);font-size:.92rem;font-weight:500}
+.rev .who span{font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+/* reserve */
+.reserve{background:var(--cream);color:var(--ink-2);position:relative;overflow:hidden}
+.reserve::before{content:"";position:absolute;top:-30%;right:-12%;width:55%;height:160%;background:radial-gradient(circle,rgba(190,149,66,.13),transparent 60%);pointer-events:none}
+.reserve .eyebrow{color:var(--brick)}.reserve .eyebrow::before{background:var(--gold)}
+.reserve-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:4.4rem;align-items:start;position:relative}
+.reserve h2{font-family:var(--fd);font-weight:600;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.04;color:var(--ink);margin:10px 0 16px}
+.reserve h2 em{font-style:italic;color:var(--brick)}
+.reserve .s-lead{color:var(--muted)}
+.res-info{margin-top:2rem}
+.vrow{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:none}
+.vrow .vi{width:42px;height:42px;border-radius:10px;background:var(--brick-soft);display:grid;place-items:center;flex-shrink:0;color:var(--brick)}
+.vrow .vi svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.8;fill:none}
+.vrow b{font-family:var(--fd);font-weight:600;font-size:1.25rem;color:var(--ink);display:block;line-height:1.2}
+.vrow span{font-size:.9rem;color:var(--muted)}
+.form{background:var(--surface);border-radius:var(--r);padding:2.4rem;box-shadow:var(--sh-l);position:relative;overflow:hidden}
+.form h3{font-family:var(--fd);font-weight:600;font-size:1.8rem;color:var(--ink)}
+.form .fh{font-size:.84rem;color:var(--muted);margin-bottom:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-row.three{grid-template-columns:1fr 1fr 1fr}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:1rem}
+.fg label{font-family:var(--fb);font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fg input,.fg select{background:var(--cream);border:1px solid var(--line-2);border-radius:6px;color:var(--ink);font-family:var(--fb);font-size:.94rem;padding:12px 14px;outline:none;transition:.2s;width:100%;appearance:none}
+.fg input::placeholder{color:var(--faint)}
+.fg input:focus,.fg select:focus{border-color:var(--brick);box-shadow:0 0 0 3px var(--brick-soft);background:#fff}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23937F6B' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:32px}
+.form .btn{width:100%;justify-content:center;margin-top:.4rem}
+.form-ok{display:none;position:absolute;inset:0;background:var(--surface);border-radius:var(--r);flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:2rem}
+.form-ok.on{display:flex;animation:fade .5s var(--eo)}
+.form-ok .ic{width:74px;height:74px;border-radius:50%;background:var(--brick);color:#fff;display:grid;place-items:center;font-size:2rem;box-shadow:0 0 0 8px var(--brick-soft)}
+.form-ok h3{color:var(--ink)}.form-ok p{color:var(--muted)}
+/* footer */
+.footer{background:#1F1712;color:rgba(255,255,255,.6);padding:72px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer .brand{color:#fff;margin-bottom:14px}.footer .brand .bs{color:var(--gold)}
+.foot-brand p{font-size:.9rem;color:rgba(255,255,255,.48);max-width:280px;line-height:1.6;margin-top:8px}
+.foot-soc{display:flex;gap:9px;margin-top:16px}
+.foot-soc a{width:38px;height:38px;border:1px solid rgba(255,255,255,.16);border-radius:50%;display:grid;place-items:center;font-size:.72rem;color:rgba(255,255,255,.7);transition:.2s}
+.foot-soc a:hover{border-color:var(--gold);color:var(--gold);background:rgba(190,149,66,.12)}
+.foot-col h5{font-family:var(--fd);font-weight:600;font-size:1.25rem;color:#fff;margin-bottom:12px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col a,.foot-col li{font-size:.88rem;color:rgba(255,255,255,.55)}
+.foot-col a:hover{color:var(--gold)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.4rem 0;font-size:.76rem;color:rgba(255,255,255,.4)}
+/* anim */
+@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(32px);transition:opacity .7s var(--eo),transform .7s var(--eo)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px;border-radius:4px}
+/* responsive */
+@media(max-width:980px){
+  .hero-grid,.story-grid,.reserve-grid{grid-template-columns:1fr;gap:3rem}
+  .hl-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+  .menu-list{grid-template-columns:1fr;gap:1rem}
+  .rev-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2.4rem}
+}
+@media(max-width:640px){
+  .section{padding:74px 0}
+  .nav-links{display:none}.burger{display:flex}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:calc(var(--nav-h) + 34px);left:0;right:0;background:rgba(251,245,236,.99);border-top:1px solid var(--line);padding:1.6rem 30px;gap:1.3rem;box-shadow:var(--sh-m)}
+  .topbar .tb-l{display:none}.topbar-in{justify-content:center}
+  .form-row,.form-row.three{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .hero-badge{left:0}.foot-bot{flex-direction:column;text-align:center}
+  .story-stats{gap:1.6rem}
+}
+@media(max-width:420px){.wrap,.nav-in{padding:0 20px}.foot-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.rv{opacity:1;transform:none}}
+</style></head><body><div class="topbar"><div class="topbar-in">
+<span class="tb-l">📍 14 Latrobe Terrace, Paddington · Brisbane</span>
+<span class="tb-r"><span><b>Open</b> Tue–Sun · 5pm till late</span><span>Bookings <a href="tel:+61730000000">(07) 3000 0000</a></span></span>
+</div></div><nav class="nav" id="nav"><div class="nav-in"><a href="#home" class="brand"><span class="bn">Fiorella</span><span class="bs">Cucina · Brisbane</span></a>
+<ul class="nav-links" id="navlinks">
+<li><a href="#menu">Menu</a></li><li><a href="#story">Our Story</a></li>
+<li><a href="#gallery">Gallery</a></li><li><a href="#reserve">Visit</a></li></ul>
+<a href="#reserve" class="btn btn-brick nav-cta">Book a table</a>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav><header class="hero" id="home"><div class="wrap"><div class="hero-grid">
+<div>
+<span class="eyebrow two">Italian kitchen &amp; wine bar</span>
+<h1>A taste of Italy,<br>made with <em>amore.</em></h1>
+<p class="lead">Handmade pasta, wood-fired pizza, and a cellar full of Italian wine — served in a warm little corner of Brisbane.</p>
+<div class="hero-cta"><a href="#reserve" class="btn btn-brick btn-lg">Book a table</a><a href="#menu" class="btn btn-ghost btn-lg">View the menu</a></div>
+<div class="hero-meta">
+<span class="hm"><span class="st">★★★★★</span> 4.8 · 900+ reviews</span><span class="hm-div"></span>
+<span class="hm"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.8 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg>Est. 2012</span></div>
+</div>
+<div class="hero-visual">
+<span class="hero-stamp">Wood<br>fired</span>
+<div class="ph hero-img"><img src="https://images.pexels.com/photos/5074420/pexels-photo-5074420.jpeg?auto=compress&cs=tinysrgb&w=760&h=950&fit=crop&dpr=1" alt="Italian pasta and pizza" loading="lazy"></div>
+<div class="hero-badge"><span class="stars">★★★★★</span><b>4.8</b><span>900+ diners</span></div>
+</div></div></div></header><div class="strip"><div class="strip-track"><span>Wood-fired pizza</span><span>Handmade pasta</span><span>Italian wines</span><span>Aperitivo hour</span><span>Family recipes</span><span>Local produce</span><span>Wood-fired pizza</span><span>Handmade pasta</span><span>Italian wines</span><span>Aperitivo hour</span><span>Family recipes</span><span>Local produce</span></div></div><section class="section highlights"><div class="wrap">
+<div class="center"><span class="eyebrow two">Why you'll love it</span><h2 class="s-title">Made fresh, <em>served warm</em></h2></div>
+<div class="hl-grid"><div class="hl rv d0"><div class="hl-img"><div class="ph "><img src="https://images.pexels.com/photos/750071/pexels-photo-750071.jpeg?auto=compress&cs=tinysrgb&w=560&h=448&fit=crop&dpr=1" alt="Handmade Pasta" loading="lazy"></div></div><div class="hl-body"><span class="k">Primi</span><h3>Handmade Pasta</h3><p>Rolled, cut and shaped by hand every morning — just like nonna taught us.</p></div></div><div class="hl rv d1"><div class="hl-img"><div class="ph "><img src="https://images.pexels.com/photos/14590497/pexels-photo-14590497.jpeg?auto=compress&cs=tinysrgb&w=560&h=448&fit=crop&dpr=1" alt="Wood-fired Pizza" loading="lazy"></div></div><div class="hl-body"><span class="k">Forno</span><h3>Wood-fired Pizza</h3><p>Blistered in our 400°C oven for that perfect leopard-spotted crust.</p></div></div><div class="hl rv d2"><div class="hl-img"><div class="ph "><img src="https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg?auto=compress&cs=tinysrgb&w=560&h=448&fit=crop&dpr=1" alt="Wine & Aperitivo" loading="lazy"></div></div><div class="hl-body"><span class="k">Bar</span><h3>Wine & Aperitivo</h3><p>A cellar of Italian drops and a Negroni that means business.</p></div></div></div></div></section><section class="section menu" id="menu"><div class="wrap">
+<div class="center"><span class="eyebrow two">Our menu</span><h2 class="s-title">Buon <em>appetito</em></h2>
+<p class="s-lead">A taste of what's on offer — our full menu changes with the seasons and the market.</p></div>
+<div class="menu-tabs"><button class="mtab on" data-panel="panel-antipasti">Antipasti</button><button class="mtab" data-panel="panel-pasta">Pasta</button><button class="mtab" data-panel="panel-pizza">Pizza</button><button class="mtab" data-panel="panel-dolci">Dolci</button></div>
+<div class="menu-panel on" id="panel-antipasti"><div class="menu-list"><div class="mi"><div class="mi-top"><span class="mi-name">Bruschetta al Pomodoro<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$14</span></div><p class="mi-desc">Grilled sourdough, vine tomatoes, basil & garlic</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Arancini<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$16</span></div><p class="mi-desc">Saffron risotto balls, mozzarella, napoli sauce</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Burrata & Prosciutto</span><span class="mi-dots"></span><span class="mi-price">$22</span></div><p class="mi-desc">Creamy burrata, San Daniele prosciutto, figs</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Calamari Fritti</span><span class="mi-dots"></span><span class="mi-price">$19</span></div><p class="mi-desc">Lightly fried calamari, lemon, garlic aioli</p></div></div></div><div class="menu-panel" id="panel-pasta"><div class="menu-list"><div class="mi"><div class="mi-top"><span class="mi-name">Tagliatelle al Ragù</span><span class="mi-dots"></span><span class="mi-price">$28</span></div><p class="mi-desc">Slow-cooked beef & pork ragù, parmigiano</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Spaghetti alle Vongole</span><span class="mi-dots"></span><span class="mi-price">$32</span></div><p class="mi-desc">Clams, white wine, chilli & parsley</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Gnocchi al Gorgonzola<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$27</span></div><p class="mi-desc">House gnocchi, gorgonzola cream, walnuts</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Ravioli di Zucca<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$26</span></div><p class="mi-desc">Pumpkin ravioli, burnt butter, sage, amaretti</p></div></div></div><div class="menu-panel" id="panel-pizza"><div class="menu-list"><div class="mi"><div class="mi-top"><span class="mi-name">Margherita DOP<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$22</span></div><p class="mi-desc">San Marzano, fior di latte, fresh basil</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Diavola</span><span class="mi-dots"></span><span class="mi-price">$26</span></div><p class="mi-desc">Spicy salami, chilli, mozzarella</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Prosciutto e Funghi</span><span class="mi-dots"></span><span class="mi-price">$25</span></div><p class="mi-desc">Leg ham, field mushroom, mozzarella</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Quattro Formaggi<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$26</span></div><p class="mi-desc">Four cheeses, hot honey, walnuts</p></div></div></div><div class="menu-panel" id="panel-dolci"><div class="menu-list"><div class="mi"><div class="mi-top"><span class="mi-name">Tiramisù<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$14</span></div><p class="mi-desc">Mascarpone, espresso-soaked savoiardi, cocoa</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Panna Cotta<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$13</span></div><p class="mi-desc">Vanilla bean, seasonal berry compote</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Cannoli Siciliani<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$13</span></div><p class="mi-desc">Crisp shells, ricotta, pistachio & chocolate</p></div><div class="mi"><div class="mi-top"><span class="mi-name">Affogato<span class="mi-veg">✿</span></span><span class="mi-dots"></span><span class="mi-price">$12</span></div><p class="mi-desc">Vanilla gelato, hot espresso, splash of Frangelico</p></div></div></div>
+<div class="menu-cta"><a href="#" class="btn btn-gold">Download full menu (PDF)</a></div>
+</div></section><section class="section story" id="story"><div class="wrap"><div class="story-grid">
+<div class="ph story-img"><img src="https://images.pexels.com/photos/29219959/pexels-photo-29219959.jpeg?auto=compress&cs=tinysrgb&w=720&h=900&fit=crop&dpr=1" alt="Inside the Fiorella kitchen" loading="lazy"></div>
+<div class="story-text rv">
+<span class="eyebrow two">Our story</span>
+<h2 class="s-title">From our <em>famiglia</em> to your table</h2>
+<p>Fiorella began with a wood-fired oven, a stack of family recipes, and a simple belief — that good food brings people together. Every dish is made by hand, the way it has been for generations.</p>
+<p>We source our produce locally, pour wines we genuinely love, and treat every guest like they're sitting at our own kitchen table. Come hungry, leave happy.</p>
+<p class="story-sign">— Giulia &amp; Marco, owners</p>
+<div class="story-stats">
+<div class="sst"><span class="n">12</span><span class="l">Years in Paddington</span></div>
+<div class="sst"><span class="n">400°</span><span class="l">Wood-fired oven</span></div>
+<div class="sst"><span class="n">60+</span><span class="l">Italian wines</span></div></div>
+</div></div></div></section><section class="section gallery" id="gallery"><div class="wrap">
+<div class="center"><span class="eyebrow two">A peek inside</span><h2 class="s-title">Come hungry, <em>stay a while</em></h2></div>
+<div class="gal-grid"><div class="gal tall rv"><div class="ph "><img src="https://images.pexels.com/photos/5074420/pexels-photo-5074420.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div><div class="gal  rv"><div class="ph "><img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div><div class="gal  rv"><div class="ph "><img src="https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div><div class="gal wide rv"><div class="ph "><img src="https://images.pexels.com/photos/34686219/pexels-photo-34686219.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div><div class="gal  rv"><div class="ph "><img src="https://images.pexels.com/photos/20115306/pexels-photo-20115306.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div><div class="gal  rv"><div class="ph "><img src="https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop&dpr=1" alt="Fiorella" loading="lazy"></div></div></div></div></section><section class="section reviews"><div class="wrap">
+<div class="center"><span class="eyebrow two">Kind words</span><h2 class="s-title">Loved by <em>locals</em></h2></div>
+<div class="rev-grid"><div class="rev rv"><div class="quo">”</div><div class="stars">★★★★★</div><p>The ragù tagliatelle is the best I've had outside of Bologna. Genuinely. We're here every fortnight now.</p><div class="who"><div class="av">M</div><div><b>Marco R.</b><span>Regular since 2019</span></div></div></div><div class="rev rv"><div class="quo">”</div><div class="stars">★★★★★</div><p>Cosy, warm, and the wood-fired pizza is unreal. The staff treat you like family. Our favourite date-night spot.</p><div class="who"><div class="av">E</div><div><b>Elena & Tom</b><span>Date night</span></div></div></div><div class="rev rv"><div class="quo">”</div><div class="stars">★★★★★</div><p>Booked for my mum's 60th — they looked after us beautifully. Every plate was perfect. Grazie Fiorella!</p><div class="who"><div class="av">S</div><div><b>Sophie L.</b><span>Celebration</span></div></div></div></div></div></section><section class="section reserve" id="reserve"><div class="wrap"><div class="reserve-grid">
+<div class="rv"><span class="eyebrow">Book a table</span>
+<h2>Reserve your <em>spot</em></h2>
+<p class="s-lead">We'd love to have you. Book online below, or give us a call — walk-ins always welcome at the bar.</p>
+<div class="res-info">
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Find us</b><span>14 Latrobe Terrace, Paddington QLD 4064</span></div></div>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 013 6a2 2 0 012-2z"/></svg></span><div><b>Call us</b><span>(07) 3000 0000</span></div></div>
+<div class="vrow"><span class="vi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Open hours</b><span>Tue–Thu 5–10pm · Fri–Sat 12–11pm · Sun 12–9pm</span></div></div>
+</div></div>
+<div class="rv d1"><form class="form" id="resform" novalidate>
+<h3>Make a reservation</h3><p class="fh">We'll confirm your table by text within the hour.</p>
+<div class="form-row"><div class="fg"><label>Name</label><input type="text" placeholder="Jane Smith" required></div>
+<div class="fg"><label>Phone</label><input type="tel" placeholder="04XX XXX XXX" required></div></div>
+<div class="form-row three"><div class="fg"><label>Date</label><input type="text" placeholder="Fri 20 Jun"></div>
+<div class="fg"><label>Time</label><select><option>5:00pm</option><option>5:30pm</option><option>6:00pm</option><option>6:30pm</option><option>7:00pm</option><option>7:30pm</option><option>8:00pm</option><option>8:30pm</option></select></div>
+<div class="fg"><label>Guests</label><select><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div></div>
+<div class="fg"><label>Email</label><input type="email" placeholder="jane@example.com"></div>
+<button type="submit" class="btn btn-brick" id="sendbtn">Request reservation</button>
+<div class="form-ok" id="formok"><div class="ic">✓</div><h3>Grazie!</h3><p>Your table request is in — we'll confirm by text shortly.</p></div>
+</form></div>
+</div></div></section><footer class="footer"><div class="wrap"><div class="foot-grid">
+<div class="foot-brand"><a href="#home" class="brand"><span class="bn">Fiorella</span><span class="bs">Cucina · Brisbane</span></a><p>A warm Italian trattoria &amp; wine bar in the heart of Paddington. Handmade pasta, wood-fired pizza, and a whole lot of amore.</p>
+<div class="foot-soc"><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a><a href="#" aria-label="TripAdvisor">t</a></div></div>
+<div class="foot-col"><h5>Menu</h5><ul><li><a href="#menu">Antipasti</a></li><li><a href="#menu">Pasta</a></li><li><a href="#menu">Wood-fired Pizza</a></li><li><a href="#menu">Dolci</a></li><li><a href="#menu">Wine list</a></li></ul></div>
+<div class="foot-col"><h5>Visit</h5><ul><li>14 Latrobe Terrace</li><li>Paddington QLD 4064</li><li>Tue–Sun · 5pm till late</li><li><a href="#reserve">Get directions</a></li></ul></div>
+<div class="foot-col"><h5>Bookings</h5><ul><li><a href="#reserve">Book a table</a></li><li><a href="tel:+61730000000">(07) 3000 0000</a></li><li><a href="mailto:ciao@fiorella.com.au">ciao@fiorella.com.au</a></li><li>Private events welcome</li></ul></div>
+</div><div class="foot-bot"><span>© 2026 Fiorella Cucina Italiana · Made with 🍷 in Brisbane</span><span>Wood-fired · Handmade daily · Licensed</span></div>
+</div></footer><script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger'),links=document.getElementById('navlinks');
+  var secs=[].slice.call(document.querySelectorAll('section[id]'));var navas=[].slice.call(document.querySelectorAll('.nav-links a'));
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>30);var cur='';secs.forEach(function(s){if(scrollY>=s.offsetTop-140)cur=s.id;});navas.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});},{passive:true});
+  burger.addEventListener('click',function(){var o=burger.classList.toggle('open');links.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');links.classList.remove('open');document.body.style.overflow='';});});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+})();
+[].slice.call(document.querySelectorAll('.ph img')).forEach(function(img){img.addEventListener('error',function(){img.classList.add('imgfail');});});
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});[].slice.call(document.querySelectorAll('.rv')).forEach(function(e){io.observe(e);});})();
+// menu tabs
+(function(){var tabs=[].slice.call(document.querySelectorAll('.mtab')),panels=[].slice.call(document.querySelectorAll('.menu-panel'));tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.classList.remove('on');});t.classList.add('on');var id=t.dataset.panel;panels.forEach(function(p){p.classList.toggle('on',p.id===id);});});});})();
+// reservation form
+(function(){var f=document.getElementById('resform'),ok=document.getElementById('formok'),b=document.getElementById('sendbtn');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var t=b.innerHTML;b.innerHTML='Sending…';b.disabled=true;setTimeout(function(){ok.classList.add('on');b.innerHTML=t;b.disabled=false;},1100);});})();
+console.log('%cFiorella — Cucina Italiana','font:600 22px Cormorant Garamond,serif;color:#C0492F');
+</script></body></html>
