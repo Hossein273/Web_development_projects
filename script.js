@@ -66,11 +66,10 @@
   var url = document.getElementById("frame-url");
   if (!pvs.length) return;
   var urls = [
-    "bellavista.com.au",
-    "wildflower.co",
-    "apexauto.com.au",
-    "cornerstore.com.au",
-    "loomandlast.com",
+    "Charcoalandcrust.com.au",
+    "bloomCo.com.au",
+    "TopCarRemoval.com.au",
+    "Almasreceptions.com.au",
   ];
   var i = 0,
     timer,
