@@ -5,413 +5,17 @@
    ========================================================= */
 var WEB3FORMS_ACCESS_KEY = "";
 
-/* --- CRM / IDX NOTE ---------------------------------------
-Listings below are a static demo array. To go live, replace
-this array with a feed from your CRM / portal (AgentBox, Rex,
-LockedOn, or an IDX/MLS feed) — fetch it and map to the same
-shape. Lead forms post to Web3Forms; add a Web3Forms webhook
-(Pro) or a serverless function to push leads into your CRM too.
----------------------------------------------------------- */
-var AGENTS = [
-  {
-    in: "DW",
-    name: "Daniel Whitmore",
-    role: "Principal & Auctioneer",
-    photo: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    in: "PS",
-    name: "Priya Sharma",
-    role: "Senior Sales Agent",
-    photo: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    in: "TC",
-    name: "Tom Callahan",
-    role: "Sales Associate",
-    photo: "https://randomuser.me/api/portraits/men/52.jpg",
-  },
-];
-var LISTINGS = [
-  {
-    id: "P01",
-    addr: "24 Latrobe Terrace",
-    sub: "Paddington",
-    type: "House",
-    price: 1650000,
-    bed: 4,
-    bath: 2,
-    car: 2,
-    land: 405,
-    tag: ["3D Tour", "Auction"],
-    ag: 0,
-    img: [19344325, 5179534, 6035357],
-    feat: [
-      "Renovated Queenslander",
-      "Stone chef\u2019s kitchen",
-      "North-facing deck",
-      "Pool & lush garden",
-    ],
-    desc: "A classic Paddington character home reimagined for modern family life \u2014 soaring VJ ceilings, a stone chef\u2019s kitchen and a north-facing deck overlooking the pool.",
-  },
-  {
-    id: "N02",
-    addr: "8/15 Welsby Street",
-    sub: "New Farm",
-    type: "Apartment",
-    price: 895000,
-    bed: 2,
-    bath: 2,
-    car: 1,
-    land: 110,
-    tag: ["Video"],
-    ag: 1,
-    img: [18423197, 28991200, 4857757],
-    feat: [
-      "Riverside precinct",
-      "Secure parking",
-      "Wrap-around balcony",
-      "Walk to Powerhouse",
-    ],
-    desc: "A light-filled two-bedroom apartment moments from New Farm Park and the Powerhouse, with a wrap-around balcony and secure basement parking.",
-  },
-  {
-    id: "B03",
-    addr: "12 Quay Street",
-    sub: "Bulimba",
-    type: "House",
-    price: 2250000,
-    bed: 5,
-    bath: 3,
-    car: 2,
-    land: 612,
-    tag: ["3D Tour"],
-    ag: 0,
-    img: [323780, 1643383, 10168692],
-    feat: [
-      "Walk to Oxford St",
-      "Resort-style pool",
-      "Dedicated home office",
-      "CityCat to CBD",
-    ],
-    desc: "An elegant family residence a short stroll from Oxford Street and the CityCat \u2014 five bedrooms, a resort-style pool and a dedicated home office.",
-  },
-  {
-    id: "A04",
-    addr: "47 Lansdowne Street",
-    sub: "Ascot",
-    type: "House",
-    price: 1980000,
-    bed: 4,
-    bath: 3,
-    car: 2,
-    land: 506,
-    tag: ["Just listed"],
-    ag: 2,
-    img: [33213827, 5179534, 1643383],
-    feat: [
-      "Tightly held street",
-      "Soaring ceilings",
-      "Butler\u2019s pantry",
-      "Leafy outlook",
-    ],
-    desc: "Set in one of Ascot\u2019s most tightly held streets, this refined four-bedroom home pairs soaring ceilings with a butler\u2019s pantry and a private, leafy outlook.",
-  },
-  {
-    id: "H05",
-    addr: "3 Riverview Terrace",
-    sub: "Hawthorne",
-    type: "House",
-    price: 1420000,
-    bed: 3,
-    bath: 2,
-    car: 2,
-    land: 380,
-    tag: ["Video"],
-    ag: 1,
-    img: [7031581, 4857757, 6035357],
-    feat: [
-      "Quiet terrace",
-      "Open-plan living",
-      "Covered alfresco",
-      "Near Hawthorne ferry",
-    ],
-    desc: "A move-in-ready three-bedroom home on a quiet Hawthorne terrace \u2014 open-plan living flows to a covered alfresco, minutes from the ferry and cafes.",
-  },
-  {
-    id: "T06",
-    addr: "102/60 Riverwalk Avenue",
-    sub: "Teneriffe",
-    type: "Apartment",
-    price: 1150000,
-    bed: 2,
-    bath: 2,
-    car: 1,
-    land: 128,
-    tag: ["3D Tour"],
-    ag: 2,
-    img: [16631149, 28991200, 10168692],
-    feat: [
-      "River views",
-      "Concierge building",
-      "Floor-to-ceiling glass",
-      "Entertainer\u2019s terrace",
-    ],
-    desc: "A sophisticated riverfront apartment in a concierge building \u2014 floor-to-ceiling glass frames the water, with a generous entertainer\u2019s terrace.",
-  },
-  {
-    id: "C07",
-    addr: "19 Cracknell Road",
-    sub: "Coorparoo",
-    type: "Townhouse",
-    price: 785000,
-    bed: 3,
-    bath: 2,
-    car: 1,
-    land: 210,
-    tag: ["Just listed"],
-    ag: 1,
-    img: [13771880, 4857757, 28991200],
-    feat: [
-      "Boutique complex",
-      "Private courtyard",
-      "Whitegoods included",
-      "Near Coorparoo Square",
-    ],
-    desc: "A low-maintenance townhouse in a boutique complex \u2014 three bedrooms, a private courtyard and a short walk to Coorparoo Square dining and cinemas.",
-  },
-  {
-    id: "M08",
-    addr: "6 Eblin Drive",
-    sub: "Hamilton",
-    type: "House",
-    price: 2950000,
-    bed: 5,
-    bath: 4,
-    car: 3,
-    land: 720,
-    tag: ["3D Tour", "Auction"],
-    ag: 0,
-    img: [30580640, 1643383, 10168692],
-    feat: [
-      "Hamilton Hill",
-      "City & river views",
-      "Lift to all levels",
-      "Wine cellar",
-    ],
-    desc: "A landmark Hamilton Hill residence capturing sweeping city and river views \u2014 five bedrooms, a lift to all levels and a temperature-controlled cellar.",
-  },
-  {
-    id: "W09",
-    addr: "55 Mackay Street",
-    sub: "Wilston",
-    type: "House",
-    price: 1295000,
-    bed: 4,
-    bath: 2,
-    car: 2,
-    land: 455,
-    tag: ["Video"],
-    ag: 2,
-    img: [15422346, 6035357, 5179534],
-    feat: [
-      "Dual-living option",
-      "Established gardens",
-      "Family friendly",
-      "Wilston State catchment",
-    ],
-    desc: "A versatile four-bedroom home with a dual-living option, established gardens and the Wilston State School catchment \u2014 perfect for a growing family.",
-  },
-  {
-    id: "P10",
-    addr: "7 Beck Street",
-    sub: "Paddington",
-    type: "House",
-    price: 1390000,
-    bed: 3,
-    bath: 2,
-    car: 1,
-    land: 303,
-    tag: ["Just listed"],
-    ag: 0,
-    img: [7031581, 6035357, 5179534],
-    feat: [
-      "Hilltop position",
-      "Breezy verandahs",
-      "City glimpses",
-      "Walk to Latrobe Tce",
-    ],
-    desc: "A charming hilltop Queenslander with breezy verandahs and city glimpses, a short walk to the cafes and boutiques of Latrobe Terrace.",
-  },
-  {
-    id: "N11",
-    addr: "12/40 Merthyr Road",
-    sub: "New Farm",
-    type: "Apartment",
-    price: 1290000,
-    bed: 3,
-    bath: 2,
-    car: 2,
-    land: 140,
-    tag: ["3D Tour"],
-    ag: 1,
-    img: [16631149, 4857757, 28991200],
-    feat: [
-      "Boutique block",
-      "Two car spaces",
-      "Chef\u2019s kitchen",
-      "Steps to the park",
-    ],
-    desc: "A spacious three-bedroom apartment in a boutique block, with two secure car spaces and a chef\u2019s kitchen, steps from New Farm Park.",
-  },
-  {
-    id: "C12",
-    addr: "5 Cavendish Street",
-    sub: "Coorparoo",
-    type: "House",
-    price: 1180000,
-    bed: 4,
-    bath: 2,
-    car: 2,
-    land: 410,
-    tag: ["Video"],
-    ag: 2,
-    img: [33213827, 1643383, 6035357],
-    feat: [
-      "Renovated character home",
-      "Wide side access",
-      "Covered entertaining",
-      "Top school catchment",
-    ],
-    desc: "A renovated character home with wide side access and a covered entertaining deck, in a sought-after Coorparoo school catchment.",
-  },
-  {
-    id: "B13",
-    addr: "30 Godwin Street",
-    sub: "Bulimba",
-    type: "Townhouse",
-    price: 985000,
-    bed: 3,
-    bath: 2,
-    car: 1,
-    land: 190,
-    tag: ["Just listed"],
-    ag: 0,
-    img: [13771880, 10168692, 4857757],
-    feat: [
-      "Low maintenance",
-      "Private courtyard",
-      "Walk to ferry",
-      "Pet friendly",
-    ],
-    desc: "A low-maintenance townhouse with a private courtyard, an easy walk to the Bulimba ferry, Oxford Street and riverside parks.",
-  },
-  {
-    id: "H14",
-    addr: "21 Hawthorne Road",
-    sub: "Hawthorne",
-    type: "Apartment",
-    price: 720000,
-    bed: 2,
-    bath: 1,
-    car: 1,
-    land: 96,
-    tag: ["Video"],
-    ag: 1,
-    img: [18423197, 28991200, 4857757],
-    feat: [
-      "Smart entry buy",
-      "North-east aspect",
-      "Leafy outlook",
-      "Near cafes",
-    ],
-    desc: "A smart entry-level apartment with a north-east aspect and leafy outlook, moments from Hawthorne\u2019s cafes and the ferry terminal.",
-  },
-  {
-    id: "A15",
-    addr: "9 Sutherland Avenue",
-    sub: "Ascot",
-    type: "House",
-    price: 3250000,
-    bed: 5,
-    bath: 4,
-    car: 3,
-    land: 810,
-    tag: ["3D Tour", "Auction"],
-    ag: 0,
-    img: [30580640, 1643383, 10168692],
-    feat: [
-      "Blue-ribbon address",
-      "Tennis court",
-      "Pool & cabana",
-      "Triple garage",
-    ],
-    desc: "A statement family estate on a blue-ribbon Ascot avenue \u2014 five bedrooms, a full tennis court, pool with cabana and triple garaging.",
-  },
-  {
-    id: "T16",
-    addr: "507/55 Vernon Terrace",
-    sub: "Teneriffe",
-    type: "Apartment",
-    price: 1480000,
-    bed: 3,
-    bath: 2,
-    car: 2,
-    land: 160,
-    tag: ["3D Tour"],
-    ag: 2,
-    img: [323780, 28991200, 16631149],
-    feat: [
-      "Top-floor outlook",
-      "Woolstore character",
-      "Dual balconies",
-      "Secure building",
-    ],
-    desc: "A top-floor Woolstore conversion with soaring ceilings, exposed beams and dual balconies framing the river and city skyline.",
-  },
-  {
-    id: "W17",
-    addr: "14 Lamington Street",
-    sub: "Wilston",
-    type: "House",
-    price: 1560000,
-    bed: 4,
-    bath: 3,
-    car: 2,
-    land: 480,
-    tag: ["Just listed"],
-    ag: 1,
-    img: [15422346, 5179534, 6035357],
-    feat: [
-      "Elevated block",
-      "Dual living",
-      "Designer kitchen",
-      "Walk to village",
-    ],
-    desc: "An elevated four-bedroom home with flexible dual-living, a designer kitchen and a short stroll to the Wilston village and station.",
-  },
-  {
-    id: "M18",
-    addr: "3 Crescent Road",
-    sub: "Hamilton",
-    type: "House",
-    price: 2680000,
-    bed: 4,
-    bath: 3,
-    car: 2,
-    land: 650,
-    tag: ["Video"],
-    ag: 0,
-    img: [19344325, 1643383, 10168692],
-    feat: [
-      "River-precinct",
-      "Entertainer\u2019s deck",
-      "Chef\u2019s kitchen",
-      "Lift-ready design",
-    ],
-    desc: "A refined Hamilton home in the river precinct, built for entertaining with a vast deck, chef\u2019s kitchen and a lift-ready design over two levels.",
-  },
-];
+/* --- LISTINGS NOTE ----------------------------------------
+   All listing cards, their images and their modal galleries are
+   hardcoded in index.html (each <article class="card"> carries its
+   data in data-* attributes, including data-img with the gallery
+   paths). This script only reads the DOM — it renders no content
+   and references no image URLs. To go live, swap the static cards
+   for your CRM/IDX output in the same shape; lead forms post to
+   Web3Forms.
+   ---------------------------------------------------------- */
+
+/* suburb medians — used only by the valuation calculator */
 var MED = {
   Paddington: 1650000,
   "New Farm": 1700000,
@@ -425,21 +29,11 @@ var MED = {
   Other: 1300000,
 };
 
-function img(id, w, h) {
-  return (
-    "https://images.pexels.com/photos/" +
-    id +
-    "/pexels-photo-" +
-    id +
-    ".jpeg?auto=compress&cs=tinysrgb&w=" +
-    w +
-    "&h=" +
-    h +
-    "&fit=crop"
-  );
-}
 function money(n) {
   return "$" + Math.round(n).toLocaleString("en-AU");
+}
+function val(id) {
+  return document.getElementById(id).value;
 }
 function sendToWeb3Forms(fd) {
   fd.set("access_key", WEB3FORMS_ACCESS_KEY);
@@ -452,133 +46,87 @@ function sendToWeb3Forms(fd) {
   });
 }
 
-/* ---- populate selects ---- */
-(function () {
-  var subs = Object.keys(MED)
-    .filter(function (s) {
-      return s !== "Other";
-    })
-    .sort();
-  var fs = document.getElementById("f-suburb"),
-    hs = document.getElementById("h-suburb"),
-    vs = document.getElementById("v-suburb");
-  fs.innerHTML = '<option value="">All suburbs</option>';
-  hs.innerHTML = '<option value="">All suburbs</option>';
-  vs.innerHTML = "";
-  subs.forEach(function (s) {
-    fs.insertAdjacentHTML("beforeend", "<option>" + s + "</option>");
-    hs.insertAdjacentHTML("beforeend", "<option>" + s + "</option>");
-    vs.insertAdjacentHTML("beforeend", "<option>" + s + "</option>");
-  });
-})();
-
 /* ---- favourites (in-memory) ---- */
 var fav = new Set();
 
-/* ---- render + filter listings ---- */
+/* ---- filter + sort + paginate the static cards ---- */
 var grid = document.getElementById("grid"),
-  fcount = document.getElementById("fcount");
-var loadmore = document.getElementById("loadmore"),
-  PAGE = 6,
+  fcount = document.getElementById("fcount"),
+  loadmore = document.getElementById("loadmore");
+var allCards = [].slice.call(grid.querySelectorAll(".card"));
+var PAGE = 6,
   shown = PAGE,
-  lastOut = [];
-function renderGrid() {
-  if (!lastOut.length) {
-    grid.innerHTML =
-      '<div class="empty"><b>No homes match those filters</b>Try widening your price range or suburb — or reset to see everything.</div>';
+  matched = [],
+  emptyEl = null;
+
+function byNum(key, dir) {
+  return function (a, b) {
+    return (+a.dataset[key] - +b.dataset[key]) * dir;
+  };
+}
+function applyFilters() {
+  var sub = val("f-suburb"),
+    ty = val("f-type"),
+    bd = +val("f-beds"),
+    ba = +val("f-baths"),
+    mn = +val("f-min"),
+    mx = +val("f-max"),
+    sort = val("f-sort");
+  matched = allCards.filter(function (c) {
+    var d = c.dataset;
+    if (sub && d.sub !== sub) return false;
+    if (ty && d.type !== ty) return false;
+    if (bd && +d.bed < bd) return false;
+    if (ba && +d.bath < ba) return false;
+    if (mn && +d.price < mn) return false;
+    if (mx && +d.price > mx) return false;
+    return true;
+  });
+  var nonmatched = allCards.filter(function (c) {
+    return matched.indexOf(c) < 0;
+  });
+  if (sort === "lo") matched.sort(byNum("price", 1));
+  else if (sort === "hi") matched.sort(byNum("price", -1));
+  else if (sort === "bed") matched.sort(byNum("bed", -1));
+  else matched.sort(byNum("order", 1)); // Featured
+  // reorder DOM so matched cards come first, in sorted order
+  matched.concat(nonmatched).forEach(function (c) {
+    grid.appendChild(c);
+  });
+  fcount.textContent =
+    matched.length + (matched.length === 1 ? " home" : " homes");
+  shown = PAGE;
+  render();
+}
+function render() {
+  allCards.forEach(function (c) {
+    c.style.display = "none";
+  });
+  if (emptyEl) {
+    emptyEl.remove();
+    emptyEl = null;
+  }
+  if (!matched.length) {
+    emptyEl = document.createElement("div");
+    emptyEl.className = "empty";
+    emptyEl.innerHTML =
+      "<b>No homes match those filters</b>Try widening your price range or suburb — or reset to see everything.";
+    grid.appendChild(emptyEl);
     loadmore.style.display = "none";
     return;
   }
-  grid.innerHTML = lastOut.slice(0, shown).map(cardHTML).join("");
-  var remaining = lastOut.length - shown;
+  matched.slice(0, shown).forEach(function (c) {
+    c.style.display = "";
+  });
+  var remaining = matched.length - shown;
   if (remaining > 0) {
     loadmore.style.display = "";
     loadmore.textContent = "Load more homes (" + remaining + " more)";
   } else loadmore.style.display = "none";
 }
-function badgeHTML(t) {
-  var cls =
-    t === "Auction" ? "badge auc" : t === "Just listed" ? "badge new" : "badge";
-  var ic = t === "3D Tour" ? "\u25E2 " : t === "Video" ? "\u25B7 " : "";
-  return '<span class="' + cls + '">' + ic + t + "</span>";
-}
-function cardHTML(p) {
-  return (
-    '<article class="card" data-id="' +
-    p.id +
-    '">' +
-    '<div class="card-media"><img src="' +
-    img(p.img[0], 800, 600) +
-    '" alt="' +
-    p.addr +
-    ", " +
-    p.sub +
-    '" loading="lazy">' +
-    '<div class="badges">' +
-    p.tag.map(badgeHTML).join("") +
-    "</div>" +
-    '<button class="card-fav' +
-    (fav.has(p.id) ? " on" : "") +
-    '" data-fav aria-label="Save home">' +
-    (fav.has(p.id) ? "\u2665" : "\u2661") +
-    "</button></div>" +
-    '<div class="card-body"><div class="price mono">' +
-    money(p.price) +
-    "</div>" +
-    '<h3 class="card-addr">' +
-    p.addr +
-    '</h3><div class="card-sub">' +
-    p.sub +
-    ", QLD</div>" +
-    '<div class="spec"><span>' +
-    p.bed +
-    "<i>bd</i></span><span>" +
-    p.bath +
-    "<i>ba</i></span><span>" +
-    p.car +
-    "<i>car</i></span><span>" +
-    p.land +
-    "<i>m\u00B2</i></span></div>" +
-    '<button class="card-view">View property</button></div></article>'
-  );
-}
-function applyFilters() {
-  var sub = document.getElementById("f-suburb").value,
-    ty = document.getElementById("f-type").value,
-    bd = +document.getElementById("f-beds").value,
-    ba = +document.getElementById("f-baths").value,
-    mn = +document.getElementById("f-min").value,
-    mx = +document.getElementById("f-max").value,
-    sort = document.getElementById("f-sort").value;
-  var out = LISTINGS.filter(function (p) {
-    if (sub && p.sub !== sub) return false;
-    if (ty && p.type !== ty) return false;
-    if (bd && p.bed < bd) return false;
-    if (ba && p.bath < ba) return false;
-    if (mn && p.price < mn) return false;
-    if (mx && p.price > mx) return false;
-    return true;
-  });
-  if (sort === "lo")
-    out.sort(function (a, b) {
-      return a.price - b.price;
-    });
-  else if (sort === "hi")
-    out.sort(function (a, b) {
-      return b.price - a.price;
-    });
-  else if (sort === "bed")
-    out.sort(function (a, b) {
-      return b.bed - a.bed;
-    });
-  fcount.textContent = out.length + (out.length === 1 ? " home" : " homes");
-  lastOut = out;
-  shown = PAGE;
-  renderGrid();
-}
-document.getElementById("loadmore").addEventListener("click", function () {
+loadmore.addEventListener("click", function () {
   shown += PAGE;
-  renderGrid();
+  render();
 });
 ["f-suburb", "f-type", "f-beds", "f-baths", "f-min", "f-max", "f-sort"].forEach(
   function (id) {
@@ -595,10 +143,8 @@ document.getElementById("freset").addEventListener("click", function () {
   applyFilters();
 });
 document.getElementById("h-go").addEventListener("click", function () {
-  document.getElementById("f-suburb").value =
-    document.getElementById("h-suburb").value;
-  document.getElementById("f-type").value =
-    document.getElementById("h-type").value;
+  document.getElementById("f-suburb").value = val("h-suburb");
+  document.getElementById("f-type").value = val("h-type");
   applyFilters();
   document.getElementById("listings").scrollIntoView({ behavior: "smooth" });
 });
@@ -608,81 +154,81 @@ applyFilters();
 grid.addEventListener("click", function (e) {
   var card = e.target.closest(".card");
   if (!card) return;
-  var p = LISTINGS.find(function (x) {
-    return x.id === card.dataset.id;
-  });
   if (e.target.closest("[data-fav]")) {
     e.stopPropagation();
-    var on = fav.has(p.id);
-    if (on) fav.delete(p.id);
-    else fav.add(p.id);
+    var id = card.dataset.id,
+      on = fav.has(id);
+    if (on) fav.delete(id);
+    else fav.add(id);
     var b = e.target.closest("[data-fav]");
     b.classList.toggle("on", !on);
     b.textContent = on ? "\u2661" : "\u2665";
     window.__toast(on ? "Removed from saved" : "Saved to your shortlist");
     return;
   }
-  openModal(p);
+  openModal(card);
 });
 
-/* ---- property modal ---- */
+/* ---- property modal (reads the card's data-* attributes) ---- */
 var modal = document.getElementById("pmodal");
-function openModal(p) {
-  var ag = AGENTS[p.ag];
-  document.getElementById("mprice").textContent = money(p.price);
-  document.getElementById("maddr").textContent = p.addr;
+function openModal(card) {
+  var d = card.dataset;
+  var imgs = d.img.split(",");
+  var feat = d.feat.split("|");
+  document.getElementById("mprice").textContent = money(+d.price);
+  document.getElementById("maddr").textContent = d.addr;
   document.getElementById("msub").textContent =
-    p.sub + ", QLD \u00B7 " + p.type;
+    d.sub + ", QLD \u00B7 " + d.type;
   document.getElementById("mspec").innerHTML =
     '<div class="ms"><span>' +
-    p.bed +
+    d.bed +
     '</span><small>Beds</small></div><div class="ms"><span>' +
-    p.bath +
+    d.bath +
     '</span><small>Baths</small></div><div class="ms"><span>' +
-    p.car +
+    d.car +
     '</span><small>Car</small></div><div class="ms"><span>' +
-    p.land +
+    d.land +
     "</span><small>m\u00B2 land</small></div>";
-  document.getElementById("mdesc").textContent = p.desc;
-  document.getElementById("mfeat").innerHTML = p.feat
+  document.getElementById("mdesc").textContent = d.desc;
+  document.getElementById("mfeat").innerHTML = feat
     .map(function (f) {
       return "<li>" + f + "</li>";
     })
     .join("");
   document.getElementById("magent").innerHTML =
     '<div class="av"><img src="' +
-    ag.photo +
+    d.agentPhoto +
     '" alt="' +
-    ag.name +
+    d.agentName +
     '"></div><div><b>' +
-    ag.name +
+    d.agentName +
     "</b><span>" +
-    ag.role +
+    d.agentRole +
     "</span></div>";
   document.getElementById("mprop").value =
-    p.addr + ", " + p.sub + " (" + money(p.price) + ")";
+    d.addr + ", " + d.sub + " (" + money(+d.price) + ")";
   document.querySelector("#mform [name=subject]").value =
-    "Property enquiry: " + p.addr + ", " + p.sub;
+    "Property enquiry: " + d.addr + ", " + d.sub;
   var thumbs = document.getElementById("mhthumbs"),
     mainimg = document.getElementById("mhimg");
-  mainimg.src = img(p.img[0], 1100, 620);
-  mainimg.alt = p.addr;
-  thumbs.innerHTML = p.img
-    .map(function (id, i) {
+  mainimg.src = imgs[0];
+  mainimg.alt = d.addr;
+  thumbs.innerHTML = imgs
+    .map(function (src, i) {
       return (
         '<button data-i="' +
         i +
         '" class="' +
         (i === 0 ? "on" : "") +
         '"><img src="' +
-        img(id, 120, 90) +
+        src +
         '" alt=""></button>'
       );
     })
     .join("");
   thumbs.querySelectorAll("button").forEach(function (b) {
     b.addEventListener("click", function () {
-      mainimg.src = img(p.img[+b.dataset.i], 1100, 620);
+      mainimg.src = imgs[+b.dataset.i];
       thumbs.querySelectorAll("button").forEach(function (x) {
         x.classList.remove("on");
       });

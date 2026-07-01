@@ -108,7 +108,6 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <script src="script.js"></script>
     <div class="announce">
       <b>Free property appraisals</b> open for Spring 2026<span class="sep"
         >·</span
@@ -186,7 +185,18 @@
           <div class="searchbar">
             <div class="sb-field">
               <label>Suburb</label
-              ><select id="h-suburb"></select>
+              ><select id="h-suburb">
+                <option value="">All suburbs</option>
+                <option>Ascot</option>
+                <option>Bulimba</option>
+                <option>Coorparoo</option>
+                <option>Hamilton</option>
+                <option>Hawthorne</option>
+                <option>New Farm</option>
+                <option>Paddington</option>
+                <option>Teneriffe</option>
+                <option>Wilston</option>
+              </select>
             </div>
             <div class="sb-field">
               <label>Property type</label
@@ -224,7 +234,18 @@
     <div class="fbar" id="listings">
       <div class="wrap">
         <div class="fbar-in">
-          <select id="f-suburb"></select>
+          <select id="f-suburb">
+            <option value="">All suburbs</option>
+            <option>Ascot</option>
+            <option>Bulimba</option>
+            <option>Coorparoo</option>
+            <option>Hamilton</option>
+            <option>Hawthorne</option>
+            <option>New Farm</option>
+            <option>Paddington</option>
+            <option>Teneriffe</option>
+            <option>Wilston</option>
+          </select>
           <select id="f-type">
             <option value="">Any type</option>
             <option>House</option>
@@ -277,7 +298,801 @@
           <span class="eyebrow">For sale now</span>
           <h2 class="s-title">Homes on the <em>market</em></h2>
         </div>
-        <div class="grid" id="grid"></div>
+        <div class="grid" id="grid">
+          <article
+            class="card"
+            data-id="P01"
+            data-order="0"
+            data-addr="24 Latrobe Terrace"
+            data-sub="Paddington"
+            data-type="House"
+            data-bed="4"
+            data-bath="2"
+            data-car="2"
+            data-land="405"
+            data-price="1650000"
+            data-desc="A classic Paddington character home reimagined for modern family life — soaring VJ ceilings, a stone chef’s kitchen and a north-facing deck overlooking the pool."
+            data-feat="Renovated Queenslander|Stone chef’s kitchen|North-facing deck|Pool &amp; lush garden"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/19344325.jpg,/images/listings/5179534.jpg,/images/listings/6035357.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/property_ten.jpg"
+                alt="24 Latrobe Terrace, Paddington"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge">◢ 3D Tour</span
+                ><span class="badge auc">Auction</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,650,000</div>
+              <h3 class="card-addr">24 Latrobe Terrace</h3>
+              <div class="card-sub">Paddington, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>405<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="N02"
+            data-order="1"
+            data-addr="8/15 Welsby Street"
+            data-sub="New Farm"
+            data-type="Apartment"
+            data-bed="2"
+            data-bath="2"
+            data-car="1"
+            data-land="110"
+            data-price="895000"
+            data-desc="A light-filled two-bedroom apartment moments from New Farm Park and the Powerhouse, with a wrap-around balcony and secure basement parking."
+            data-feat="Riverside precinct|Secure parking|Wrap-around balcony|Walk to Powerhouse"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/18423197.jpg,/images/listings/28991200.jpg,/images/listings/4857757.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/18423197.jpg"
+                alt="8/15 Welsby Street, New Farm"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$895,000</div>
+              <h3 class="card-addr">8/15 Welsby Street</h3>
+              <div class="card-sub">New Farm, QLD</div>
+              <div class="spec">
+                <span>2<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>110<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="B03"
+            data-order="2"
+            data-addr="12 Quay Street"
+            data-sub="Bulimba"
+            data-type="House"
+            data-bed="5"
+            data-bath="3"
+            data-car="2"
+            data-land="612"
+            data-price="2250000"
+            data-desc="An elegant family residence a short stroll from Oxford Street and the CityCat — five bedrooms, a resort-style pool and a dedicated home office."
+            data-feat="Walk to Oxford St|Resort-style pool|Dedicated home office|CityCat to CBD"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/323780.jpg,/images/listings/1643383.jpg,/images/listings/10168692.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/323780.jpg"
+                alt="12 Quay Street, Bulimba"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">◢ 3D Tour</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$2,250,000</div>
+              <h3 class="card-addr">12 Quay Street</h3>
+              <div class="card-sub">Bulimba, QLD</div>
+              <div class="spec">
+                <span>5<i>bd</i></span
+                ><span>3<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>612<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="A04"
+            data-order="3"
+            data-addr="47 Lansdowne Street"
+            data-sub="Ascot"
+            data-type="House"
+            data-bed="4"
+            data-bath="3"
+            data-car="2"
+            data-land="506"
+            data-price="1980000"
+            data-desc="Set in one of Ascot’s most tightly held streets, this refined four-bedroom home pairs soaring ceilings with a butler’s pantry and a private, leafy outlook."
+            data-feat="Tightly held street|Soaring ceilings|Butler’s pantry|Leafy outlook"
+            data-agent-name="Tom Callahan"
+            data-agent-role="Sales Associate"
+            data-agent-photo="/images/agents/tom-callahan.jpg"
+            data-img="/images/listings/33213827.jpg,/images/listings/5179534.jpg,/images/listings/1643383.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/property_seven.jpg"
+                alt="47 Lansdowne Street, Ascot"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge new">Just listed</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,980,000</div>
+              <h3 class="card-addr">47 Lansdowne Street</h3>
+              <div class="card-sub">Ascot, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>3<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>506<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="H05"
+            data-order="4"
+            data-addr="3 Riverview Terrace"
+            data-sub="Hawthorne"
+            data-type="House"
+            data-bed="3"
+            data-bath="2"
+            data-car="2"
+            data-land="380"
+            data-price="1420000"
+            data-desc="A move-in-ready three-bedroom home on a quiet Hawthorne terrace — open-plan living flows to a covered alfresco, minutes from the ferry and cafes."
+            data-feat="Quiet terrace|Open-plan living|Covered alfresco|Near Hawthorne ferry"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/7031581.jpg,/images/listings/4857757.jpg,/images/listings/6035357.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/7031581.jpg"
+                alt="3 Riverview Terrace, Hawthorne"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,420,000</div>
+              <h3 class="card-addr">3 Riverview Terrace</h3>
+              <div class="card-sub">Hawthorne, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>380<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="T06"
+            data-order="5"
+            data-addr="102/60 Riverwalk Avenue"
+            data-sub="Teneriffe"
+            data-type="Apartment"
+            data-bed="2"
+            data-bath="2"
+            data-car="1"
+            data-land="128"
+            data-price="1150000"
+            data-desc="A sophisticated riverfront apartment in a concierge building — floor-to-ceiling glass frames the water, with a generous entertainer’s terrace."
+            data-feat="River views|Concierge building|Floor-to-ceiling glass|Entertainer’s terrace"
+            data-agent-name="Tom Callahan"
+            data-agent-role="Sales Associate"
+            data-agent-photo="/images/agents/tom-callahan.jpg"
+            data-img="/images/listings/16631149.jpg,/images/listings/28991200.jpg,/images/listings/10168692.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/property_nine.jpg"
+                alt="102/60 Riverwalk Avenue, Teneriffe"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">◢ 3D Tour</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,150,000</div>
+              <h3 class="card-addr">102/60 Riverwalk Avenue</h3>
+              <div class="card-sub">Teneriffe, QLD</div>
+              <div class="spec">
+                <span>2<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>128<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="C07"
+            data-order="6"
+            data-addr="19 Cracknell Road"
+            data-sub="Coorparoo"
+            data-type="Townhouse"
+            data-bed="3"
+            data-bath="2"
+            data-car="1"
+            data-land="210"
+            data-price="785000"
+            data-desc="A low-maintenance townhouse in a boutique complex — three bedrooms, a private courtyard and a short walk to Coorparoo Square dining and cinemas."
+            data-feat="Boutique complex|Private courtyard|Whitegoods included|Near Coorparoo Square"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/13771880.jpg,/images/listings/4857757.jpg,/images/listings/28991200.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/13771880.jpg"
+                alt="19 Cracknell Road, Coorparoo"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge new">Just listed</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$785,000</div>
+              <h3 class="card-addr">19 Cracknell Road</h3>
+              <div class="card-sub">Coorparoo, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>210<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="M08"
+            data-order="7"
+            data-addr="6 Eblin Drive"
+            data-sub="Hamilton"
+            data-type="House"
+            data-bed="5"
+            data-bath="4"
+            data-car="3"
+            data-land="720"
+            data-price="2950000"
+            data-desc="A landmark Hamilton Hill residence capturing sweeping city and river views — five bedrooms, a lift to all levels and a temperature-controlled cellar."
+            data-feat="Hamilton Hill|City &amp; river views|Lift to all levels|Wine cellar"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/30580640.jpg,/images/listings/1643383.jpg,/images/listings/10168692.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/30580640.jpg"
+                alt="6 Eblin Drive, Hamilton"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge">◢ 3D Tour</span
+                ><span class="badge auc">Auction</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$2,950,000</div>
+              <h3 class="card-addr">6 Eblin Drive</h3>
+              <div class="card-sub">Hamilton, QLD</div>
+              <div class="spec">
+                <span>5<i>bd</i></span
+                ><span>4<i>ba</i></span
+                ><span>3<i>car</i></span
+                ><span>720<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="W09"
+            data-order="8"
+            data-addr="55 Mackay Street"
+            data-sub="Wilston"
+            data-type="House"
+            data-bed="4"
+            data-bath="2"
+            data-car="2"
+            data-land="455"
+            data-price="1295000"
+            data-desc="A versatile four-bedroom home with a dual-living option, established gardens and the Wilston State School catchment — perfect for a growing family."
+            data-feat="Dual-living option|Established gardens|Family friendly|Wilston State catchment"
+            data-agent-name="Tom Callahan"
+            data-agent-role="Sales Associate"
+            data-agent-photo="/images/agents/tom-callahan.jpg"
+            data-img="/images/listings/15422346.jpg,/images/listings/6035357.jpg,/images/listings/5179534.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/15422346.jpg"
+                alt="55 Mackay Street, Wilston"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,295,000</div>
+              <h3 class="card-addr">55 Mackay Street</h3>
+              <div class="card-sub">Wilston, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>455<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="P10"
+            data-order="9"
+            data-addr="7 Beck Street"
+            data-sub="Paddington"
+            data-type="House"
+            data-bed="3"
+            data-bath="2"
+            data-car="1"
+            data-land="303"
+            data-price="1390000"
+            data-desc="A charming hilltop Queenslander with breezy verandahs and city glimpses, a short walk to the cafes and boutiques of Latrobe Terrace."
+            data-feat="Hilltop position|Breezy verandahs|City glimpses|Walk to Latrobe Tce"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/7031581.jpg,/images/listings/6035357.jpg,/images/listings/5179534.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/7031581.jpg"
+                alt="7 Beck Street, Paddington"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge new">Just listed</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,390,000</div>
+              <h3 class="card-addr">7 Beck Street</h3>
+              <div class="card-sub">Paddington, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>303<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="N11"
+            data-order="10"
+            data-addr="12/40 Merthyr Road"
+            data-sub="New Farm"
+            data-type="Apartment"
+            data-bed="3"
+            data-bath="2"
+            data-car="2"
+            data-land="140"
+            data-price="1290000"
+            data-desc="A spacious three-bedroom apartment in a boutique block, with two secure car spaces and a chef’s kitchen, steps from New Farm Park."
+            data-feat="Boutique block|Two car spaces|Chef’s kitchen|Steps to the park"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/16631149.jpg,/images/listings/4857757.jpg,/images/listings/28991200.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/16631149.jpg"
+                alt="12/40 Merthyr Road, New Farm"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">◢ 3D Tour</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,290,000</div>
+              <h3 class="card-addr">12/40 Merthyr Road</h3>
+              <div class="card-sub">New Farm, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>140<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="C12"
+            data-order="11"
+            data-addr="5 Cavendish Street"
+            data-sub="Coorparoo"
+            data-type="House"
+            data-bed="4"
+            data-bath="2"
+            data-car="2"
+            data-land="410"
+            data-price="1180000"
+            data-desc="A renovated character home with wide side access and a covered entertaining deck, in a sought-after Coorparoo school catchment."
+            data-feat="Renovated character home|Wide side access|Covered entertaining|Top school catchment"
+            data-agent-name="Tom Callahan"
+            data-agent-role="Sales Associate"
+            data-agent-photo="/images/agents/tom-callahan.jpg"
+            data-img="/images/listings/33213827.jpg,/images/listings/1643383.jpg,/images/listings/6035357.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/property_eight.jpg"
+                alt="5 Cavendish Street, Coorparoo"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,180,000</div>
+              <h3 class="card-addr">5 Cavendish Street</h3>
+              <div class="card-sub">Coorparoo, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>410<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="B13"
+            data-order="12"
+            data-addr="30 Godwin Street"
+            data-sub="Bulimba"
+            data-type="Townhouse"
+            data-bed="3"
+            data-bath="2"
+            data-car="1"
+            data-land="190"
+            data-price="985000"
+            data-desc="A low-maintenance townhouse with a private courtyard, an easy walk to the Bulimba ferry, Oxford Street and riverside parks."
+            data-feat="Low maintenance|Private courtyard|Walk to ferry|Pet friendly"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/13771880.jpg,/images/listings/10168692.jpg,/images/listings/4857757.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/property_four.jpg"
+                alt="30 Godwin Street, Bulimba"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge new">Just listed</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$985,000</div>
+              <h3 class="card-addr">30 Godwin Street</h3>
+              <div class="card-sub">Bulimba, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>190<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="H14"
+            data-order="13"
+            data-addr="21 Hawthorne Road"
+            data-sub="Hawthorne"
+            data-type="Apartment"
+            data-bed="2"
+            data-bath="1"
+            data-car="1"
+            data-land="96"
+            data-price="720000"
+            data-desc="A smart entry-level apartment with a north-east aspect and leafy outlook, moments from Hawthorne’s cafes and the ferry terminal."
+            data-feat="Smart entry buy|North-east aspect|Leafy outlook|Near cafes"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/18423197.jpg,/images/listings/28991200.jpg,/images/listings/4857757.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/18423197.jpg"
+                alt="21 Hawthorne Road, Hawthorne"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$720,000</div>
+              <h3 class="card-addr">21 Hawthorne Road</h3>
+              <div class="card-sub">Hawthorne, QLD</div>
+              <div class="spec">
+                <span>2<i>bd</i></span
+                ><span>1<i>ba</i></span
+                ><span>1<i>car</i></span
+                ><span>96<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="A15"
+            data-order="14"
+            data-addr="9 Sutherland Avenue"
+            data-sub="Ascot"
+            data-type="House"
+            data-bed="5"
+            data-bath="4"
+            data-car="3"
+            data-land="810"
+            data-price="3250000"
+            data-desc="A statement family estate on a blue-ribbon Ascot avenue — five bedrooms, a full tennis court, pool with cabana and triple garaging."
+            data-feat="Blue-ribbon address|Tennis court|Pool &amp; cabana|Triple garage"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/30580640.jpg,/images/listings/1643383.jpg,/images/listings/10168692.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/30580640.jpg"
+                alt="9 Sutherland Avenue, Ascot"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge">◢ 3D Tour</span
+                ><span class="badge auc">Auction</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$3,250,000</div>
+              <h3 class="card-addr">9 Sutherland Avenue</h3>
+              <div class="card-sub">Ascot, QLD</div>
+              <div class="spec">
+                <span>5<i>bd</i></span
+                ><span>4<i>ba</i></span
+                ><span>3<i>car</i></span
+                ><span>810<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="T16"
+            data-order="15"
+            data-addr="507/55 Vernon Terrace"
+            data-sub="Teneriffe"
+            data-type="Apartment"
+            data-bed="3"
+            data-bath="2"
+            data-car="2"
+            data-land="160"
+            data-price="1480000"
+            data-desc="A top-floor Woolstore conversion with soaring ceilings, exposed beams and dual balconies framing the river and city skyline."
+            data-feat="Top-floor outlook|Woolstore character|Dual balconies|Secure building"
+            data-agent-name="Tom Callahan"
+            data-agent-role="Sales Associate"
+            data-agent-photo="/images/agents/tom-callahan.jpg"
+            data-img="/images/listings/323780.jpg,/images/listings/28991200.jpg,/images/listings/16631149.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/323780.jpg"
+                alt="507/55 Vernon Terrace, Teneriffe"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">◢ 3D Tour</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,480,000</div>
+              <h3 class="card-addr">507/55 Vernon Terrace</h3>
+              <div class="card-sub">Teneriffe, QLD</div>
+              <div class="spec">
+                <span>3<i>bd</i></span
+                ><span>2<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>160<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="W17"
+            data-order="16"
+            data-addr="14 Lamington Street"
+            data-sub="Wilston"
+            data-type="House"
+            data-bed="4"
+            data-bath="3"
+            data-car="2"
+            data-land="480"
+            data-price="1560000"
+            data-desc="An elevated four-bedroom home with flexible dual-living, a designer kitchen and a short stroll to the Wilston village and station."
+            data-feat="Elevated block|Dual living|Designer kitchen|Walk to village"
+            data-agent-name="Priya Sharma"
+            data-agent-role="Senior Sales Agent"
+            data-agent-photo="/images/agents/priya-sharma.jpg"
+            data-img="/images/listings/15422346.jpg,/images/listings/5179534.jpg,/images/listings/6035357.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/15422346.jpg"
+                alt="14 Lamington Street, Wilston"
+                loading="lazy"
+              />
+              <div class="badges">
+                <span class="badge new">Just listed</span>
+              </div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$1,560,000</div>
+              <h3 class="card-addr">14 Lamington Street</h3>
+              <div class="card-sub">Wilston, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>3<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>480<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+          <article
+            class="card"
+            data-id="M18"
+            data-order="17"
+            data-addr="3 Crescent Road"
+            data-sub="Hamilton"
+            data-type="House"
+            data-bed="4"
+            data-bath="3"
+            data-car="2"
+            data-land="650"
+            data-price="2680000"
+            data-desc="A refined Hamilton home in the river precinct, built for entertaining with a vast deck, chef’s kitchen and a lift-ready design over two levels."
+            data-feat="River-precinct|Entertainer’s deck|Chef’s kitchen|Lift-ready design"
+            data-agent-name="Daniel Whitmore"
+            data-agent-role="Principal &amp; Auctioneer"
+            data-agent-photo="/images/agents/daniel-whitmore.jpg"
+            data-img="/images/listings/19344325.jpg,/images/listings/1643383.jpg,/images/listings/10168692.jpg"
+          >
+            <div class="card-media">
+              <img
+                src="/images/listings/19344325.jpg"
+                alt="3 Crescent Road, Hamilton"
+                loading="lazy"
+              />
+              <div class="badges"><span class="badge">▷ Video</span></div>
+              <button class="card-fav" data-fav aria-label="Save home">
+                ♡
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="price mono">$2,680,000</div>
+              <h3 class="card-addr">3 Crescent Road</h3>
+              <div class="card-sub">Hamilton, QLD</div>
+              <div class="spec">
+                <span>4<i>bd</i></span
+                ><span>3<i>ba</i></span
+                ><span>2<i>car</i></span
+                ><span>650<i>m²</i></span>
+              </div>
+              <button class="card-view">View property</button>
+            </div>
+          </article>
+        </div>
         <div class="loadmore-wrap">
           <button class="btn btn-line btn-lg" id="loadmore">
             Load more homes
@@ -395,7 +1210,19 @@
                   placeholder="Street address (optional)"
                 />
               </div>
-              <div class="vfield"><select id="v-suburb"></select></div>
+              <div class="vfield">
+                <select id="v-suburb">
+                  <option>Ascot</option>
+                  <option>Bulimba</option>
+                  <option>Coorparoo</option>
+                  <option>Hamilton</option>
+                  <option>Hawthorne</option>
+                  <option>New Farm</option>
+                  <option>Paddington</option>
+                  <option>Teneriffe</option>
+                  <option>Wilston</option>
+                </select>
+              </div>
               <div class="vfield">
                 <select id="v-type">
                   <option value="house">House</option>
@@ -663,7 +1490,7 @@
           <div class="sold-card rv">
             <div class="sold-media">
               <img
-                src="/images/property_five.jpg"
+                src="/images/property_six.jpg"
                 alt="Sold in Paddington"
                 loading="lazy"
               /><span class="sold-stamp">Sold · 4 days</span>
@@ -721,7 +1548,7 @@
           <div class="agent rv">
             <div class="av">
               <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
+                src="/images/agents/daniel-whitmore.jpg"
                 alt="Daniel Whitmore"
                 loading="lazy"
               />
@@ -737,7 +1564,7 @@
           <div class="agent rv d1">
             <div class="av">
               <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
+                src="/images/agents/priya-sharma.jpg"
                 alt="Priya Sharma"
                 loading="lazy"
               />
@@ -753,7 +1580,7 @@
           <div class="agent rv d2">
             <div class="av">
               <img
-                src="https://randomuser.me/api/portraits/men/52.jpg"
+                src="/images/agents/tom-callahan.jpg"
                 alt="Tom Callahan"
                 loading="lazy"
               />
@@ -1117,5 +1944,6 @@
     <div class="toast" id="toast">
       <span class="td">●</span><span class="tx">Done</span>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
