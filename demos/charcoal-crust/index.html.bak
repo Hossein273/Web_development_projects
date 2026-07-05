@@ -68,7 +68,7 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div class="topbar">
@@ -123,7 +123,7 @@
     <header class="hero" id="top">
       <img
         class="hero-poster"
-        src="/images/kebab-photo-17138059.jpg"
+        src="images/kebab-photo-17138059.jpg"
         alt="Charcoal grill with flames"
         fetchpriority="high"
       />
@@ -135,7 +135,7 @@
         playsinline
         poster="/images/kebab-photo-17138059.jpg"
       >
-        <source src="/images/kebabshop.mp4" type="video/mp4" />
+        <source src="images/kebabshop.mp4" type="video/mp4" />
       </video>
       <div class="hero-in">
         <div class="wrap">
@@ -218,7 +218,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/20115306/pexels-photo-20115306.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/margherita.jpg"
+                    src="images/margherita.jpg"
                     alt="Margherita pizza"
                     width="440"
                     height="330"
@@ -247,7 +247,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/7813574/pexels-photo-7813574.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/pepperoni.jpg"
+                    src="images/pepperoni.jpg"
                     alt="Pepperoni pizza"
                     width="440"
                     height="330"
@@ -276,7 +276,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/bbq-chicken.jpg"
+                    src="images/bbq-chicken.jpg"
                     alt="BBQ chicken pizza"
                     width="440"
                     height="330"
@@ -305,7 +305,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/30221416/pexels-photo-30221416.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/meat-lovers.jpg"
+                    src="images/meat-lovers.jpg"
                     alt="Meat lovers pizza"
                     width="440"
                     height="330"
@@ -332,7 +332,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/14590497/pexels-photo-14590497.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/mediterranean.jpg"
+                    src="images/mediterranean.jpg"
                     alt="Mediterranean pizza"
                     width="440"
                     height="330"
@@ -361,7 +361,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/28962798/pexels-photo-28962798.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/hawaiian.jpg"
+                    src="images/hawaiian.jpg"
                     alt="Hawaiian pizza"
                     width="440"
                     height="330"
@@ -388,7 +388,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/6068717/pexels-photo-6068717.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/supreme.jpg"
+                    src="images/supreme.jpg"
                     alt="Supreme pizza"
                     width="440"
                     height="330"
@@ -415,7 +415,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/10584828/pexels-photo-10584828.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/garlic-prawn.jpg"
+                    src="images/garlic-prawn.jpg"
                     alt="Garlic prawn pizza"
                     width="440"
                     height="330"
@@ -442,7 +442,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/6223186/pexels-photo-6223186.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/spicy-lamb.jpg"
+                    src="images/spicy-lamb.jpg"
                     alt="Spicy lamb pizza"
                     width="440"
                     height="330"
@@ -469,7 +469,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/17800186/pexels-photo-17800186.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/four-cheese.jpg"
+                    src="images/four-cheese.jpg"
                     alt="Four cheese pizza"
                     width="440"
                     height="330"
@@ -505,7 +505,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/11286814/pexels-photo-11286814.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/chicken-wrap.jpg"
+                    src="images/chicken-wrap.jpg"
                     alt="Chicken kebab wrap"
                     width="440"
                     height="330"
@@ -532,7 +532,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/29306504/pexels-photo-29306504.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/mixed-wrap.jpg"
+                    src="images/mixed-wrap.jpg"
                     alt="Mixed kebab wrap"
                     width="440"
                     height="330"
@@ -559,7 +559,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/27744717/pexels-photo-27744717.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/lamb-wrap.jpg"
+                    src="images/lamb-wrap.jpg"
                     alt="Lamb kebab wrap"
                     width="440"
                     height="330"
@@ -586,7 +586,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/34106235/pexels-photo-34106235.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/beef-wrap.jpg"
+                    src="images/beef-wrap.jpg"
                     alt="Beef kebab wrap"
                     width="440"
                     height="330"
@@ -613,7 +613,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/3804003/pexels-photo-3804003.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/falafel-wrap.jpg"
+                    src="images/falafel-wrap.jpg"
                     alt="Falafel wrap"
                     width="440"
                     height="330"
@@ -640,7 +640,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/9056963/pexels-photo-9056963.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/chicken-plate.jpg"
+                    src="images/chicken-plate.jpg"
                     alt="Chicken kebab plate"
                     width="440"
                     height="330"
@@ -667,7 +667,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/6920656/pexels-photo-6920656.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/mixed-plate.jpg"
+                    src="images/mixed-plate.jpg"
                     alt="Mixed kebab plate"
                     width="440"
                     height="330"
@@ -694,7 +694,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/53148/pexels-photo-53148.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/lamb-skewers.jpg"
+                    src="images/lamb-skewers.jpg"
                     alt="Lamb skewers"
                     width="440"
                     height="330"
@@ -721,7 +721,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/37080242/pexels-photo-37080242.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/chicken-skewers.jpg"
+                    src="images/chicken-skewers.jpg"
                     alt="Chicken skewers"
                     width="440"
                     height="330"
@@ -748,7 +748,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/6941009/pexels-photo-6941009.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/snack-pack.jpg"
+                    src="images/snack-pack.jpg"
                     alt="Snack pack with chips and mixed meat"
                     width="440"
                     height="330"
@@ -782,7 +782,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/4109234/pexels-photo-4109234.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/chips.jpg"
+                    src="images/chips.jpg"
                     alt="Bowl of chips"
                     width="440"
                     height="330"
@@ -809,7 +809,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/1200354/pexels-photo-1200354.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/loaded-chips.jpg"
+                    src="images/loaded-chips.jpg"
                     alt="Loaded chips with cheese"
                     width="440"
                     height="330"
@@ -836,7 +836,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/13062441/pexels-photo-13062441.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/garlic-bread.jpg"
+                    src="images/garlic-bread.jpg"
                     alt="Garlic bread"
                     width="440"
                     height="330"
@@ -863,7 +863,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/7159284/pexels-photo-7159284.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/cheesy-garlic-bread.jpg"
+                    src="images/cheesy-garlic-bread.jpg"
                     alt="Cheesy garlic bread"
                     width="440"
                     height="330"
@@ -890,7 +890,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/8880733/pexels-photo-8880733.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/onion-rings.jpg"
+                    src="images/onion-rings.jpg"
                     alt="Onion rings"
                     width="440"
                     height="330"
@@ -917,7 +917,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/11160096/pexels-photo-11160096.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/calamari.jpg"
+                    src="images/calamari.jpg"
                     alt="Fried calamari"
                     width="440"
                     height="330"
@@ -944,7 +944,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/greek-salad.jpg"
+                    src="images/greek-salad.jpg"
                     alt="Greek salad"
                     width="440"
                     height="330"
@@ -971,7 +971,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/tabbouleh.jpg"
+                    src="images/tabbouleh.jpg"
                     alt="Tabbouleh salad"
                     width="440"
                     height="330"
@@ -998,7 +998,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/18674114/pexels-photo-18674114.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/hummus-pita.jpg"
+                    src="images/hummus-pita.jpg"
                     alt="Hummus with pita"
                     width="440"
                     height="330"
@@ -1025,7 +1025,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/5639378/pexels-photo-5639378.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/mozzarella-sticks.jpg"
+                    src="images/mozzarella-sticks.jpg"
                     alt="Mozzarella sticks"
                     width="440"
                     height="330"
@@ -1059,7 +1059,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/20183046/pexels-photo-20183046.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/baklava.jpg"
+                    src="images/baklava.jpg"
                     alt="Baklava"
                     width="440"
                     height="330"
@@ -1086,7 +1086,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/17834547/pexels-photo-17834547.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/kunafa.jpg"
+                    src="images/kunafa.jpg"
                     alt="Kunafa"
                     width="440"
                     height="330"
@@ -1113,7 +1113,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/chocolate-mousse.jpg"
+                    src="images/chocolate-mousse.jpg"
                     alt="Chocolate mousse"
                     width="440"
                     height="330"
@@ -1140,7 +1140,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/8589559/pexels-photo-8589559.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/gelato.jpg"
+                    src="images/gelato.jpg"
                     alt="Gelato scoops"
                     width="440"
                     height="330"
@@ -1167,7 +1167,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/13177921/pexels-photo-13177921.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/tiramisu.jpg"
+                    src="images/tiramisu.jpg"
                     alt="Tiramisu"
                     width="440"
                     height="330"
@@ -1194,7 +1194,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/372851/pexels-photo-372851.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/churros.jpg"
+                    src="images/churros.jpg"
                     alt="Churros"
                     width="440"
                     height="330"
@@ -1228,7 +1228,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/8879626/pexels-photo-8879626.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/coca-cola.jpg"
+                    src="images/coca-cola.jpg"
                     alt="Coca-Cola"
                     width="440"
                     height="330"
@@ -1255,7 +1255,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/31332092/pexels-photo-31332092.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/sprite.jpg"
+                    src="images/sprite.jpg"
                     alt="Sprite"
                     width="440"
                     height="330"
@@ -1282,7 +1282,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/17408558/pexels-photo-17408558.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/fanta.jpg"
+                    src="images/fanta.jpg"
                     alt="Fanta"
                     width="440"
                     height="330"
@@ -1309,7 +1309,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/158935/pexels-photo-158935.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/still-water.jpg"
+                    src="images/still-water.jpg"
                     alt="Still water"
                     width="440"
                     height="330"
@@ -1336,7 +1336,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/13887363/pexels-photo-13887363.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/sparkling-water.jpg"
+                    src="images/sparkling-water.jpg"
                     alt="Sparkling water"
                     width="440"
                     height="330"
@@ -1363,7 +1363,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/8879611/pexels-photo-8879611.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/ayran.jpg"
+                    src="images/ayran.jpg"
                     alt="Ayran yoghurt drink"
                     width="440"
                     height="330"
@@ -1390,7 +1390,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/3642/pexels-photo-3642.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/orange-juice.jpg"
+                    src="images/orange-juice.jpg"
                     alt="Fresh orange juice"
                     width="440"
                     height="330"
@@ -1417,7 +1417,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/14509267/pexels-photo-14509267.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/mango-lassi.jpg"
+                    src="images/mango-lassi.jpg"
                     alt="Mango lassi"
                     width="440"
                     height="330"
@@ -1444,7 +1444,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/1484678/pexels-photo-1484678.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/iced-tea.jpg"
+                    src="images/iced-tea.jpg"
                     alt="Iced tea"
                     width="440"
                     height="330"
@@ -1471,7 +1471,7 @@
                 <div class="card-img">
                   <!-- download → https://images.pexels.com/photos/28572821/pexels-photo-28572821.jpeg?auto=compress&cs=tinysrgb&w=880&h=660&fit=crop -->
                   <img
-                    src="/images/turkish-tea.jpg"
+                    src="images/turkish-tea.jpg"
                     alt="Turkish tea in a tulip glass"
                     width="440"
                     height="330"
@@ -1506,7 +1506,7 @@
         <div class="story-grid">
           <div class="story-img rv">
             <img
-              src="/images/pexels-photo-9056963.jpg"
+              src="images/pexels-photo-9056963.jpg"
               alt="Charcoal-grilled kebab plate"
             />
             <div class="glow"></div>
