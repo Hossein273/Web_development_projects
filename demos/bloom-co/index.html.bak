@@ -15,19 +15,19 @@
          Rename these to match the exact filenames google-webfonts-helper gives you. -->
     <link
       rel="preload"
-      href="fonts/instrument-serif-v4-latin-regular.woff2"
+      href="/fonts/instrument-serif-v4-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="fonts/hanken-grotesk-v8-latin-regular.woff2"
+      href="/fonts/hanken-grotesk-v8-latin-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
     <nav class="nav" id="nav">
@@ -104,7 +104,7 @@
           <div class="hero-visual">
             <div class="ph hero-img">
               <img
-                src="images/hero_image1.jpg"
+                src="/images/hero_image1.jpg"
                 alt="Fresh hand-tied bouquet"
                 loading="lazy"
               />
@@ -123,7 +123,7 @@
           <a class="cat rv" data-jump="bouquets"
             ><div class="ph">
               <img
-                src="images/hero_image1_.jpg"
+                src="/images/hero_image1_.jpg"
                 alt="Bouquets"
                 loading="lazy"
               />
@@ -135,7 +135,7 @@
               ></span></div></a
           ><a class="cat rv" data-jump="plants"
             ><div class="ph">
-              <img src="images/plants.jpg" alt="Plants" loading="lazy" />
+              <img src="/images/plants.jpg" alt="Plants" loading="lazy" />
             </div>
             <div class="cat-label">
               <b>Plants</b
@@ -145,7 +145,7 @@
           ><a class="cat rv" data-jump="dried"
             ><div class="ph">
               <img
-                src="images/dried_flowers.jpg"
+                src="/images/dried_flowers.jpg"
                 alt="Dried flowers"
                 loading="lazy"
               />
@@ -158,7 +158,7 @@
           ><a class="cat rv" data-jump="all"
             ><div class="ph">
               <img
-                src="images/Flower_gifts.jpg"
+                src="/images/Flower_gifts.jpg"
                 alt="Flower gifts"
                 loading="lazy"
               />
@@ -191,7 +191,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/blush-peony.jpg"
+                  src="/images/blush-peony.jpg"
                   alt="Blush Peony flowers"
                   loading="lazy"
                 />
@@ -224,7 +224,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/sunshine-mix.jpg"
+                  src="/images/sunshine-mix.jpg"
                   alt="Sunshine Mix flowers"
                   loading="lazy"
                 />
@@ -256,7 +256,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/wild-and-bright.jpg"
+                  src="/images/wild-and-bright.jpg"
                   alt="Wild &amp; Bright flowers"
                   loading="lazy"
                 />
@@ -289,7 +289,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/spring-tulips.jpg"
+                  src="/images/spring-tulips.jpg"
                   alt="Spring Tulips flowers"
                   loading="lazy"
                 />
@@ -321,7 +321,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/golden-pothos.jpg"
+                  src="/images/golden-pothos.jpg"
                   alt="Golden Pothos flowers"
                   loading="lazy"
                 />
@@ -353,7 +353,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/everlasting-dried.jpg"
+                  src="/images/everlasting-dried.jpg"
                   alt="Everlasting Dried flowers"
                   loading="lazy"
                 />
@@ -385,7 +385,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/rosy-garden.jpg"
+                  src="/images/rosy-garden.jpg"
                   alt="Rosy Garden flowers"
                   loading="lazy"
                 />
@@ -417,7 +417,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/sunflower-burst.jpg"
+                  src="/images/sunflower-burst.jpg"
                   alt="Sunflower Burst flowers"
                   loading="lazy"
                 />
@@ -450,7 +450,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/lavender-field.jpg"
+                  src="/images/lavender-field.jpg"
                   alt="Lavender Field flowers"
                   loading="lazy"
                 />
@@ -482,7 +482,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/coral-dahlia.jpg"
+                  src="/images/coral-dahlia.jpg"
                   alt="Coral Dahlia flowers"
                   loading="lazy"
                 />
@@ -513,7 +513,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/white-lily-grace.jpg"
+                  src="/images/white-lily-grace.jpg"
                   alt="White Lily Grace flowers"
                   loading="lazy"
                 />
@@ -545,7 +545,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/pink-ranunculus.jpg"
+                  src="/images/pink-ranunculus.jpg"
                   alt="Pink Ranunculus flowers"
                   loading="lazy"
                 />
@@ -575,7 +575,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/monstera-deliciosa.jpg"
+                  src="/images/monstera-deliciosa.jpg"
                   alt="Monstera Deliciosa flowers"
                   loading="lazy"
                 />
@@ -606,7 +606,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/peace-lily.jpg"
+                  src="/images/peace-lily.jpg"
                   alt="Peace Lily flowers"
                   loading="lazy"
                 />
@@ -638,7 +638,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/snake-plant.jpg"
+                  src="/images/snake-plant.jpg"
                   alt="Snake Plant flowers"
                   loading="lazy"
                 />
@@ -668,7 +668,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/mini-succulent-trio.jpg"
+                  src="/images/mini-succulent-trio.jpg"
                   alt="Mini Succulent Trio flowers"
                   loading="lazy"
                 />
@@ -700,7 +700,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/dried-pampas.jpg"
+                  src="/images/dried-pampas.jpg"
                   alt="Dried Pampas flowers"
                   loading="lazy"
                 />
@@ -732,7 +732,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/bunny-tail-bunch.jpg"
+                  src="/images/bunny-tail-bunch.jpg"
                   alt="Bunny Tail Bunch flowers"
                   loading="lazy"
                 />
@@ -762,7 +762,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/wheat-and-wildflower.jpg"
+                  src="/images/wheat-and-wildflower.jpg"
                   alt="Wheat &amp; Wildflower flowers"
                   loading="lazy"
                 />
@@ -795,7 +795,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/eucalyptus-wreath.jpg"
+                  src="/images/eucalyptus-wreath.jpg"
                   alt="Eucalyptus Wreath flowers"
                   loading="lazy"
                 />
@@ -827,7 +827,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/orchid-elegance.jpg"
+                  src="/images/orchid-elegance.jpg"
                   alt="Orchid Elegance flowers"
                   loading="lazy"
                 />
@@ -857,7 +857,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/mixed-gerbera.jpg"
+                  src="/images/mixed-gerbera.jpg"
                   alt="Mixed Gerbera flowers"
                   loading="lazy"
                 />
@@ -889,7 +889,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/hydrangea-cloud.jpg"
+                  src="/images/hydrangea-cloud.jpg"
                   alt="Hydrangea Cloud flowers"
                   loading="lazy"
                 />
@@ -921,7 +921,7 @@
             <div class="card-img">
               <div class="ph">
                 <img
-                  src="images/carnation-sweet.jpg"
+                  src="/images/carnation-sweet.jpg"
                   alt="Carnation Sweet flowers"
                   loading="lazy"
                 />
@@ -1276,7 +1276,7 @@
           <div class="subs-img">
             <div class="ph">
               <img
-                src="images/flower_gifts_2.jpg"
+                src="/images/flower_gifts_2.jpg"
                 alt="Weekly flower subscription"
                 loading="lazy"
               />
@@ -1322,7 +1322,7 @@
         <div class="about-grid">
           <div class="ph about-img">
             <img
-              src="images/freshflowersArragned.jpg"
+              src="/images/freshflowersArragned.jpg"
               alt="Fresh flowers being arranged at Bloom Co."
               loading="lazy"
             />
@@ -1411,7 +1411,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/bloom-co-flowers.jpg"
+                src="/images/bloom-co-flowers.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />
@@ -1420,7 +1420,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/bloom-co-flowers-2.jpg"
+                src="/images/bloom-co-flowers-2.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />
@@ -1429,7 +1429,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/tulip-flower-bloom-pink.jpg"
+                src="/images/tulip-flower-bloom-pink.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />
@@ -1438,7 +1438,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/sunflower-sun-summer-yellow.jpg"
+                src="/images/sunflower-sun-summer-yellow.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />
@@ -1447,7 +1447,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/bloom-co-flowers-2.jpg"
+                src="/images/bloom-co-flowers-2.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />
@@ -1456,7 +1456,7 @@
           <div class="gal rv">
             <div class="ph">
               <img
-                src="images/bloom_coFlowers.jpg"
+                src="/images/bloom_coFlowers.jpg"
                 alt="Bloom Co. flowers"
                 loading="lazy"
               />

@@ -105,7 +105,7 @@
         "sameAs": ["https://facebook.com", "https://instagram.com"]
       }
     </script>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
     <div class="announce">
@@ -169,7 +169,7 @@
     <header class="hero" id="home">
       <div class="hero-bg">
         <img
-          src="images/hero_images.jpg"
+          src="/images/hero_images.jpg"
           alt="Contemporary Brisbane home at dusk"
           loading="eager"
         />
@@ -320,7 +320,7 @@
           >
             <div class="card-media">
               <img
-                src="images/property_ten.jpg"
+                src="/images/property_ten.jpg"
                 alt="24 Latrobe Terrace, Paddington"
                 loading="lazy"
               />
@@ -366,7 +366,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/18423197.jpg"
+                src="/images/listings/18423197.jpg"
                 alt="8/15 Welsby Street, New Farm"
                 loading="lazy"
               />
@@ -409,7 +409,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/323780.jpg"
+                src="/images/listings/323780.jpg"
                 alt="12 Quay Street, Bulimba"
                 loading="lazy"
               />
@@ -452,7 +452,7 @@
           >
             <div class="card-media">
               <img
-                src="images/property_seven.jpg"
+                src="/images/property_seven.jpg"
                 alt="47 Lansdowne Street, Ascot"
                 loading="lazy"
               />
@@ -497,7 +497,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/7031581.jpg"
+                src="/images/listings/7031581.jpg"
                 alt="3 Riverview Terrace, Hawthorne"
                 loading="lazy"
               />
@@ -540,7 +540,7 @@
           >
             <div class="card-media">
               <img
-                src="images/property_nine.jpg"
+                src="/images/property_nine.jpg"
                 alt="102/60 Riverwalk Avenue, Teneriffe"
                 loading="lazy"
               />
@@ -583,7 +583,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/13771880.jpg"
+                src="/images/listings/13771880.jpg"
                 alt="19 Cracknell Road, Coorparoo"
                 loading="lazy"
               />
@@ -628,7 +628,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/30580640.jpg"
+                src="/images/listings/30580640.jpg"
                 alt="6 Eblin Drive, Hamilton"
                 loading="lazy"
               />
@@ -674,7 +674,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/15422346.jpg"
+                src="/images/listings/15422346.jpg"
                 alt="55 Mackay Street, Wilston"
                 loading="lazy"
               />
@@ -717,7 +717,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/7031581.jpg"
+                src="/images/listings/7031581.jpg"
                 alt="7 Beck Street, Paddington"
                 loading="lazy"
               />
@@ -762,7 +762,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/16631149.jpg"
+                src="/images/listings/16631149.jpg"
                 alt="12/40 Merthyr Road, New Farm"
                 loading="lazy"
               />
@@ -805,7 +805,7 @@
           >
             <div class="card-media">
               <img
-                src="images/property_eight.jpg"
+                src="/images/property_eight.jpg"
                 alt="5 Cavendish Street, Coorparoo"
                 loading="lazy"
               />
@@ -848,7 +848,7 @@
           >
             <div class="card-media">
               <img
-                src="images/property_four.jpg"
+                src="/images/property_four.jpg"
                 alt="30 Godwin Street, Bulimba"
                 loading="lazy"
               />
@@ -893,7 +893,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/18423197.jpg"
+                src="/images/listings/18423197.jpg"
                 alt="21 Hawthorne Road, Hawthorne"
                 loading="lazy"
               />
@@ -936,7 +936,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/30580640.jpg"
+                src="/images/listings/30580640.jpg"
                 alt="9 Sutherland Avenue, Ascot"
                 loading="lazy"
               />
@@ -982,7 +982,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/323780.jpg"
+                src="/images/listings/323780.jpg"
                 alt="507/55 Vernon Terrace, Teneriffe"
                 loading="lazy"
               />
@@ -1025,7 +1025,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/15422346.jpg"
+                src="/images/listings/15422346.jpg"
                 alt="14 Lamington Street, Wilston"
                 loading="lazy"
               />
@@ -1070,7 +1070,7 @@
           >
             <div class="card-media">
               <img
-                src="images/listings/19344325.jpg"
+                src="/images/listings/19344325.jpg"
                 alt="3 Crescent Road, Hamilton"
                 loading="lazy"
               />
@@ -1407,7 +1407,7 @@
         </div>
         <div class="subs-grid">
           <div class="sub-card rv">
-            <img src="images/property_one.jpg" alt="Bulimba" loading="lazy" />
+            <img src="/images/property_one.jpg" alt="Bulimba" loading="lazy" />
             <div class="sub-info">
               <h3>Bulimba</h3>
               <div class="smed">House median $1.95M</div>
@@ -1417,7 +1417,7 @@
             </div>
           </div>
           <div class="sub-card rv d1">
-            <img src="images/property_two.jpg" alt="New Farm" loading="lazy" />
+            <img src="/images/property_two.jpg" alt="New Farm" loading="lazy" />
             <div class="sub-info">
               <h3>New Farm</h3>
               <div class="smed">House median $1.70M</div>
@@ -1428,7 +1428,7 @@
           </div>
           <div class="sub-card rv d2">
             <img
-              src="images/property_three.jpg"
+              src="/images/property_three.jpg"
               alt="Hawthorne"
               loading="lazy"
             />
@@ -1441,7 +1441,7 @@
             </div>
           </div>
           <div class="sub-card rv">
-            <img src="images/property_four.jpg" alt="Ascot" loading="lazy" />
+            <img src="/images/property_four.jpg" alt="Ascot" loading="lazy" />
             <div class="sub-info">
               <h3>Ascot</h3>
               <div class="smed">House median $2.10M</div>
@@ -1490,7 +1490,7 @@
           <div class="sold-card rv">
             <div class="sold-media">
               <img
-                src="images/property_six.jpg"
+                src="/images/property_six.jpg"
                 alt="Sold in Paddington"
                 loading="lazy"
               /><span class="sold-stamp">Sold · 4 days</span>
@@ -1504,7 +1504,7 @@
           <div class="sold-card rv d1">
             <div class="sold-media">
               <img
-                src="images/property_five.jpg"
+                src="/images/property_five.jpg"
                 alt="Sold in Hawthorne"
                 loading="lazy"
               /><span class="sold-stamp">Sold · at auction</span>
@@ -1518,7 +1518,7 @@
           <div class="sold-card rv d2">
             <div class="sold-media">
               <img
-                src="images/property_seven.jpg"
+                src="/images/property_seven.jpg"
                 alt="Sold in Teneriffe"
                 loading="lazy"
               /><span class="sold-stamp">Sold · 9 days</span>
@@ -1548,7 +1548,7 @@
           <div class="agent rv">
             <div class="av">
               <img
-                src="images/agents/daniel-whitmore.jpg"
+                src="/images/agents/daniel-whitmore.jpg"
                 alt="Daniel Whitmore"
                 loading="lazy"
               />
@@ -1564,7 +1564,7 @@
           <div class="agent rv d1">
             <div class="av">
               <img
-                src="images/agents/priya-sharma.jpg"
+                src="/images/agents/priya-sharma.jpg"
                 alt="Priya Sharma"
                 loading="lazy"
               />
@@ -1580,7 +1580,7 @@
           <div class="agent rv d2">
             <div class="av">
               <img
-                src="images/agents/tom-callahan.jpg"
+                src="/images/agents/tom-callahan.jpg"
                 alt="Tom Callahan"
                 loading="lazy"
               />

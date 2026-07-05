@@ -39,7 +39,7 @@
         "areaOfLaw": ["Family Law", "Civil Litigation", "Immigration Law"]
       }
     </script>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
     <a href="#main" class="skip">Skip to content</a>
@@ -564,7 +564,7 @@
               <div class="tm">
                 <div class="avatar">
                   <img
-                    src="images/team/danielle-whitlock.jpg"
+                    src="/images/team/danielle-whitlock.jpg"
                     alt="Danielle Whitlock"
                     loading="lazy"
                     onerror="this.remove()"
@@ -581,7 +581,7 @@
               <div class="tm">
                 <div class="avatar">
                   <img
-                    src="images/team/marcus-okafor.jpg"
+                    src="/images/team/marcus-okafor.jpg"
                     alt="Marcus Okafor"
                     loading="lazy"
                     onerror="this.remove()"
@@ -598,7 +598,7 @@
               <div class="tm">
                 <div class="avatar">
                   <img
-                    src="images/team/priya-naidu.jpg"
+                    src="/images/team/priya-naidu.jpg"
                     alt="Priya Naidu"
                     loading="lazy"
                     onerror="this.remove()"
@@ -618,7 +618,7 @@
               <div class="tm">
                 <div class="avatar">
                   <img
-                    src="images/team/omar-haddad.jpg"
+                    src="/images/team/omar-haddad.jpg"
                     alt="Omar Haddad"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1709,7 +1709,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/danielle-whitlock.jpg"
+                    src="/images/team/danielle-whitlock.jpg"
                     alt="Danielle Whitlock"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1733,7 +1733,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/marcus-okafor.jpg"
+                    src="/images/team/marcus-okafor.jpg"
                     alt="Marcus Okafor"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1756,7 +1756,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/priya-naidu.jpg"
+                    src="/images/team/priya-naidu.jpg"
                     alt="Priya Naidu"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1782,7 +1782,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/omar-haddad.jpg"
+                    src="/images/team/omar-haddad.jpg"
                     alt="Omar Haddad"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1804,7 +1804,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/sophie-tran.jpg"
+                    src="/images/team/sophie-tran.jpg"
                     alt="Sophie Tran"
                     loading="lazy"
                     onerror="this.remove()"
@@ -1826,7 +1826,7 @@
               <div class="tm has-bio">
                 <div class="avatar">
                   <img
-                    src="images/team/james-whitlock.jpg"
+                    src="/images/team/james-whitlock.jpg"
                     alt="James Whitlock"
                     loading="lazy"
                     onerror="this.remove()"
