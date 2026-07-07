@@ -159,6 +159,7 @@
   io.observe(nums[0].closest(".hero-stats") || nums[0]);
 })();
 // form
+// form -> Web3Forms
 (function () {
   var f = document.getElementById("startform"),
     ok = document.getElementById("formok"),
@@ -166,17 +167,34 @@
   if (!f) return;
   f.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!f.reportValidity()) return;
     var t = b.innerHTML;
     b.innerHTML = "Sending…";
     b.disabled = true;
-    setTimeout(function () {
-      ok.classList.add("on");
-      b.innerHTML = t;
-      b.disabled = false;
-    }, 1300);
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(f),
+    })
+      .then(function (r) {
+        return r.json();
+      })
+      .then(function (data) {
+        if (data.success) {
+          ok.classList.add("on");
+          f.reset();
+        } else {
+          alert("Couldn't send — please email ali@northboundwebstudio.com");
+          console.error("Web3Forms:", data);
+        }
+      })
+      .catch(function (err) {
+        alert("Network error — please email ali@northboundwebstudio.com");
+        console.error(err);
+      })
+      .then(function () {
+        b.innerHTML = t;
+        b.disabled = false;
+      });
   });
 })();
-console.log(
-  "%cNORTHBOUND — web studio",
-  "font:700 18px Bricolage Grotesque,sans-serif;color:#5B4BFF"
-);
