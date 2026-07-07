@@ -87,7 +87,7 @@
               <div class="frame-view">
                 <div class="pv on">
                   <img
-                    src="/images/previews/Charcoal&Crust.png"
+                    src="/images/previews/charcoal-crust.png"
                     alt="Charcoal and Crust website"
                   />
                 </div>
@@ -262,58 +262,10 @@
           <button class="chip" data-filter="events">Events &amp; Venues</button>
         </div>
         <div class="work-grid">
-          <article class="proj rv" data-cat="auto">
-            <a
-              class="frame"
-              href="/top-car-removal/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style="
-                display: block;
-                text-decoration: none;
-                color: inherit;
-                cursor: pointer;
-              "
-            >
-              <div class="frame-bar">
-                <i></i><i></i><i></i
-                ><span class="frame-url">topcarremoval.com.au</span>
-              </div>
-              <div class="frame-view">
-                <div class="pv on">
-                  <img
-                    src="/images/previews/Top_car_removal.png"
-                    alt="Cash for Cars and scrap metal business"
-                  />
-                </div>
-              </div>
-            </a>
-            <div class="proj-body">
-              <div class="proj-top">
-                <span class="proj-cat">Trades</span
-                ><span class="proj-stack">HTML · CSS · JS</span>
-              </div>
-              <h3 class="proj-n">Top Car Removal</h3>
-              <p class="proj-d">
-                A bright, modern rebuild for an industrial scrap & recycling
-                business — live metal prices and fast quote requests.
-              </p>
-              <div class="proj-foot">
-                <a
-                  class="view-live"
-                  href="/top-car-removal/"
-                  target="_blank"
-                  rel="noopener"
-                  >View live
-                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" /></svg
-                ></a>
-              </div>
-            </div>
-          </article>
           <article class="proj rv" data-cat="hospitality">
             <a
               class="frame"
-              href="/charcoal-and-crust/"
+              href="/demos/charcoal-crust/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -330,7 +282,7 @@
               <div class="frame-view">
                 <div class="pv on">
                   <img
-                    src="/images/previews/Charcoal&Crust.png"
+                    src="/images/previews/charcoal-crust.png"
                     alt="Charcoal & Crust website"
                   />
                 </div>
@@ -352,7 +304,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/charcoal-and-crust/"
+                  href="/demos/charcoal-crust/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -364,7 +316,7 @@
           <article class="proj rv" data-cat="shops">
             <a
               class="frame"
-              href="/bloom-and-co/"
+              href="/demos/bloom-co/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -400,7 +352,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/bloom-and-co/"
+                  href="/demos/bloom-co/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -412,7 +364,7 @@
           <article class="proj rv" data-cat="auto">
             <a
               class="frame"
-              href="/torque-autocare/"
+              href="/demos/torque-autocare/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -448,7 +400,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/torque-autocare/"
+                  href="/demos/torque-autocare/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -460,7 +412,7 @@
           <article class="proj rv" data-cat="professional">
             <a
               class="frame"
-              href="/brightwater-legal/"
+              href="/demos/law-firm/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -496,7 +448,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/brightwater-legal/"
+                  href="/demos/law-firm/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -508,7 +460,7 @@
           <article class="proj rv" data-cat="events">
             <a
               class="frame"
-              href="/almas-receptions/"
+              href="/demos/almas-receptions/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -544,7 +496,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/almas-receptions/"
+                  href="/demos/almas-receptions/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -556,7 +508,7 @@
           <article class="proj rv" data-cat="shops">
             <a
               class="frame"
-              href="/petal-and-stem/"
+              href="/demos/petal-stem/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -573,7 +525,7 @@
               <div class="frame-view">
                 <div class="pv on">
                   <img
-                    src="/images/previews/Petal&stem.png"
+                    src="/images/previews/petal-stem.png"
                     alt="Petal & Stem website"
                   />
                 </div>
@@ -593,7 +545,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/petal-and-stem/"
+                  href="/demos/petal-stem/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -605,7 +557,7 @@
           <article class="proj rv" data-cat="auto">
             <a
               class="frame"
-              href="/top-cash-for-cars/"
+              href="/demos/top-cash-for-cars/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -642,7 +594,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/top-cash-for-cars/"
+                  href="/demos/top-cash-for-cars/"
                   target="_blank"
                   rel="noopener"
                   >View live
@@ -654,7 +606,7 @@
           <article class="proj rv" data-cat="professional">
             <a
               class="frame"
-              href="/top-real-estate/"
+              href="/demos/real-estate-agency/"
               target="_blank"
               rel="noopener noreferrer"
               style="
@@ -693,7 +645,7 @@
               <div class="proj-foot">
                 <a
                   class="view-live"
-                  href="/top-real-estate/"
+                  href="/demos/real-estate-agency/"
                   target="_blank"
                   rel="noopener"
                   >View live

@@ -17,10 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mulish:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style src="styles/styles.css"></style>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <nav class="nav" id="nav">
       <div class="nav-in">
         <a href="#home" class="brand"
@@ -108,7 +108,7 @@
             <span class="hero-deco">in season now</span>
             <div class="ph hero-img">
               <img
-                src="/images/hand_tiedseasonalbouquet.jpg"
+                src="images/hand_tiedseasonalbouquet.jpg"
                 alt="Hand-tied seasonal bouquet"
                 loading="lazy"
               />
@@ -157,7 +157,7 @@
           <article class="card rv" data-cat="bouquets">
             <div class="ph card-img">
               <img
-                src="/images/blushpeonybouquet.jpg"
+                src="images/blushpeonybouquet.jpg"
                 alt="Blush Peony bouquet"
                 loading="lazy"
               />
@@ -180,7 +180,7 @@
           <article class="card rv" data-cat="seasonal">
             <div class="ph card-img">
               <img
-                src="/images/springtulipbunchboquet.jpg"
+                src="images/springtulipbunchboquet.jpg"
                 alt="Spring Tulip Bunch bouquet"
                 loading="lazy"
               />
@@ -203,7 +203,7 @@
           <article class="card rv" data-cat="seasonal">
             <div class="ph card-img">
               <img
-                src="/images/goldenhourboquet.jpg"
+                src="images/goldenhourboquet.jpg"
                 alt="Golden Hour bouquet"
                 loading="lazy"
               />
@@ -226,7 +226,7 @@
           <article class="card rv" data-cat="dried">
             <div class="ph card-img">
               <img
-                src="/images/everlastingdrivedbouquet.jpg"
+                src="images/everlastingdrivedbouquet.jpg"
                 alt="Everlasting Dried bouquet"
                 loading="lazy"
               />
@@ -249,7 +249,7 @@
           <article class="card rv" data-cat="bouquets">
             <div class="ph card-img">
               <img
-                src="/images/thewhildflowerbouquet.jpg"
+                src="images/thewhildflowerbouquet.jpg"
                 alt="The Wildflower bouquet"
                 loading="lazy"
               />
@@ -272,7 +272,7 @@
           <article class="card rv" data-cat="weddings">
             <div class="ph card-img">
               <img
-                src="/images/bridalwhitebouquet.jpg"
+                src="images/bridalwhitebouquet.jpg"
                 alt="Bridal White bouquet"
                 loading="lazy"
               />
@@ -357,7 +357,7 @@
         <div class="about-grid">
           <div class="ph about-img">
             <img
-              src="/images/florist_attendant.jpg"
+              src="images/florist_attendant.jpg"
               alt="Our florist in the shop"
               loading="lazy"
             />

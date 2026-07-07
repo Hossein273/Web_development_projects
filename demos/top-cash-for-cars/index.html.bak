@@ -206,14 +206,14 @@
     <!-- Self-hosted fonts: preload the two most-used weights, then the stylesheet -->
     <link
       rel="preload"
-      href="/fonts/sora-700.woff2"
+      href="fonts/sora-700.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/fonts/inter-400.woff2"
+      href="fonts/inter-400.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -620,21 +620,21 @@
               <div class="slides">
                 <div class="slide">
                   <img
-                    src="/images/h1.jpg"
+                    src="images/h1.jpg"
                     alt="Used car ready to sell for cash"
                     loading="lazy"
                   />
                 </div>
                 <div class="slide">
                   <img
-                    src="/images/fr0ggy5-UanilB8ZktA-unsplash.jpg"
+                    src="images/fr0ggy5-UanilB8ZktA-unsplash.jpg"
                     alt="Older car bought in any condition"
                     loading="lazy"
                   />
                 </div>
                 <div class="slide">
                   <img
-                    src="/images/craig-marolf-LrDsApWs3C0-unsplash.jpg"
+                    src="images/craig-marolf-LrDsApWs3C0-unsplash.jpg"
                     alt="Damaged and written-off cars bought for cash"
                     loading="lazy"
                   />
@@ -737,21 +737,21 @@
               <div class="slides">
                 <div class="slide">
                   <img
-                    src="/images/scarpMetal1.jpg"
+                    src="images/scarpMetal1.jpg"
                     alt="Scrap metal being sorted at a recycling yard"
                     loading="lazy"
                   />
                 </div>
                 <div class="slide">
                   <img
-                    src="/images/scrapMetal2.jpg"
+                    src="images/scrapMetal2.jpg"
                     alt="Heap of scrap metal pipes and tubes"
                     loading="lazy"
                   />
                 </div>
                 <div class="slide">
                   <img
-                    src="/images/scrapMetal3.jpg"
+                    src="images/scrapMetal3.jpg"
                     alt="Piles of all types of scrap metal in a yard"
                     loading="lazy"
                   />
@@ -917,7 +917,7 @@
       <div class="cbg">
         <div class="ph">
           <img
-            src="/images/cashinhand.jpg"
+            src="images/cashinhand.jpg"
             alt="Cash paid for cars"
             loading="lazy"
           />
@@ -1363,6 +1363,6 @@
     <div class="toast" id="toast">
       <span class="td">⚡</span><span class="tx">Done</span>
     </div>
-    <script src="/script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
