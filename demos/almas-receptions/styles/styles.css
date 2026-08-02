@@ -1436,6 +1436,10 @@ img {
   overflow: hidden;
   position: relative;
 }
+.gal .ph {
+  position: absolute;
+  inset: 0;
+}
 .gal.tall {
   grid-row: span 2;
 }
